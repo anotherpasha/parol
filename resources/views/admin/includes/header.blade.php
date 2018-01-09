@@ -13,9 +13,6 @@
         <link rel="stylesheet" href="{!! asset('assets/css/admin.css') !!}" />
 		@section('page-level-styles')
 	    @show
-        <script src="{!! asset('assets/js/lib/jquery/jquery-2.2.4.min.js') !!}"></script>
-        <script src="{!! asset('assets/js/lib/uikit.min.js') !!}"></script>
-        <script src="{!! asset('assets/js/lib/uikit-icons.min.js') !!}"></script>
         <!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>

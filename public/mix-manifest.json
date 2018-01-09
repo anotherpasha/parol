@@ -1,4 +1,6 @@
 {
+    "/js/product.js": "/js/product.js",
     "/js/media.js": "/js/media.js",
+    "/css/app.css": "/css/app.css",
     "/js/dashboard.js": "/js/dashboard.js"
 }

@@ -28,10 +28,10 @@
             </a>
             <ul class="uk-nav-sub" >
                 <li>
-                    <a href="">Product List</a>
+                    <a href="{!! backendUrl('product') !!}">Product List</a>
                 </li>
                 <li>
-                    <a href="">Add Product</a>
+                    <a href="{!! backendUrl('product/create') !!}">Add Product</a>
                 </li>
             </ul>
         </li>

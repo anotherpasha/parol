@@ -88,6 +88,13 @@ Route::group([
     Route::post('faq/{post}/update', 'FaqController@update')->name('faq.edit');
     Route::get('faq/{post}/delete', 'FaqController@delete')->name('faq.delete');
 
+    Route::get('product', 'ProductsController@index')->name('product');
+    Route::get('product/create', 'ProductsController@create')->name('product.add');
+    Route::post('product', 'ProductsController@store')->name('product.add');
+    Route::get('product/{post}/edit', 'ProductsController@edit')->name('product.edit');
+    Route::post('product/{post}/update', 'ProductsController@update')->name('product.edit');
+    Route::get('product/{post}/delete', 'ProductsController@delete')->name('product.delete');
+
     Route::get('categories/{postType}', 'CategoriesController@index')->name('categories');
     Route::get('categories/{postType}/create', 'CategoriesController@create')->name('categories.add');
     Route::post('categories/{postType}', 'CategoriesController@store')->name('categories.add');
@@ -117,6 +124,7 @@ Route::group([
     Route::get('posts/datatable', 'PostsController@datatableList')->name('posts');
     Route::get('pages/datatable', 'PagesController@datatableList')->name('pages');
     Route::get('faq/datatable', 'FaqController@datatableList')->name('faq');
+    Route::get('product/datatable', 'ProductsController@datatableList')->name('product');
     Route::get('registrant/datatable', 'RegistrantsController@datatableList')->name('registrant');
     Route::get('claim/datatable', 'ClaimsController@datatableList')->name('claim');
 });

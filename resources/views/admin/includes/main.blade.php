@@ -18,23 +18,27 @@
                 <textarea class="uk-input textarea uk-width-1-1" name="content[{{ $lang }}]">@if(old('content')[$lang] != ''){!! old('content')[$lang] !!}@endif</textarea>
             </div>
 
-            <ul uk-accordion="multiple: true">
-                @if (isset($isProduct) && $isProduct)
-                    <li class="">
-                        <h5 class="uk-accordion-title">Highlight Title</h5>
-                        <div class="uk-accordion-content uk-margin-small-top">
-                        <textarea class="uk-textarea uk-width-1-1" name="highlight_title[{{ $lang }}]" rows="5"
-                                  placeholder="{{ trans('placeholders.excerpt', [], $lang) }}">@if(old('gallery_title')[$lang] != ''){!! old('')[$lang] !!}@endif</textarea>
-                        </div>
-                    </li>
-                    <li class="">
-                        <h5 class="uk-accordion-title">Gallery Title</h5>
-                        <div class="uk-accordion-content uk-margin-small-top">
-                        <textarea class="uk-textarea uk-width-1-1" name="gallery_title[{{ $lang }}]" rows="5"
-                                  placeholder="{{ trans('placeholders.excerpt', [], $lang) }}">@if(old('gallery_title')[$lang] != ''){!! old('gallery_title')[$lang] !!}@endif</textarea>
-                        </div>
-                    </li>
-                @endif
+            <div class="uk-margin-small">
+                <button class="uk-button uk-button-default" type="button"
+                    @click="addSection('plain', '{{ $lang }}')">Add Plain Section</button>
+                <button class="uk-button uk-button-default" type="button"
+                    @click="addSection('keypair', '{{ $lang }}')">Add Keypair Section</button>
+                <div class="uk-margin-small uk-card" v-for="(section, index) in sectionList">
+                    <a uk-close @click="removeSection(index)"></a>
+                    <div class="uk-margin-small">
+                        <input class="uk-input uk-width-1-1" type="text"
+                            :name="`section_title[${section.lang}][]`"
+                            v-model="sectionList[index].title">
+                    </div>
+                    <div class="uk-margin-small" v-if="section.type == 'plain'">
+                        <wysiwyg v-model="sectionList[index].description" />
+                    </div>
+                    <keypairsection v-if="section.type == 'keypair'" />
+                </div>
+                @{{ sectionList }}
+            </div>
+
+            <ul uk-accordion="multiple: true" class="uk-margin-top">
                 <li class="">
                     <h5 class="uk-accordion-title">Excerpt</h5>
                     <div class="uk-accordion-content uk-margin-small-top">
