@@ -1,0 +1,172 @@
+<?php
+
+use App\Mail\OrderShipped;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Storage;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+$adminPrefix = config('misc.admin-prefix');
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/registration', 'FrontendController@registration');
+Route::post('/registration', 'FrontendController@postRegistration');
+Route::get('/payment', 'FrontendController@payment');
+Route::post('/payment', 'FrontendController@paymentDetail');
+Route::get('/claim', 'FrontendController@claim');
+Route::post('/claim', 'FrontendController@postClaim');
+Route::get('/calculator/flexa', 'CalculatorsController@flexa');
+Route::post('/calculator/flexa', 'CalculatorsController@flexaResult');
+Route::get('/calculator/flood', 'CalculatorsController@flood');
+Route::post('/calculator/flood', 'CalculatorsController@floodResult');
+Route::get('/calculator/earthquake', 'CalculatorsController@earthquake');
+Route::post('/calculator/earthquake', 'CalculatorsController@earthquakeResult');
+Route::get('/migrate/city', 'FrontendController@migrateCity');
+
+Auth::routes();
+
+Route::group(['prefix' => 'doku'], function () {
+    Route::any('/redirect', 'PaymentsController@dokuRedirect');
+    Route::any('/notify', 'PaymentsController@dokuNotify');
+});
+
+Route::group([
+    'middleware' => ['auth', 'authorization'],
+    'prefix' => $adminPrefix
+], function () {
+    Route::get('dashboard', 'HomeController@dashboard');
+
+    Route::get('permissions', 'PermissionsController@index')->name('permissions');
+    Route::get('permissions/create', 'PermissionsController@create')->name('permissions.add');
+    Route::post('permissions', 'PermissionsController@store')->name('permissions.add');
+    Route::get('permissions/{permission}/edit', 'PermissionsController@edit')->name('permissions.edit');
+    Route::post('permissions/{permission}/update', 'PermissionsController@update')->name('permissions.edit');
+    Route::get('permissions/{permission}/delete', 'PermissionsController@destroy')->name('permissions.delete');
+
+    Route::get('roles', 'RolesController@index')->name('roles');
+    Route::get('roles/create', 'RolesController@create')->name('roles.add');
+    Route::post('roles', 'RolesController@store')->name('roles.add');
+    Route::get('roles/{role}/edit', 'RolesController@edit')->name('roles.edit');
+    Route::post('roles/{role}/update', 'RolesController@update')->name('roles.edit');
+    Route::get('roles/{role}/delete', 'RolesController@delete')->name('roles.delete');
+
+    Route::get('users', 'UsersController@index')->name('users');
+    Route::get('users/create', 'UsersController@create')->name('users.add');
+    Route::post('users', 'UsersController@store')->name('users.add');
+    Route::get('users/{user}/edit', 'UsersController@edit')->name('users.edit');
+    Route::post('users/{user}/update', 'UsersController@update')->name('users.edit');
+    Route::get('users/{user}/delete', 'UsersController@delete')->name('users.delete');
+
+    Route::get('options', 'OptionsController@detail');
+    Route::get('options/edit', 'OptionsController@edit');
+    Route::post('options/update', 'OptionsController@update');
+
+    Route::get('pages', 'PagesController@index')->name('pages');
+    Route::get('pages/create', 'PagesController@create')->name('pages.add');
+    Route::post('pages', 'PagesController@store')->name('pages.add');
+    Route::get('pages/{post}/edit', 'PagesController@edit')->name('pages.edit');
+    Route::post('pages/{post}/update', 'PagesController@update')->name('pages.edit');
+    Route::get('pages/{post}/delete', 'PagesController@delete')->name('pages.delete');
+
+    Route::get('faq', 'FaqController@index')->name('faq');
+    Route::get('faq/create', 'FaqController@create')->name('faq.add');
+    Route::post('faq', 'FaqController@store')->name('faq.add');
+    Route::get('faq/{post}/edit', 'FaqController@edit')->name('faq.edit');
+    Route::post('faq/{post}/update', 'FaqController@update')->name('faq.edit');
+    Route::get('faq/{post}/delete', 'FaqController@delete')->name('faq.delete');
+
+    Route::get('categories/{postType}', 'CategoriesController@index')->name('categories');
+    Route::get('categories/{postType}/create', 'CategoriesController@create')->name('categories.add');
+    Route::post('categories/{postType}', 'CategoriesController@store')->name('categories.add');
+    Route::get('categories/{postType}/{category}/edit', 'CategoriesController@edit')->name('categories.edit');
+    Route::post('categories/{postType}/{category}/update', 'CategoriesController@update')->name('categories.edit');
+    Route::get('categories/{postType}/{category}/delete', 'CategoriesController@delete')->name('categories.delete');
+
+    Route::get('posts', 'PostsController@index')->name('posts');
+    Route::get('posts/create', 'PostsController@create')->name('posts.add');
+    Route::post('posts', 'PostsController@store')->name('posts.add');
+    Route::get('posts/{post}/edit', 'PostsController@edit')->name('posts.edit');
+    Route::post('posts/{post}/update', 'PostsController@update')->name('posts.edit');
+    Route::get('posts/{post}/delete', 'PostsController@delete')->name('posts.delete');
+
+    Route::get('/registrants', 'RegistrantsController@index')->name('registrants');
+
+    Route::get('/claims', 'ClaimsController@index')->name('claims');
+});
+
+Route::group([
+    'middleware' => ['auth']
+], function () {
+    Route::get('permissions/datatable', 'PermissionsController@datatableList')->name('permissions');
+    Route::get('roles/datatable', 'RolesController@datatableList')->name('roles');
+    Route::get('users/datatable', 'UsersController@datatableList')->name('users');
+    Route::get('categories/{postType}/datatable', 'CategoriesController@datatableList')->name('categories');
+    Route::get('posts/datatable', 'PostsController@datatableList')->name('posts');
+    Route::get('pages/datatable', 'PagesController@datatableList')->name('pages');
+    Route::get('faq/datatable', 'FaqController@datatableList')->name('faq');
+    Route::get('registrant/datatable', 'RegistrantsController@datatableList')->name('registrant');
+    Route::get('claim/datatable', 'ClaimsController@datatableList')->name('claim');
+});
+
+Route::get('/tests/editor', function() {
+    return view('tests.editor');
+});
+Route::get('/tinymce-image', function() {
+    return view('tests.image');
+});
+Route::get('/get-medias', 'MediaController@getMedias');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/tests/send-mail', function() {
+    dd(Mail::to('pasha_md5@yahoo.com')
+            // ->cc($moreUsers)
+            // ->bcc($evenMoreUsers)
+            ->send(new OrderShipped()));
+});
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/client/login', function() {
+    return view('clients/login');
+});
+
+Route::get('/client/dashboard', function() {
+    return view('clients/dashboard');
+});
+
+
+Route::get('/tests/check-s3-storage', function() {
+    Storage::makeDirectory('newdirectory');
+    dd(Storage::exists('software_list.ods'));
+});

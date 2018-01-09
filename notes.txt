@@ -1,0 +1,73 @@
+-- posted posts data structure :
+
+slug: 'slug-dari-title',
+post_date: '2017-01-01',
+post_type: 1,
+created_by_id: 1,
+created_by: Pasha,
+title: [
+    'en': 'Title',
+    'id': 'Judul'
+],
+content: [
+    'en': 'Content',
+    'id': 'Konten'
+],
+excerpt: [
+    'en': 'excerpt',
+    'id': 'ringkasan'
+],
+categories: [1,2,3],
+metas: [
+    'key': value,
+    'key2': value2
+],
+// SEO
+page_title: [
+    'en': 'Page Title',
+    'id': 'Judul Halaman'
+],
+meta_description: [
+    'en': 'Meta Description',
+    'id': 'Deskripsi Meta'
+]
+
+
+
+
+-- Options --
+head_scripts (google analytic etc)
+reg_emails (reg notification emails)
+payment_emails (payment notif emails)
+
+
+
+http://jakarta-aquarium.com/mandiri/notify
+http://jakarta-aquarium.com/mandiri/redirect
+http://jakarta-aquarium.com/mandiri/review
+http://jakarta-aquarium.com/mandiri/identify
+
+
+
+
+-- tables --
+- construction_types
+id
+code => unique
+description_id => text
+description_en => text
+
+- construction_classes
+id
+code => unique
+description_id => text
+description_en => text
+
+- flexas
+construction_type_id (pk)
+construction_class_id (pk)
+flexas => double
+
+
+
+

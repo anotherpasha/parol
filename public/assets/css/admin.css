@@ -1,0 +1,136 @@
+@import "fonts/asap/stylesheet.css";
+@import "fonts/FontAwesome/font-awesome.css";
+@import "lib/colors.css";
+
+body {
+    font-size: 14px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: #F7F8F7;
+    color: #333;
+}
+.uk-card,
+.uk-input {
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.uk-button {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+.uk-form-medium {
+    font-size: 1.1rem;
+}
+.uk-label {
+    padding: 0 5px;
+    line-height: 1.6;
+}
+.k-border  {
+    border: 1px solid #e5e5e5 !important;
+}
+
+.k-login {
+    height: 100vh;
+}
+.k-footer {
+    font-size: .875rem;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    margin-top: 20px;
+}
+.k-login .k-footer {
+    color: #fff;
+}
+.k-topnav,
+.k-topnav .uk-navbar-item,
+.k-topnav .uk-navbar-nav>li>a,
+.k-topnav .uk-navbar-toggle {
+    height: 50px;
+    text-transform: capitalize;
+    color: #fff;
+}
+.k-topnav {
+    background: #000 !important;
+}
+.k-sidenav {
+    height: calc(100vh - 80px);
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    width: 150px;
+}
+.k-sidenav .uk-nav-default .uk-nav-sub a {
+    color: #fff;
+}
+.k-sidenav .uk-nav-default a:hover {
+    color: #999;
+}
+.k-sidenav .uk-nav-default>li>a {
+    color: #fff;
+}
+.k-sidenav .uk-nav-default>li.uk-active>a {
+    color: #fff;
+}
+.k-sidenav ul.uk-nav-sub {
+    padding-left: 34px;
+}
+.k-container {
+    padding: 20px 20px 20px 200px;
+    width: calc(100% - 220px);
+}
+.k-main {
+    min-height: calc(100vh - 130px);
+}
+.k-title-page {
+    font-size: 1em;
+    color: #fff;
+    line-height: 50px;
+    margin: 0;
+    padding: 0;
+}
+.k-modal-h {
+    height: calc(100vh - 220px);
+    overflow: auto;
+}
+.k-modal-h2 {
+    height: calc(100vh - 350px);
+    overflow: auto;
+}
+.k-modal-w {
+    max-width: calc(80% - 65px) !important;
+}
+.k-lang-chooser.uk-tab {
+    margin-left: -5px;
+}
+.k-lang-chooser.uk-tab>* {
+    padding-left: 5px;
+    line-height: 20px;
+}
+.k-lang-chooser.uk-tab>*>a {
+    padding: 0;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.k-lang-chooser.uk-tab>.uk-active>a {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+/**/
+.mce-branding-powered-by {
+    display: none;
+}
+.mce-window-head,
+.mce-panel {
+    border: none !important;
+}
+.k-card-title,
+.mce-window-head .mce-title {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+    padding-right: 20px
+}
