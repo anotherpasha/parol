@@ -9,12 +9,14 @@
         <div>
             <label>TSI</label><br/>
             <input type="text" name="tsi" /><br/>
+            <br/>
             <label>Zipcode</label><br/>
             <select name="zipcode">
                 @foreach($zipcodes as $zipcode)
                 <option value="{!! $zipcode->id !!}">{!! $zipcode->description !!}</option>
                 @endforeach
             </select><br/>
+            <br/>
             <button type="submit">Calculate</button>
         </div>
     </form>
