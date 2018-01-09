@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 
 class CalculatorsController extends Controller
 {
+    public function index()
+    {
+        return view('frontend.calculators.index');
+    }
+
     public function flexa()
     {
         $data['types'] = FlConstructionType::all();
