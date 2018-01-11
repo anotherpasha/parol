@@ -40,11 +40,11 @@ class CalculatorsController extends Controller
             } else if ($floor >= 18 && $floor < 24) {
                 $constType = 3;
             } else {
-                $constType = 4;
+                $constType = 5;
             }
         } else {
             $constClass = 1;
-            $constType = 6;
+            $constType = $request->house_type;
             $wood = $request->wood_element;
             if ($wood) {
                 $constClass = 2;
@@ -52,12 +52,13 @@ class CalculatorsController extends Controller
         }
 
         $rsmdcc = $request->has('rsmdcc') ? 0.025 : 0;
+        $dlv = $request->has('dlv') ? 0.01 : 0;
 
         $building = $request->has('building_value') ? $request->building_value : 0;
         $content = $request->has('content_value') ? $request->content_value : 0;
         $tsi = $building + $content;
 
-        $flexa = $this->calculateFlexa($tsi, $constType, $constClass, $rsmdcc, 0);
+        $flexa = $this->calculateFlexa($tsi, $constType, $constClass, $rsmdcc, $dlv);
 
         $flood = 0;
         $eq = 0;
@@ -72,7 +73,7 @@ class CalculatorsController extends Controller
             $eq = $this->calculateEarthquake($tsi, $type, $zipcode);
         }
 
-        $data['name'] = $request->name;
+        // $data['name'] = $request->name;
         $data['flexa'] = $flexa;
         $data['flood'] = $flood;
         $data['eq'] = $eq;

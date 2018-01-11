@@ -4,7 +4,7 @@
     <title>Result</title>
 </head>
 <body>
-    <h3>Hi {!! $name !!}, thank you for choosing {!! $package !!} package</h3>
+    <h3>Thank you for choosing {!! $package !!} package</h3>
 
     <p>Here is your detail</p>
 

@@ -7,7 +7,7 @@
     <div id="calculator">
         <form method="post" action="{!! url('/calculator') !!}">
             {!! csrf_field() !!}
-            <div>
+            <!-- <div>
                 Name : <br/>
                 <input type="text" name="name" /><br/><br/>
             </div>
@@ -19,10 +19,10 @@
                 How do you hear about us: <br/>
                 <input type="text" name="how_do_you_hear" /><br/><br/>
             </div>
-            <hr />
+            <hr /> -->
             <div>
                 Building Status: <br/>
-                <select name="building_status">
+                <select name="building_status" v-model="buildingStatus">
                     <option value="1">Own</option>
                     <option value="2">Rental</option>
                 </select><br/><br/>
@@ -41,11 +41,20 @@
                 Type: <br/>
                 <select name="building_type" @change="changeType">
                     <option value="1">Apartment</option>
-                    <option value="2">Landed House</option>
+                    <option value="2">Dwelling / Landed House</option>
                 </select><br/><br/>
             </div>
 
             <div v-if="type == 2">
+                House detail: <br/>
+                <select name="house_type">
+                    <option value="6">2976 - Less than 4 stores, non- shophouse</option>
+                    <option value="7">29761 - Kos-Kosan</option>
+                    <option value="8">2977 - House floating on sea/ river shore</option>
+                    <option value="9">2978 - Independent analytical laboratories</option>
+                    <option value="4">2974 - Convention halls Or other multi purpose building</option>
+                </select><br/><br/>
+
                 Wood element more than 20% / Your wall made of concrete or wood ?<br/>
                 <select name="wood_element">
                     <option value="1">Yes</option>
@@ -77,37 +86,48 @@
             <hr/>
             <div>
                 Choose Package <br/>
-                <select name="package" @change="changePackage">
+                <select name="package" v-if="buildingStatus == 1">
                     <option value="both">Both (Building + Contents)</option>
                     <option value="building">Building</option>
                     <option value="content">Contents</option>
-                </select><br/><br/>
+                </select>
+                <select name="package" v-if="buildingStatus == 2">
+                    <option value="content">Contents</option>
+                </select>
+                <br/><br/>
             </div>
 
-            <div v-if="package == 'both' || package == 'building'">
-                How much is your building value? <br/>
-                <input type="text" name="building_value"><br/><br/>
+            <div>
+                <span v-if="buildingStatus == 1">How much is your building value?</span>
+                <span v-if="buildingStatus == 2">How much is your rented building value?</span> <br/>
+                <input type="text" name="building_value" v-model="building_value"><br/><br/>
             </div>
 
-            <div v-if="package == 'both' || package == 'content'">
+            <div>
                 How much is your content value? <br/>
-                <input type="text" name="content_value"><br/><br/>
+                <input type="text" name="content_value"
+                    v-model="content_value"
+                    ref="content_value"
+                    @blur="checkContentValue"><br/><br/>
             </div>
 
             <hr/>
 
-            <p>Standard Building & Contents coverage, does not cover such as
+            <p>The standard coverage covers the damage from Fire, Lightning, Explosion, Impact of Falling Aircraft, Smoke. Would you like to extend the coverage to cover below:
             <ul>
-                <li>Riot, Strike, Malicious Damage & Civil Commotion</li>
+                <li>RSMDCC - Riot, Strike, Malicious Damage & Civil Commotion</li>
+                <li>DLV - Removal of Debris, Landslide/Landslip, Vehicle Impact</li>
                 <li>Typhoon, storm, flood and water damage</li>
-                <li>Earthquake</li>
+                <li>Earthquake – additional Policy applicable</li>
             </ul>
             Do you want to add additional package ?
             </p>
 
             <input type="checkbox" name="rsmdcc" value="1"> Riot, Strike, Malicious Damage & Civil Commotion<br/><br/>
+            <input type="checkbox" name="dlv" value="1" v-model="earthquake"> Removal of Debris, Landslide/Landslip, Vehicle Impact<br/><br/>
             <input type="checkbox" name="flood" value="1"> Typhoon, storm, flood and water damage<br/><br/>
             <input type="checkbox" name="earthquake" value="1" v-model="earthquake"> Earthquake<br/><br/>
+
             <div v-if="earthquake">
                 Construction Type<br/>
                 <select name="eq_type">
