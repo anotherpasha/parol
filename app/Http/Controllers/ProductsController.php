@@ -31,7 +31,7 @@ class ProductsController extends Controller
 
     public function datatableList()
     {
-        return $this->post->datatable($this->postTypeId, 'faq');
+        return $this->post->datatable($this->postTypeId, 'product');
     }
 
     public function create()
@@ -44,26 +44,59 @@ class ProductsController extends Controller
 
     public function store(StorePost $request)
     {
-        $this->post->store($request);
-        return backendRedirect('faq')->with(['message' => 'Data has been saved.']);
+        // dd($request->all());
+        $post = $this->post->create($this->postTypeId, $request->publish_date);
+        $this->post->addTranslation($post, $request->only(['title','excerpt','content','page_title','meta_description']));
+
+        $sections = [];
+        // dd($request->sections);
+        foreach ($request->sections as $lang => $items) {
+            // dd($items);
+            foreach ($items as $key => $item) {
+                $type = $item['type'];
+                $title = $item['title'];
+                if ($type == 'plain') {
+                    $content = isset($item['description']) ? $item['description'] : '';
+                } else {
+                    $content = isset($item['keypairs']) ? json_encode($item['keypairs']) : '';
+                }
+                if ($content != '') {
+                    $sections[] = [
+                        'lang' => $lang,
+                        'title' => $title,
+                        'type' => $type,
+                        'content' => $content
+                    ];
+                }
+            }
+        }
+        $this->post->addProductSection($post, $sections);
+
+        return backendRedirect('product')->with(['message' => 'Data has been saved.']);
     }
 
     public function edit(PostModel $post)
     {
         $data['pageTitle'] = 'Edit Product';
-        $data['post'] = $post->load('translations');
+        $data['post'] = $post->load('translations')->load('metas')->load('productSections');
+        $data['isProduct'] = true;
+        $sections = '';
+        if ($data['post']->productSections->count()) {
+            $sections = $data['post']->productSections->toJson();
+        }
+        $data['sections'] = $sections;
         return view('admin.products.edit', $data);
     }
 
     public function update(StorePost $request, PostModel $post)
     {
         $this->post->update($request, $post);
-        return backendRedirect('faq')->with(['message' => 'Data has been updated.']);
+        return backendRedirect('product')->with(['message' => 'Data has been updated.']);
     }
 
     public function delete(PostModel $post)
     {
         $post->delete();
-        return backendRedirect('faq')->with(['message' => 'Data has been deleted.']);
+        return backendRedirect('product')->with(['message' => 'Data has been deleted.']);
     }
 }

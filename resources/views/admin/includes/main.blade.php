@@ -18,25 +18,9 @@
                 <textarea class="uk-input textarea uk-width-1-1" name="content[{{ $lang }}]">@if(old('content')[$lang] != ''){!! old('content')[$lang] !!}@endif</textarea>
             </div>
 
-            <div class="uk-margin-small">
-                <button class="uk-button uk-button-default" type="button"
-                    @click="addSection('plain', '{{ $lang }}')">Add Plain Section</button>
-                <button class="uk-button uk-button-default" type="button"
-                    @click="addSection('keypair', '{{ $lang }}')">Add Keypair Section</button>
-                <div class="uk-margin-small uk-card" v-for="(section, index) in sectionList">
-                    <a uk-close @click="removeSection(index)"></a>
-                    <div class="uk-margin-small">
-                        <input class="uk-input uk-width-1-1" type="text"
-                            :name="`section_title[${section.lang}][]`"
-                            v-model="sectionList[index].title">
-                    </div>
-                    <div class="uk-margin-small" v-if="section.type == 'plain'">
-                        <wysiwyg v-model="sectionList[index].description" />
-                    </div>
-                    <keypairsection v-if="section.type == 'keypair'" />
-                </div>
-                @{{ sectionList }}
-            </div>
+            @if(isset($isProduct) && $isProduct)
+                @include('admin.includes.product')
+            @endif
 
             <ul uk-accordion="multiple: true" class="uk-margin-top">
                 <li class="">

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePost;
 use App\Models\Post as PostModel;
-use App\Services\Post;
+use App\Services\Page;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -12,15 +12,15 @@ class PagesController extends Controller
     /**
      * @var Post
      */
-    private $post;
+    private $page;
     protected $postTypeId = 2;
 
     /**
      * PostsController constructor.
      */
-    public function __construct(Post $post)
+    public function __construct(Page $page)
     {
-        $this->post = $post;
+        $this->page = $page;
     }
 
     public function index()
@@ -31,7 +31,7 @@ class PagesController extends Controller
 
     public function datatableList()
     {
-        return $this->post->datatable($this->postTypeId, 'pages');
+        return $this->page->datatable($this->postTypeId, 'pages');
     }
 
     public function create()
@@ -43,7 +43,7 @@ class PagesController extends Controller
 
     public function store(StorePost $request)
     {
-        $this->post->store($request);
+        $this->page->store($request);
         return backendRedirect('pages')->with(['message' => 'Data has been saved.']);
     }
 
@@ -56,7 +56,7 @@ class PagesController extends Controller
 
     public function update(StorePost $request, PostModel $post)
     {
-        $this->post->update($request, $post);
+        $this->page->update($request, $post);
         return backendRedirect('pages')->with(['message' => 'Data has been updated.']);
     }
 

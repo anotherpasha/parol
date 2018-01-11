@@ -30,6 +30,10 @@
 
             </div>
 
+            @if(isset($isProduct) && $isProduct)
+                @include('admin.includes.product')
+            @endif
+
             <ul uk-accordion="multiple: true">
                 <li class="">
                     <h5 class="uk-accordion-title">Excerpt</h5>

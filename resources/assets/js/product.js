@@ -15,29 +15,78 @@ const app = new Vue({
     },
 
     data: {
-        sectionList: []
+        sectionList: {
+            en: [],
+            id: []
+        }
     },
 
     mounted() {
+        if (productSections != '') {
+            this.parseExistingSections(productSections);
+        }
     },
 
     methods: {
         addSection(type, lang) {
             const section = {
                 type,
-                lang,
                 title:'',
-                description:''
+                description:'',
+                keypairList: []
             };
             console.log(section);
-            this.sectionList.push(section);
+            this.sectionList[lang].push(section);
         },
-        removeSection(index) {
-            // console.log(this.sectionList.length);
-            if (this.sectionList.length > 0) {
+        removeSection(index, lang) {
+            if (this.sectionList[lang].length > 0) {
                 console.log(index);
-                this.sectionList.splice(index, 1);
+                this.sectionList[lang].splice(index, 1);
             }
+        },
+
+        addKeypair(index, lang) {
+            const keypair = {
+                key: '',
+                value: ''
+            };
+            this.sectionList[lang][index]['keypairList'].push(keypair);
+        },
+        removeKeypair(index, lang, kIndex) {
+            if (this.sectionList[lang][index]['keypairList'].length > 0) {
+                this.sectionList[lang][index]['keypairList'].splice(kIndex, 1);
+            }
+        },
+
+        parseExistingSections(sections) {
+            let vm = this;
+            sections.forEach(function(sec) {
+                if (sec.type == 'plain') {
+                    const section = {
+                        title: sec.title,
+                        type: sec.type,
+                        description: sec.content
+                    };
+                    vm.sectionList[sec.locale].push(section);
+                } else {
+                    let parsedContent = JSON.parse(sec.content);
+                    let keypairList = [];
+                    parsedContent.forEach(function(ct) {
+                        const keypair = {
+                            key: ct.title,
+                            value: ct.description
+                        };
+                        keypairList.push(keypair);
+                    });
+                    const section = {
+                        title: sec.title,
+                        type: sec.type,
+                        description: '',
+                        keypairList
+                    }
+                    vm.sectionList[sec.locale].push(section);
+                }
+            });
         }
     },
 

@@ -3,10 +3,18 @@
 namespace App\Services;
 
 use App\Models\Post as PostModel;
+use App\Services\Post;
 use Carbon\Carbon;
 
 class Page
 {
+    protected $post;
+
+    public function __construct(Post $post)
+    {
+        $this->post = $post;
+    }
+
     use DatatableParameters, Sluggable;
 
     protected $baseUrl = 'pages';
@@ -34,49 +42,19 @@ class Page
 
     public function store($request)
     {
-        $user = auth()->user();
-        $post = \App\Models\Post::create([
-            'slug' => '',
-            'post_type_id' => $request->post_type_id,
-            'parent_id' => $request->has('parent_id') ? $request->parent_id : 0,
-            'publish_date' => Carbon::createFromFormat('d/m/Y', $request->publish_date)->format('Y-m-d'),
-            'created_by_id' => $user->id,
-            'created_by' => $user->name
-        ]);
+        $post = $this->post->create($this->postTypeId, $request->publish_date);
 
-        $sluggedTitle = '';
-        foreach (getTransOptions() as $lang => $details) {
-            $title = $request->title[$lang];
-            $excerpt = $request->excerpt[$lang];
-            $content = $request->content[$lang];
-            $pageTitle = $request->page_title[$lang];
-            $metaDesc = $request->meta_description[$lang];
+        $this->post->addTranslation($post, $request->only(['title','excerpt','content','page_title','meta_description']));
 
-            $excerpt = $this->generateExcerpt($excerpt, $content);
+        $metas = [
+            'testkey' => [
+                'en' => 'testkey en',
+                'id' => 'testkey id'
+            ]
+        ];
+        $this->post->addMeta($post, $metas);
 
-            if ($lang == getDefaultLocale()) {
-                $sluggedTitle = $title;
-            } else {
-                $sluggedTitle = $sluggedTitle == '' ? $title : $sluggedTitle;
-            }
-            $title = ($title == '') ? $request->title[getDefaultLocale()] . ' - ['. $lang .']' : $title;
-
-            $post->addTranslation([
-                'locale' => $lang,
-                'title' => $title,
-                'excerpt' => $excerpt,
-                'content' => $content,
-                'page_title' => $pageTitle,
-                'meta_description' => $metaDesc
-            ]);
-        }
-
-        $slug = $this->generateSlug($sluggedTitle, \App\Models\Post::class);
-        $post->slug = $slug;
-        $post->save();
-
-        return $post;
-
+        // return $post;
     }
 
     public function update($request, $post)

@@ -18,6 +18,69 @@ class CalculatorsController extends Controller
         return view('frontend.calculators.index');
     }
 
+    public function calculator()
+    {
+        $data['types'] = EqConstructionType::all();
+        $data['zipcodes'] = EqZipcode::take(100)->get();
+        return view('frontend.calculators.calculator', $data);
+    }
+
+    public function calculatorResult(Request $request)
+    {
+        $constType = '';
+        $constClass = '';
+        // apartment
+        if ($request->building_type == 1) {
+            $constClass = 1;
+            $floor = $request->floor;
+            if ($floor < 6) {
+                $constType = 1;
+            } else if ($floor >= 6 && $floor < 18) {
+                $constType = 2;
+            } else if ($floor >= 18 && $floor < 24) {
+                $constType = 3;
+            } else {
+                $constType = 4;
+            }
+        } else {
+            $constClass = 1;
+            $constType = 6;
+            $wood = $request->wood_element;
+            if ($wood) {
+                $constClass = 2;
+            }
+        }
+
+        $rsmdcc = $request->has('rsmdcc') ? 0.025 : 0;
+
+        $building = $request->has('building_value') ? $request->building_value : 0;
+        $content = $request->has('content_value') ? $request->content_value : 0;
+        $tsi = $building + $content;
+
+        $flexa = $this->calculateFlexa($tsi, $constType, $constClass, $rsmdcc, 0);
+
+        $flood = 0;
+        $eq = 0;
+        $zipcode = $request->zipcode;
+
+        if ($request->has('flood')) {
+            $flood = $this->calculateFlood($tsi, $zipcode);
+        }
+
+        if ($request->has('earthquake')) {
+            $type = $request->eq_type;
+            $eq = $this->calculateEarthquake($tsi, $type, $zipcode);
+        }
+
+        $data['name'] = $request->name;
+        $data['flexa'] = $flexa;
+        $data['flood'] = $flood;
+        $data['eq'] = $eq;
+        $data['package'] = $request->package;
+
+        return view('frontend.calculators.calculator-result', $data);
+    }
+
     public function flexa()
     {
         $data['types'] = FlConstructionType::all();

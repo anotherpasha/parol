@@ -27,6 +27,8 @@ Route::get('/payment', 'FrontendController@payment');
 Route::post('/payment', 'FrontendController@paymentDetail');
 Route::get('/claim', 'FrontendController@claim');
 Route::post('/claim', 'FrontendController@postClaim');
+Route::get('/calculator', 'CalculatorsController@calculator');
+Route::post('/calculator', 'CalculatorsController@calculatorResult');
 Route::get('/calculators', 'CalculatorsController@index');
 Route::get('/calculator/flexa', 'CalculatorsController@flexa');
 Route::post('/calculator/flexa', 'CalculatorsController@flexaResult');

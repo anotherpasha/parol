@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Models\PostMeta;
+use App\Models\PostProductSection;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -11,6 +13,16 @@ class Post extends Model
     public function translations()
     {
         return $this->hasMany(PostTranslation::class);
+    }
+
+    public function metas()
+    {
+        return $this->hasMany(PostMeta::class);
+    }
+
+    public function productSections()
+    {
+        return $this->hasMany(PostProductSection::class);
     }
 
     public function localeTranslations($locale = '')
@@ -26,7 +38,16 @@ class Post extends Model
 
     public function addTranslation($translation)
     {
-        $translation = $this->translations()->create($translation);
-        return $translation;
+        return $this->translations()->create($translation);
+    }
+
+    public function addMeta($meta)
+    {
+        return $this->metas()->create($meta);
+    }
+
+    public function addProductSection($section)
+    {
+        return $this->productSections()->create($section);
     }
 }

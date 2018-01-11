@@ -17,6 +17,8 @@
     export default {
         name: 'keypairsection',
 
+        props: [ 'lang', 'index' ],
+
         mounted() {
             console.log('keypair mounted.')
         },

@@ -11,6 +11,79 @@ class Post
 
     protected $baseUrl = 'posts';
 
+    public function create($postTypeId, $publishDate)
+    {
+        $user = auth()->user();
+        return PostModel::create([
+            'slug' => '',
+            'post_type_id' => $postTypeId,
+            'parent_id' => 0,
+            'publish_date' => Carbon::createFromFormat('d/m/Y', $publishDate)->format('Y-m-d'),
+            'created_by_id' => $user->id,
+            'created_by' => $user->name
+        ]);
+    }
+
+    public function addTranslation($post, $request)
+    {
+        $sluggedTitle = '';
+        foreach (getTransOptions() as $lang => $details) {
+            $title = $request['title'][$lang];
+            $excerpt = $request['excerpt'][$lang];
+            $content = $request['content'][$lang];
+            $pageTitle = $request['page_title'][$lang];
+            $metaDesc = $request['meta_description'][$lang];
+
+            $excerpt = $this->generateExcerpt($excerpt, $content);
+
+            if ($lang == getDefaultLocale()) {
+                $sluggedTitle = $title;
+            } else {
+                $sluggedTitle = $sluggedTitle == '' ? $title : $sluggedTitle;
+            }
+            $title = ($title == '') ? $request['title'][getDefaultLocale()] . ' - ['. $lang .']' : $title;
+
+            $post->addTranslation([
+                'locale' => $lang,
+                'title' => $title,
+                'excerpt' => $excerpt,
+                'content' => $content,
+                'page_title' => $pageTitle,
+                'meta_description' => $metaDesc
+            ]);
+        }
+
+        $slug = $this->generateSlug($sluggedTitle, PostModel::class);
+        $post->slug = $slug;
+        $post->save();
+    }
+
+    public function addMeta($post, $metas)
+    {
+        foreach ($metas as $key => $value) {
+            $meta = $post->addMeta(['meta_key' => $key]);
+            foreach (getTransOptions() as $lang => $details) {
+                $metaValue = $value[$lang];
+                $meta->addTranslation([
+                    'locale' => $lang,
+                    'value' => $metaValue
+                ]);
+            }
+        }
+    }
+
+    public function addProductSection($post, $sections)
+    {
+        foreach ($sections as $section) {
+            $post->addProductSection([
+                'locale' => $section['lang'],
+                'title' => $section['title'],
+                'type' => $section['type'],
+                'content' => $section['content']
+            ]);
+        }
+    }
+
     public function datatable($postTypeId, $baseUrl)
     {
         $this->baseUrl = $baseUrl;

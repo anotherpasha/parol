@@ -14,4 +14,5 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/media.js', 'public/js')
     .js('resources/assets/js/dashboard.js', 'public/js')
     .js('resources/assets/js/product.js', 'public/js')
+    .js('resources/assets/js/calculator.js', 'public/js')
     .sass('resources/assets/sass/app.scss', 'public/css');;

@@ -54,6 +54,9 @@
 @endsection
 
 @section('page-level-scripts')
+    <script>
+        var productSections = '';
+    </script>
     <script src="{!! asset('assets/js/lib/tinymce/tinymce.min.js') !!}"></script>
     <!-- <script src="{!! asset('assets/js/lib/plupload/plupload.full.min.js') !!}"></script> -->
     <script src="{!! asset('assets/js/editor.js') !!}"></script>

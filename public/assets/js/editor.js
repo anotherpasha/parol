@@ -9,5 +9,5 @@ tinymce.init({
     convert_urls: false,
     force_p_newlines : false,
     forced_root_block : '',
-    height : "300"
+    height : "200"
 });
