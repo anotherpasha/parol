@@ -86,7 +86,7 @@
             <hr/>
             <div>
                 Choose Package <br/>
-                <select name="package" v-if="buildingStatus == 1">
+                <select name="package" v-if="buildingStatus == 1" v-model="package">
                     <option value="both">Both (Building + Contents)</option>
                     <option value="building">Building</option>
                     <option value="content">Contents</option>
@@ -100,10 +100,11 @@
             <div>
                 <span v-if="buildingStatus == 1">How much is your building value?</span>
                 <span v-if="buildingStatus == 2">How much is your rented building value?</span> <br/>
-                <input type="text" name="building_value" v-model="building_value"><br/><br/>
+                <input type="text" name="building_value"
+                    v-model="building_value"><br/><br/>
             </div>
 
-            <div>
+            <div v-if="package == 'both' || package == 'content'">
                 How much is your content value? <br/>
                 <input type="text" name="content_value"
                     v-model="content_value"
