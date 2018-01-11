@@ -113,7 +113,7 @@
 
             <hr/>
 
-            <p>The standard coverage covers the damage from Fire, Lightning, Explosion, Impact of Falling Aircraft, Smoke. Please select below options to add extended coverage.
+            <p>The standard coverage covers the damage from Fire, Lightning, Explosion, Impact of Falling Aircraft, Smoke. Please select below options to add extended coverage.</p>
             <!-- <ul>
                 <li>RSMDCC - Riot, Strike, Malicious Damage & Civil Commotion</li>
                 <li>DLV - Removal of Debris, Landslide/Landslip, Vehicle Impact</li>
