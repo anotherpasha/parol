@@ -15,7 +15,7 @@
     @if ($eq > 0)
     <p>Earthquake : {!! $eq !!}</p>
     @endif
-    <p><b>Total : {!! number_format($flexa + $flood + $eq, 0, ',', '.'); !!}</b></p>
+    <p><b>Your estimated premium per annum will be IDR : {!! number_format($flexa + $flood + $eq, 0, ',', '.'); !!}</b></p>
 
 
 </body>
