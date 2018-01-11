@@ -114,14 +114,14 @@
             <hr/>
 
             <p>The standard coverage covers the damage from Fire, Lightning, Explosion, Impact of Falling Aircraft, Smoke. Would you like to extend the coverage to cover below:
-            <ul>
+            <!-- <ul>
                 <li>RSMDCC - Riot, Strike, Malicious Damage & Civil Commotion</li>
                 <li>DLV - Removal of Debris, Landslide/Landslip, Vehicle Impact</li>
                 <li>Typhoon, storm, flood and water damage</li>
                 <li>Earthquake – additional Policy applicable</li>
             </ul>
             Do you want to add additional package ?
-            </p>
+            </p> -->
 
             <input type="checkbox" name="rsmdcc" value="1"> Riot, Strike, Malicious Damage & Civil Commotion<br/><br/>
             <input type="checkbox" name="dlv" value="1" v-model="earthquake"> Removal of Debris, Landslide/Landslip, Vehicle Impact<br/><br/>
