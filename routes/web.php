@@ -18,8 +18,12 @@ use Illuminate\Support\Facades\Storage;
 $adminPrefix = config('misc.admin-prefix');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend/home');
 });
+Route::get('/home', function () {
+    return view('frontend/home');
+});
+
 
 Route::get('/registration', 'FrontendController@registration');
 Route::post('/registration', 'FrontendController@postRegistration');

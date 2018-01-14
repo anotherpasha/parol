@@ -1,0 +1,62 @@
+.half-center-transparent--top {
+  position:relative;
+    &:after {
+      content: '';
+      display:block;
+      z-index: 1000;
+      position:absolute;
+      padding: 25px 0;
+      top: -40px;
+      width: 100%;
+      left: 0;
+      background: url('/images/half-circle-decor.png')no-repeat center center;
+      background-size:100%;
+    }
+}
+.half-center-scroll-icon {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  &.bottom {
+    bottom: -35px;
+  }
+  &.top {
+    top: -35px;
+  }
+
+    .scroll {
+      display: inline-block;
+      padding: 10px;
+      background-color: #fff;
+      @include vendor((border-radius: 50%), webkit moz ms o);
+    }
+}
+.icon-scroll {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  text-align: center;
+}
+
+section {
+  background: #fff;
+  &.default {
+    padding: 30px 0;
+  }
+  &.home-contact {
+    background:  url('/images/decoration-call.png')no-repeat bottom left, #fff;
+  }
+  &.extra-padding {
+    padding: 50px 0;
+  }
+  &.grey {
+    background-color: #f7f7f7;
+  }
+  &.with-scroll-bottom {
+    padding-bottom: 70px;
+  }
+
+}

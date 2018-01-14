@@ -1,7 +1,7 @@
 {
     "/js/product.js": "/js/product.js",
-    "/js/media.js": "/js/media.js",
-    "/css/app.css": "/css/app.css",
+    "/js/app.js": "/js/app.js",
+    "/css/style.css": "/css/style.css",
     "/js/dashboard.js": "/js/dashboard.js",
     "/js/calculator.js": "/js/calculator.js"
 }

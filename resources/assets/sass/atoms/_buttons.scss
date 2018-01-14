@@ -1,0 +1,20 @@
+.btn-parolamas {
+  background: $brand-primary;
+  color: #fff;
+  @include vendor((border-radius: 30px), webkit moz ms o);
+  @include vendor((transition: all 400ms), webkit moz ms o);
+  text-transform: uppercase;
+  font-family: $brand-font-medium, sans-serif;
+  &:hover {
+    background: scale-color($brand-primary, $lightness: -10%);
+
+  }
+}
+.btn-md {
+  font-size: 12px;
+  padding: 15px;
+  &.min-width {
+    min-width: 120px
+  }
+
+}

@@ -1,0 +1,38 @@
+$brand-darker-grey: #3e3e3e;
+footer {
+  padding-top: 25px;
+  background-color: $brand-darker-grey;
+   .menu-list {
+     li {
+       margin-bottom: 10px;
+       &:last-child {
+         margin-bottom: 0;
+       }
+       &.sub-menu {
+         a {
+           color: scale-color(#fff, $lightness: -25%);
+         }
+       }
+       a {
+         color: #fff;
+         font-size: 12px;
+         &:hover {
+            color: scale-color(#fff, $lightness: -20%);
+         }
+       }
+     }
+   }
+   .logo-list {
+     dt {
+       margin-bottom: 15px;
+
+     }
+   }
+   .copyright {
+     margin-top: 40px;
+     background: #6b6b6b;
+     padding: 10px;
+     text-align: center;
+     color: scale-color(#fff, $lightness: -20%);
+   }
+}

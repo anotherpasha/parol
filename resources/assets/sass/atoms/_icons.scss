@@ -1,0 +1,35 @@
+.icon {
+  display: inline-block;
+  background: url('/images/icon-sprites.png');
+  background-repeat: no-repeat;
+}
+.icon-call {
+  width: 24px;
+  height: 24px;
+ background-position: 0 82.291667%; background-size: 116.666667%;
+ float: left;
+}
+.mail { background-position: 0 0%; background-size: 100%; }
+.phone-blue { background-position: 0 22.580645%; background-size: 100%; }
+.locs { background-position: 0 53.846154%; background-size: 112%; }
+.phone { background-position: 0 82.291667%; background-size: 116.666667%; }
+.globe { background-position: 0 100%; background-size: 155.555556%; }
+
+.product-icon {
+  display: inline-block;
+  background: url('/images/icon-produk.png');
+  background-repeat: no-repeat;
+  width: 63px;
+  height: 63px;
+    &.home {
+      background-position: 0 0;
+    }
+    &.goods {
+      background-position:  -63px 0;
+    }
+    &.goods-home {
+      width: 75px;
+      background-position: -126px 0 ;
+    }
+
+}

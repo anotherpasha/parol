@@ -1,0 +1,63 @@
+// Fonts
+@font-face {
+    font-family: 'GothamMedium';
+    src: url('/assets/fonts/GothamMedium.woff2') format('woff2'),
+        url('/assets/fonts/GothamMedium.woff') format('woff'),
+        url('/assets/fonts/GothamMedium.ttf') format('truetype'),
+        url('/assets/fonts/GothamMedium.svg#GothamMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('/assets/fonts/GothamBold.woff2') format('woff2'),
+        url('/assets/fonts/GothamBold.woff') format('woff'),
+        url('/assets/fonts/GothamBold.ttf') format('truetype'),
+        url('/assets/fonts/GothamBold.svg#GothamBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamUltra';
+    src: url('/assets/fonts/GothamUltra.woff2') format('woff2'),
+        url('/assets/fonts/GothamUltra.woff') format('woff'),
+        url('/assets/fonts/GothamUltra.ttf') format('truetype'),
+        url('/assets/fonts/GothamUltra.svg#GothamUltra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: $brand-font-bold;
+  color: #fff;
+}
+p {
+  font-family: $brand-font-regular;
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+hr{
+    &.primary {
+      height: 7px;
+      width: 73px;
+      background-color: $brand-primary;
+      border: none;
+        &.small {
+          height: 3px;
+        }
+    }
+    &.left {
+      margin-left: 0;
+    }
+    &.right {
+      margin-right: 0;
+    }
+}
+
+h1 {
+  font-size: 43px;
+}

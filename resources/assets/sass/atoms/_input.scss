@@ -1,0 +1,27 @@
+input{
+  border: none;
+  &.rounded {
+    @include vendor((border-radius: 50px), webkit moz ms o);
+  }
+  &:focus {
+  }
+  outline: none;
+
+  &.grey {
+    background-color: #dfdfdf;
+  }
+  &.form-control {
+    border: none;
+    border-radius: 10px;
+  }
+}
+.input-group-addon {
+  background: #d2d2d2;
+  border: none;
+  color: #fff;
+  font-size: 19px;
+  &:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}

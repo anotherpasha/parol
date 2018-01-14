@@ -1,0 +1,43 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 100;
+  .brand {
+    padding: 15px 0;
+    display: inline-block;
+  }
+    .navbar-primary {
+      display: flex;
+      padding: 15px 0;
+      .left-content {
+        width: 15%;
+      }
+      .right-content {
+        width: 85%;
+      }
+      .wrapper {
+        width: 100%;
+        display: inline-block;
+      }
+
+    .nav-link {
+      float: right;
+      li {
+        a {
+          padding: 10px;
+          color: #fff;
+          &:hover {
+            text-decoration: none;
+            color: $brand-primary;
+          }
+        }
+      }
+      form {
+        display: inline-block;
+      }
+    }
+  }
+}
