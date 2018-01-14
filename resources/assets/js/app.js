@@ -8,6 +8,7 @@
 require('./bootstrap');
 import $ from "jquery";
 import 'eonasdan-bootstrap-datetimepicker';
+import 'bootstrap-select';
 
 
 /**
@@ -24,4 +25,9 @@ $(document).ready(()=> {
   $('#hourpicker').datetimepicker({
     format: "LT"
   });
+  $('.selectpicker').selectpicker({
+    style: 'btn-info',
+    size: 4
+  });
+
 });

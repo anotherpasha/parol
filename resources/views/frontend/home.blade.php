@@ -175,7 +175,13 @@
               <div class=" col-xs-12">
                 <div class="form-group">
                   <label >Jenis Asuransi</label>
-                  <input class="form-control grey" type="text" name="" value="">
+                  <div class="select-custom ">
+                    <select class="selectpicker">
+                      <option>Asuransi Rumah</option>
+                      <option>Asuransi Harta & Benda</option>
+                      <option>Asuransi Rumah & Harta Benda</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 

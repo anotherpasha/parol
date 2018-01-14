@@ -25,3 +25,28 @@ input{
     border-bottom-left-radius: 10px;
   }
 }
+
+.select-custom {
+  .bootstrap-select {
+    width: 100% !important;
+  }
+  .dropdown-toggle {
+      background-color: #dfdfdf;
+      @include vendor((border-radius: 10px), webkit moz ms o);
+      border: none;
+  }
+  .bs-caret {
+    background: #d2d2d2;
+    display: inline-block;
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    top: 0;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+
+
+}
