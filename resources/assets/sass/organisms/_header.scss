@@ -1,10 +1,22 @@
 header {
   position: absolute;
   top: 0;
+
   left: 0;
   width: 100%;
   padding: 10px;
   z-index: 100;
+  .header-info {
+    float: right;
+    li {
+      display: inline-block;
+      padding: 5px 10px;
+      span {
+        float: left;
+        margin-right: 5px;
+      }
+     }
+  }
   .brand {
     padding: 15px 0;
     display: inline-block;

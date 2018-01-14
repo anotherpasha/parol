@@ -45,8 +45,15 @@ input{
     right: 0;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    .caret {
+      background: #fff;
+    }
   }
 
+}
 
-
+.select-lang {
+  background-color: transparent;
+  border: none;
+  color: #fff;
 }

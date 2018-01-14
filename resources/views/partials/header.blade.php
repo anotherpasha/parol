@@ -8,10 +8,11 @@
         </div>
         <div class="right-content">
             <div class="wrapper">
-                <ul class="undotted-list inline  nav-link ">
-                    <li>1500 - 554</li>
+                <ul class="undotted-list inline  header-info ">
+                    <li class="color-white"><span class="icon-call-small"></span>&nbsp;&nbsp;1500 - 554</li>
                     <li>
-                        <select class="" name="">
+                        <span class="icon-globe"></span>
+                        <select class="select-lang" name="">
                           <option value="idn">IDN</option>
                           <option value="eng">ENG</option>
                         </select>

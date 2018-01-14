@@ -9051,6 +9051,10 @@ select.selectpicker {
   color: #000498;
 }
 
+.color-white {
+  color: #fff;
+}
+
 .color-dark-grey {
   color: #515151;
 }
@@ -9219,6 +9223,16 @@ input.form-control {
   border-bottom-right-radius: 10px;
 }
 
+.select-custom .bs-caret .caret {
+  background: #fff;
+}
+
+.select-lang {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+}
+
 .half-center-transparent--top {
   position: relative;
 }
@@ -9305,6 +9319,22 @@ section.with-scroll-bottom {
   float: left;
 }
 
+.icon-globe {
+  width: 17px;
+  height: 17px;
+  background: url("/images/icon-sprites-header.png");
+  background-position: 0 0;
+  float: left;
+}
+
+.icon-call-small {
+  width: 17px;
+  height: 17px;
+  float: left;
+  background: url("/images/icon-sprites-header.png");
+  background-position: 0 -17px;
+}
+
 .mail {
   background-position: 0 0%;
   background-size: 100%;
@@ -9369,6 +9399,20 @@ header {
   width: 100%;
   padding: 10px;
   z-index: 100;
+}
+
+header .header-info {
+  float: right;
+}
+
+header .header-info li {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+header .header-info li span {
+  float: left;
+  margin-right: 5px;
 }
 
 header .brand {

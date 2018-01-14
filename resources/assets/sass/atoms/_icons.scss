@@ -9,6 +9,22 @@
  background-position: 0 82.291667%; background-size: 116.666667%;
  float: left;
 }
+
+.icon-globe {
+  width: 17px;
+  height: 17px;
+  background: url('/images/icon-sprites-header.png');
+  background-position: 0 0;
+  float: left;
+}
+.icon-call-small {
+  width: 17px;
+  height: 17px;
+  float: left;
+  background: url('/images/icon-sprites-header.png');
+  background-position: 0 -17px;
+}
+
 .mail { background-position: 0 0%; background-size: 100%; }
 .phone-blue { background-position: 0 22.580645%; background-size: 100%; }
 .locs { background-position: 0 53.846154%; background-size: 112%; }
