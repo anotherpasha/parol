@@ -1,0 +1,31 @@
+.tabs-navigation {
+  background-color: $brand-primary;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  &:before, &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+  .nav-tabs
+  {
+    border-bottom: none;
+   li {
+      a {
+        @include vendor((border-radius: 0), webkit moz ms o);
+        padding: 10px 50px;
+        color: #fff;
+        font-family: $brand-font-regular;
+      }
+      &.active {
+        a {
+          color: $brand-primary;
+
+        }
+      }
+    }
+  }
+}

@@ -6,9 +6,18 @@
   text-transform: uppercase;
   font-family: $brand-font-medium, sans-serif;
   &:hover {
-    background: scale-color($brand-primary, $lightness: -10%);
-
+    background: scale-color($brand-primary, $lightness: 10%);
+    color: scale-color(#fff, $lightness: -10%);
   }
+}
+.btn-parolamas-secondary {
+  @extend .btn-parolamas;
+  background: $pallete-dark-grey;
+  &:hover {
+    background: scale-color($pallete-dark-grey, $lightness: 10%);
+  }
+
+
 }
 .btn-md {
   font-size: 12px;
@@ -17,4 +26,13 @@
     min-width: 120px
   }
 
+}
+
+.button-group-parolamas {
+  display: flex;
+  margin-top: 20px;
+    .btn {
+      width: 43%;
+      margin: 0 1.5%;
+    }
 }

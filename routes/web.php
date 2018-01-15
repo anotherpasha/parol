@@ -24,6 +24,11 @@ Route::get('/home', function () {
     return view('frontend/home');
 });
 
+Route::get('/product', function () {
+    return view('frontend/product');
+});
+
+
 
 Route::get('/registration', 'FrontendController@registration');
 Route::post('/registration', 'FrontendController@postRegistration');

@@ -3,10 +3,17 @@ ol , li{
   margin: 0;
   }
 li {
-  font-family: $brand-font-regular;
+  font-family: $brand-font-book;
 }
 .undotted-list {
   list-style: none;
+}
+ul.dotted-list{
+  margin: 0;
+  padding-left:15px ;
+  li {
+    margin-bottom: 10px;
+  }
 }
 
 .inline {
