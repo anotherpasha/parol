@@ -9,6 +9,14 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'GothamBook-Italic';
+    src: url('/assets/fonts/GothamBook-Italic.woff2') format('woff2'),
+        url('/assets/fonts/GothamBook-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'GothamBook';
     src: url('/assets/fonts/GothamBook.woff2') format('woff2'),
         url('/assets/fonts/GothamBook.woff') format('woff');
