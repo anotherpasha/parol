@@ -9051,6 +9051,10 @@ select.selectpicker {
   color: #000498;
 }
 
+.caps {
+  text-transform: uppercase;
+}
+
 .color-white {
   color: #fff;
 }
@@ -9275,7 +9279,7 @@ input.form-control {
 }
 
 .select-custom .bs-caret .caret {
-  background: #fff;
+  border-top-color: #fff;
 }
 
 .select-lang {
@@ -9512,6 +9516,40 @@ section.sub-page-banner.product {
 
 .tabs-navigation .nav-tabs li.active a {
   color: #000498;
+}
+
+.calculator-container {
+  width: 300px;
+  display: inline-block;
+  height: 245px;
+  -moz-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -moz-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #000498;
+  position: fixed;
+  top: 25%;
+  right: 0;
+  z-index: 1000;
+}
+
+.calculator-container .title {
+  -webkit-transform-origin: 37% 376%;
+  transform-origin: 37% 376%;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.calculator-container .content {
+  width: 86%;
+  margin-left: 43px;
+  background: #fff;
+  height: 100%;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  border-bottom: solid 10px #000498;
 }
 
 .summary-wrapper {

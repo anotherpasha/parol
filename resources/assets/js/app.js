@@ -30,4 +30,20 @@ $(document).ready(()=> {
     size: 4
   });
 
+
+// Tooggle sticky calculator
+  $('#calculator-toggle').click(()=> {
+    const $calculator = $('.calculator-container');
+    if($calculator.hasClass('active')) {
+      $calculator.removeClass('active');
+       $calculator.animate({
+        right: 0
+      });
+      return;
+    }
+    $calculator.addClass('active');
+    $calculator.animate({
+      right: '-20%'
+    }, 300);
+  })
 });
