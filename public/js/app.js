@@ -47926,6 +47926,11 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
       right: 0
     });
   });
+
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.panel-parolamas .panel-heading').click(function () {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.panel-parolamas .panel-heading').removeClass('active');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('active');
+  });
 });
 
 /***/ }),

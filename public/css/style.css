@@ -9370,6 +9370,12 @@ section.extra-padding {
   padding: 50px 0;
 }
 
+section.faq {
+  background: url("/images/decoration-people-chat.png") no-repeat bottom center, #fff;
+  background-size: 100%;
+  padding-bottom: 350px;
+}
+
 section.grey {
   background-color: #f7f7f7;
 }
@@ -9604,6 +9610,54 @@ section.sub-page-banner.about {
 .summary-wrapper .description {
   width: 75%;
   padding: 0 15px;
+}
+
+.panel {
+  background: transparent;
+}
+
+.panel-parolamas {
+  -webkit-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+}
+
+.panel-parolamas .panel-heading {
+  background: #efefef;
+  border-radius: 20px;
+}
+
+.panel-parolamas .panel-heading + .panel-collapse > .panel-body {
+  border-top: none;
+  padding-top: 0;
+}
+
+.panel-parolamas .panel-heading + .panel-collapse > .panel-body .panel-content {
+  border-left: solid 4px #000498;
+  padding: 10px 10px 0 10px;
+}
+
+.panel-parolamas .panel-title a {
+  font-size: 20px;
+  font-family: "GothamBold";
+}
+
+.panel-parolamas .panel-title a:active,
+.panel-parolamas .panel-title a:focus {
+  text-decoration: none;
+}
+
+.panel-parolamas .icon-panel {
+  width: 23px;
+  height: 14px;
+  margin-top: 5px;
+  float: right;
+  background: url("/images/icon-panel-down.png") no-repeat top left;
+}
+
+.panel-parolamas .panel-heading.active .icon-panel {
+  background: url("/images/icon-panel-up.png") no-repeat top left;
 }
 
 header {

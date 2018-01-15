@@ -49,8 +49,14 @@ section {
   &.home-contact {
     background:  url('/images/decoration-call.png')no-repeat bottom left, #fff;
   }
+
   &.extra-padding {
     padding: 50px 0;
+  }
+  &.faq {
+    background:  url('/images/decoration-people-chat.png')no-repeat bottom center, #fff;
+    background-size: 100%;
+    padding-bottom: 350px;
   }
   &.grey {
     background-color: #f7f7f7;

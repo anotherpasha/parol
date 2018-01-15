@@ -46,5 +46,10 @@ $(document).ready(()=> {
      $calculator.animate({
       right: 0
     });
+  });
+
+  $('.panel-parolamas .panel-heading').click(function() {
+      $('.panel-parolamas .panel-heading').removeClass('active');
+      $(this).addClass('active');
   })
 });
