@@ -66,14 +66,15 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <dl class="card prodcut">
+                <dl class="card product">
                   <dt><span class="product-icon home"></span></dt>
                   <dt>
-                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi</br>Rumah</h4>
                     <hr class="primary small"/>
                   </dt>
-                  <dt>
-                    <p class="color-dark-grey">Perlindungan terhadap<br>tempat tinggal Anda</p>
+                  <dt class="description">
+                    <p class="color-dark-grey book">
+                        Perlindungan terhadap<br>tempat tinggal Anda</p>
                   </dt>
                   <dt>
                     <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
@@ -82,14 +83,17 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <dl class="card prodcut">
+                <dl class="card product">
                   <dt><span class="product-icon goods"></span></dt>
                   <dt>
-                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi<br/>Harta Benda</h4>
                     <hr class="primary small"/>
                   </dt>
-                  <dt>
-                    <p class="color-dark-grey">Perlindungan terhadap<br>tempat tinggal Anda</p>
+                  <dt class="description">
+                    <p class="color-dark-grey book">
+                      Asuransi perlindungan terhadap</br>
+                      harta benda di dalam rumah Anda
+                    </p>
                   </dt>
                   <dt>
                     <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
@@ -98,14 +102,17 @@
             </div>
 
             <div class="col-xs-12 col-md-4">
-                <dl class="card prodcut">
+                <dl class="card product">
                   <dt><span class="product-icon goods-home"></span></dt>
                   <dt>
-                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi Rumah </br> & Harta Benda</h4>
                     <hr class="primary small"/>
                   </dt>
-                  <dt>
-                    <p class="color-dark-grey">Perlindungan terhadap<br>tempat tinggal Anda</p>
+                  <dt class="description">
+                    <p class="color-dark-grey book">
+                      Asuransi perlindungan gabungan antara tempat tinggal Anda dan seluruh
+                      harta benda di dalam rumah Anda
+                    </p>
                   </dt>
                   <dt>
                     <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>

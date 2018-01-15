@@ -1,23 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="calculator-container">
-  <div class="title" id="calculator-toggle">
-    <h3 class="caps">Simulasi Premi <span class="glyphicon glyphicon-triangle-top"></span></h3>
-  </div>
-  <div class="content">
-    <label for="">Tipe Asuransi</label>
-    <div class="select-custom ">
-      <select class="selectpicker">
-        <option>Rumah</option>
-        <option>Harta & Benda</option>
-        <option>Rumah & Harta Benda</option>
-      </select>
-    </div>
-  </div>
 
-
-</div>
 <section class="sub-page-banner product">
   <div class="middler-wrapper">
     <div class="container">
@@ -283,5 +267,21 @@
   </div>
 
 </section>
+<div class="calculator-container">
+  <div class="title" id="calculator-toggle">
+    <h3 class="caps">Simulasi Premi <span class="glyphicon glyphicon-triangle-top"></span></h3>
+  </div>
+  <div class="content">
+    <label for="">Tipe Asuransi</label>
+    <div class="select-custom ">
+      <select class="selectpicker">
+        <option>Rumah</option>
+        <option>Harta & Benda</option>
+        <option>Rumah & Harta Benda</option>
+      </select>
+    </div>
+  </div>
 
+
+</div>
 @endsection

@@ -71,6 +71,11 @@ section {
         background: url('/images/banner-product.jpg')no-repeat center center;
         background-size: cover;
       }
+      &.about {
+        background: url('/images/banner-about.jpg')no-repeat center center;
+        background-size: cover;
+        height: 600px;
+      }
   }
 }
 .tab-content {

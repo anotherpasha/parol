@@ -77,3 +77,9 @@ hr{
 h1 {
   font-size: 43px;
 }
+blockquote {
+  border-left: none;
+  font-family: $brand-font-book-italic;
+  color: $brand-primary;
+  font-size: 22px;
+}

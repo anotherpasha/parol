@@ -9083,9 +9083,20 @@ select.selectpicker {
   margin-bottom: 0;
 }
 
+.m-t-20 {
+  margin-top: 20px;
+}
+
 @font-face {
   font-family: 'GothamMedium';
   src: url("/assets/fonts/GothamMedium.woff2") format("woff2"), url("/assets/fonts/GothamMedium.woff") format("woff"), url("/assets/fonts/GothamMedium.ttf") format("truetype"), url("/assets/fonts/GothamMedium.svg#GothamMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamBook-Italic';
+  src: url("/assets/fonts/GothamBook-Italic.woff2") format("woff2"), url("/assets/fonts/GothamBook-Italic.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -9151,6 +9162,13 @@ hr.right {
 
 h1 {
   font-size: 43px;
+}
+
+blockquote {
+  border-left: none;
+  font-family: "GothamBook-Italic";
+  color: #000498;
+  font-size: 22px;
 }
 
 .btn-parolamas,
@@ -9377,6 +9395,12 @@ section.sub-page-banner.product {
   background-size: cover;
 }
 
+section.sub-page-banner.about {
+  background: url("/images/banner-about.jpg") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
 .tab-content section {
   position: relative;
   padding: 60px 0;
@@ -9480,6 +9504,10 @@ section.sub-page-banner.product {
 
 .card.product {
   text-align: center;
+}
+
+.card.product .description {
+  min-height: 75px;
 }
 
 .tabs-navigation {
@@ -9706,5 +9734,13 @@ footer .copyright {
   padding: 10px;
   text-align: center;
   color: #cccccc;
+}
+
+.about-description-wrapper {
+  padding: 0 60px;
+}
+
+.about-description {
+  background: url("/images/decoration-men.png") no-repeat bottom left, #fff;
 }
 
