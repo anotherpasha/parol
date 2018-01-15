@@ -47916,14 +47916,15 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     if ($calculator.hasClass('active')) {
       $calculator.removeClass('active');
       $calculator.animate({
-        right: 0
-      });
+        right: '-20%'
+      }, 300);
+
       return;
     }
     $calculator.addClass('active');
     $calculator.animate({
-      right: '-20%'
-    }, 300);
+      right: 0
+    });
   });
 });
 

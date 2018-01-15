@@ -9529,7 +9529,7 @@ section.sub-page-banner.product {
   background-color: #000498;
   position: fixed;
   top: 25%;
-  right: 0;
+  right: -20%;
   z-index: 1000;
 }
 

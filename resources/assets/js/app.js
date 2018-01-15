@@ -36,14 +36,15 @@ $(document).ready(()=> {
     const $calculator = $('.calculator-container');
     if($calculator.hasClass('active')) {
       $calculator.removeClass('active');
-       $calculator.animate({
-        right: 0
-      });
+      $calculator.animate({
+        right: '-20%'
+      }, 300);
+
       return;
     }
     $calculator.addClass('active');
-    $calculator.animate({
-      right: '-20%'
-    }, 300);
+     $calculator.animate({
+      right: 0
+    });
   })
 });

@@ -38,7 +38,7 @@
   background-color: $brand-primary;
   position: fixed;
   top: 25%;
-  right: 0;
+  right: -20%;
   z-index: 1000;
     .title {
       @include vendor((transform-origin:37% 376%),webkit moz ms o);

@@ -69,7 +69,7 @@
                 <dl class="card prodcut">
                   <dt><span class="product-icon home"></span></dt>
                   <dt>
-                    <h4 class="color-primary medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
                     <hr class="primary small"/>
                   </dt>
                   <dt>
@@ -85,7 +85,7 @@
                 <dl class="card prodcut">
                   <dt><span class="product-icon goods"></span></dt>
                   <dt>
-                    <h4 class="color-primary medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
                     <hr class="primary small"/>
                   </dt>
                   <dt>
@@ -101,7 +101,7 @@
                 <dl class="card prodcut">
                   <dt><span class="product-icon goods-home"></span></dt>
                   <dt>
-                    <h4 class="color-primary medium">Asuransi Rumah</h4>
+                    <h4 class="color-dark-grey medium">Asuransi Rumah</h4>
                     <hr class="primary small"/>
                   </dt>
                   <dt>
