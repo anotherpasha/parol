@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Media;
 use App\Models\PostMeta;
 use App\Models\PostProductSection;
 use Illuminate\Database\Eloquent\Model;
@@ -18,6 +19,11 @@ class Post extends Model
     public function metas()
     {
         return $this->hasMany(PostMeta::class);
+    }
+
+    public function medias()
+    {
+        return $this->belongsToMany(Media::class, 'post_has_medias');
     }
 
     public function productSections()

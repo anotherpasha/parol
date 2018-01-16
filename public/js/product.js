@@ -30306,13 +30306,26 @@ var app = new Vue({
         sectionList: {
             en: [],
             id: []
-        }
+        },
+        imageList: [],
+        nextPageUrl: '',
+        prevPageUrl: '',
+        image: '',
+        imageId: '',
+        file: ''
     },
 
     mounted: function mounted() {
+        console.log(productSections);
         if (productSections != '') {
             this.parseExistingSections(productSections);
         }
+
+        if (media != '') {
+            this.parseExistingMedia(media);
+        }
+
+        this.loadMedias('');
     },
 
 
@@ -30336,7 +30349,8 @@ var app = new Vue({
         addKeypair: function addKeypair(index, lang) {
             var keypair = {
                 key: '',
-                value: ''
+                value: '',
+                icon: ''
             };
             this.sectionList[lang][index]['keypairList'].push(keypair);
         },
@@ -30361,7 +30375,8 @@ var app = new Vue({
                     parsedContent.forEach(function (ct) {
                         var keypair = {
                             key: ct.title,
-                            value: ct.description
+                            value: ct.description,
+                            icon: ct.iconpath
                         };
                         keypairList.push(keypair);
                     });
@@ -30374,6 +30389,100 @@ var app = new Vue({
                     vm.sectionList[sec.locale].push(_section);
                 }
             });
+        },
+        parseExistingMedia: function parseExistingMedia(media) {
+            this.image = media.fullpath;
+            this.imageId = media.id;
+        },
+        uploadFile: function uploadFile(e) {
+            var vm = this;
+            var fileList = e.target.files || e.dataTransfer.files;
+            console.log(fileList);
+            if (fileList.length > 0) {
+                var formData = new FormData();
+                formData.append('file', fileList[0]);
+                console.log(formData);
+                axios.post('/tinymce/image-upload', formData).then(function (_ref) {
+                    var data = _ref.data;
+
+                    console.log(data);
+                    UIkit.tab('.image-tab').show(1);
+                    vm.imageList.push(data);
+                    vm.image = data.fullpath;
+                    vm.imageId = data.id;
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            }
+        },
+        nextMedia: function nextMedia() {
+            this.loadMedias(this.nextPageUrl);
+        },
+        prevMedia: function prevMedia() {
+            this.loadMedias(this.prevPageUrl);
+        },
+        loadMedias: function loadMedias(url) {
+            var vm = this;
+            var mediaUrl = url != '' ? url : '/tinymce/get-medias';
+            axios.get(mediaUrl).then(function (_ref2) {
+                var data = _ref2.data;
+
+                console.log(data);
+                var images = data.data;
+                vm.imageList = images;
+                vm.prevPageUrl = data.prev_page_url;
+                vm.nextPageUrl = data.next_page_url;
+                // console.log(data.prev_page_url == null);
+            }).catch(function (err) {
+                console.log(err);
+            });
+        },
+        selectImage: function selectImage(image) {
+            this.image = image.fullpath;
+            this.imageId = image.id;
+        },
+        submitImage: function submitImage(type) {
+            var content = '<img style="margin: 0px 10px; float: left;" src="' + this.image + '" alt="" />';
+            if (type == 'tinymce') {
+                top.tinymce.activeEditor.insertContent(content);
+                top.tinymce.activeEditor.windowManager.close();
+            }
+            if (type == 'featured') {
+
+                UIkit.modal('#featured-image-modal').hide();
+            }
+        },
+        removeImage: function removeImage() {
+            this.image = '';
+            this.imageId = '';
+        },
+        uploadIcon: function uploadIcon(e, lang, index, kIndex) {
+            // console.log(e);
+            var vm = this;
+            var fileList = e.target.files || e.dataTransfer.files;
+            // var reader = new FileReader();
+
+            if (fileList.length > 0) {
+                var formData = new FormData();
+                formData.append('type', 'product-icons');
+                formData.append('file', fileList[0]);
+                // console.log(formData);
+                axios.post('/tinymce/image-upload', formData).then(function (_ref3) {
+                    var data = _ref3.data;
+
+                    console.log(data);
+                    vm.sectionList[lang][index]['keypairList'][kIndex]['icon'] = data.fullpath;
+                }).catch(function (err) {
+                    console.log(err);
+                });
+            }
+
+            // reader.onload = function (e) {
+            //     // $('#image_upload_preview').attr('src', e.target.result);
+            //     vm.sectionList[lang][index]['keypairList'][kIndex]['icon'] = e.target.result;
+            //     // vm.sectionList[lang][.push(section);
+            // }
+            // reader.readAsDataURL(fileList[0]);
         }
     },
 

@@ -1,8 +1,8 @@
 <?php
 
-use App\Mail\OrderShipped;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Storage;
+// use App\Mail\OrderShipped;
+// use Illuminate\Support\Facades\Mail;
+// use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -189,26 +189,26 @@ Route::get('/tinymce-image', function() {
 
 
 
-Route::get('/tests/send-mail', function() {
-    dd(Mail::to('pasha_md5@yahoo.com')
-            // ->cc($moreUsers)
-            // ->bcc($evenMoreUsers)
-            ->send(new OrderShipped()));
-});
+// Route::get('/tests/send-mail', function() {
+//     dd(Mail::to('pasha_md5@yahoo.com')
+//             // ->cc($moreUsers)
+//             // ->bcc($evenMoreUsers)
+//             ->send(new OrderShipped()));
+// });
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::get('/client/login', function() {
-    return view('clients/login');
-});
-
-Route::get('/client/dashboard', function() {
-    return view('clients/dashboard');
-});
+// Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('/tests/check-s3-storage', function() {
-    Storage::makeDirectory('newdirectory');
-    dd(Storage::exists('software_list.ods'));
-});
+// Route::get('/client/login', function() {
+//     return view('clients/login');
+// });
+
+// Route::get('/client/dashboard', function() {
+//     return view('clients/dashboard');
+// });
+
+
+// Route::get('/tests/check-s3-storage', function() {
+//     Storage::makeDirectory('newdirectory');
+//     dd(Storage::exists('software_list.ods'));
+// });

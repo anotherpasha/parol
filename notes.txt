@@ -69,5 +69,7 @@ construction_class_id (pk)
 flexas => double
 
 
-
-
+==== 20180117 Client Test ====
+- Registration for contact
+- Premium calculator
+- Call to parolamas button

@@ -20,7 +20,7 @@
         @if(isset($pageTitle)) {!! $pageTitle !!}@endif
     </h3>
     <div id="product">
-        <form class="uk-form" action="{!! action('ProductsController@store') !!}" method="POST">
+        <form class="uk-form" action="{!! action('ProductsController@store') !!}" method="POST" enctype="multipart/form-data">
             {!! csrf_field() !!}
             <input type="hidden" value="{!! $postTypeId !!}" name="post_type_id">
             <div class="uk-grid-small" uk-grid>
@@ -56,11 +56,10 @@
 @section('page-level-scripts')
     <script>
         var productSections = '';
+        var media = '';
     </script>
     <script src="{!! asset('assets/js/lib/tinymce/tinymce.min.js') !!}"></script>
-    <!-- <script src="{!! asset('assets/js/lib/plupload/plupload.full.min.js') !!}"></script> -->
     <script src="{!! asset('assets/js/editor.js') !!}"></script>
-    <!-- <script src="{!! asset('assets/js/featured-image.js') !!}"></script> -->
     <script src="{!! asset('assets/js/lib/uikit.2.min.js') !!}"></script>
     <script src="{!! asset('assets/js/lib/datepicker.min.js') !!}"></script>
     <script src="{{ mix('js/product.js') }}"></script>

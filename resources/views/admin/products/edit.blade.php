@@ -4,7 +4,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{!! asset('assets/css/lib/datepicker.min.css') !!}" />
     <link rel="stylesheet" href="{!! asset('assets/css/lib/flag-icon.css') !!}" />
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}" />
+    <link rel="stylesheet" href="{{ mix('/css/wysiwyg.css') }}" />
 @endsection
 
 @section('content')
@@ -29,7 +29,7 @@
         @if(isset($pageTitle)) {!! $pageTitle !!}@endif
     </h3>
     <div id="product">
-        <form class="uk-form" action="{!! action('ProductsController@update', $post->id) !!}" method="POST">
+        <form class="uk-form" action="{!! action('ProductsController@update', $post->id) !!}" method="POST" enctype="multipart/form-data">
             {!! csrf_field() !!}
             <div class="uk-grid-small" uk-grid>
                 <div class="uk-width-2-3">
@@ -58,14 +58,24 @@
                 </div>
             </div>
         </form>
+
+        @include('admin.includes.featured-modal')
     </div>
 
-    @include('admin.includes.featured-modal')
+
 @endsection
 
 @section('page-level-scripts')
+
     <script>
-        var productSections = {!! $sections !!};
+        var productSections = '';
+        var media = '';
+        @if($sections != '')
+            productSections = {!! $sections !!};
+        @endif
+        @if($media != '')
+            media = {!! $media !!};
+        @endif
     </script>
     <script src="{!! asset('assets/js/lib/tinymce/tinymce.min.js') !!}"></script>
     <!-- <script src="{!! asset('assets/js/lib/plupload/plupload.full.min.js') !!}"></script> -->
