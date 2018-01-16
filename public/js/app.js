@@ -47910,6 +47910,23 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     style: 'btn-info',
     size: 4
   });
+
+  // Tooggle sticky calculator
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#calculator-toggle').click(function () {
+    var $calculator = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.calculator-container');
+    if ($calculator.hasClass('active')) {
+      $calculator.removeClass('active');
+      $calculator.animate({
+        right: '-20%'
+      }, 300);
+
+      return;
+    }
+    $calculator.addClass('active');
+    $calculator.animate({
+      right: 0
+    });
+  });
 });
 
 /***/ }),
