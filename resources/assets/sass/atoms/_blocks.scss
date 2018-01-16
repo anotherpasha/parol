@@ -49,6 +49,10 @@ section {
   &.home-contact {
     background:  url('/images/decoration-call.png')no-repeat bottom left, #fff;
   }
+  &.info-product {
+    z-index: 2;
+    position: relative;
+  }
 
   &.extra-padding {
     padding: 50px 0;
@@ -64,6 +68,12 @@ section {
   &.with-scroll-bottom {
     padding-bottom: 70px;
   }
+  &.calculator {
+      z-index: 1;
+      position: relative;
+      padding: 100px 0;
+  }
+
   &.sub-page-banner {
     position: relative;
     min-height: 500px;

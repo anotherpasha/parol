@@ -22,7 +22,7 @@
             <hr /> -->
             <div>
                 Building Status: <br/>
-                <select name="building_status" v-model="buildingStatus">
+                <select name="building_status" @change="changeType" v-model="buildingStatus">
                     <option value="1">Own</option>
                     <option value="2">Rental</option>
                 </select><br/><br/>

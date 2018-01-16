@@ -56,3 +56,16 @@
       border-bottom: solid 10px $brand-primary;
     }
 }
+
+.form-slider-arrow {
+  padding-left: 50px;
+  margin-top: 25px;
+  display: flex;
+  a {
+    cursor: pointer;
+  }
+}
+.calculator-form-list-indicator {
+  display: inline-block;
+  margin-left: 30px;
+}

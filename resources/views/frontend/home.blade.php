@@ -56,7 +56,10 @@
       </div>
     </div>
   </section>
-  <section class="half-center-transparent--top extra-padding with-scroll-bottom ">
+
+
+
+  <section class="half-center-transparent--top extra-padding with-scroll-bottom info-product ">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -128,8 +131,27 @@
     </div>
   </section>
 
+  <section class="extra-padding grey with-scroll-bottom calculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-5">
+          <h1 class="color-primary ">Asuransi Rumah & Harta Benda</h1>
+          <hr class="primary left"/>
+          <p class="color-dark-grey">
+Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
+        </div>
+        <div class="col-xs-12 col-md-7">
+          @include('partials.calculator')
+        </div>
+      </div>
+    </div>
+    <div class="half-center-scroll-icon bottom">
+      <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
+    </div>
+
+  </section>
   <!-- section contact --->
-  <section class="extra-padding home-contact extra-padding">
+  <section class="extra-padding home-contact ">
     <div class="container-fluid">
       <div class="row">
           <div class="col-sm-12 text-center">
