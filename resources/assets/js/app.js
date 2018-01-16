@@ -6,6 +6,7 @@
  */
 
 require('./bootstrap');
+import Vue from 'vue';
 import $ from "jquery";
 import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
@@ -32,6 +33,12 @@ $(document).ready(()=> {
   });
 
 
+  $('.selectPostal').selectpicker({
+    style: 'btn-info',
+    size: 4,
+    liveSearch: true
+  });
+
 // Tooggle sticky calculator
   $('#calculator-toggle').click(()=> {
     const $calculator = $('.calculator-container');
@@ -56,14 +63,15 @@ $(document).ready(()=> {
 });
 
 // Vue
-window.Vue = require('vue');
 
-const app = new Vue({
-    el: '#app',
+const contact = new Vue({
+    el: '#contact',
 
     components: {
     },
-
+    beforeCreate() {
+      console.log('contact created');
+    },
     data: {
         contactForm: {
           name: '',

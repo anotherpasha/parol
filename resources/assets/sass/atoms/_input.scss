@@ -25,8 +25,11 @@ input{
     border-bottom-left-radius: 10px;
   }
 }
-
 .select-custom {
+  button {
+    color: #000;
+  }
+
   .bootstrap-select {
     width: 100% !important;
   }

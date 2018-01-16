@@ -58941,12 +58941,14 @@ module.exports = __webpack_require__(166);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_eonasdan_bootstrap_datetimepicker__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_eonasdan_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_eonasdan_bootstrap_datetimepicker__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_select__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bootstrap_select___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bootstrap_select__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_eonasdan_bootstrap_datetimepicker__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_eonasdan_bootstrap_datetimepicker___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_eonasdan_bootstrap_datetimepicker__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_select__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bootstrap_select___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bootstrap_select__);
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -58959,29 +58961,36 @@ __webpack_require__(15);
 
 
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-__WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.carousel').carousel();
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#datepicker').datetimepicker({
+__WEBPACK_IMPORTED_MODULE_1_jquery___default()(document).ready(function () {
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.carousel').carousel();
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#datepicker').datetimepicker({
     format: "dddd, Do MMMM YYYY",
     locale: 'id'
   });
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#hourpicker').datetimepicker({
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#hourpicker').datetimepicker({
     format: "LT"
   });
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.selectpicker').selectpicker({
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.selectpicker').selectpicker({
     style: 'btn-info',
     size: 4
   });
 
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.selectPostal').selectpicker({
+    style: 'btn-info',
+    size: 4,
+    liveSearch: true
+  });
+
   // Tooggle sticky calculator
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#calculator-toggle').click(function () {
-    var $calculator = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.calculator-container');
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#calculator-toggle').click(function () {
+    var $calculator = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.calculator-container');
     if ($calculator.hasClass('active')) {
       $calculator.removeClass('active');
       $calculator.animate({
@@ -58996,19 +59005,21 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     });
   });
 
-  __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.panel-parolamas .panel-heading').click(function () {
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.panel-parolamas .panel-heading').removeClass('active');
-    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).addClass('active');
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.panel-parolamas .panel-heading').click(function () {
+    __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.panel-parolamas .panel-heading').removeClass('active');
+    __WEBPACK_IMPORTED_MODULE_1_jquery___default()(this).addClass('active');
   });
 });
 
 // Vue
-window.Vue = __webpack_require__(11);
 
-var app = new Vue({
-  el: '#app',
+var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
+  el: '#contact',
 
   components: {},
+  beforeCreate: function beforeCreate() {
+    console.log('contact created');
+  },
 
   data: {
     contactForm: {

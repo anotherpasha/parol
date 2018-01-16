@@ -11721,7 +11721,8 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
                 arrows: false,
                 slidesToShow: 1,
                 centerMode: true,
-                infinite: false
+                infinite: false,
+                adaptiveHeight: true
             }
         };
     },

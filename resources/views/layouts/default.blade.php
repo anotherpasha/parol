@@ -24,7 +24,8 @@
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/calculator.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}" async></script>
+    <script src="{{ asset('js/calculator.js') }}" async></script>
+
 </body>
 </html>

@@ -17,12 +17,12 @@
 
 $adminPrefix = config('misc.admin-prefix');
 
-Route::get('/', function () {
-    return view('frontend/home');
-});
-Route::get('/home', function () {
-    return view('frontend/home');
-});
+// Route::get('/', function () {
+//     return view('frontend/home');
+// });
+// Route::get('/home', function () {
+//     return view('frontend/home');
+// });
 
 Route::get('/product', function () {
     return view('frontend/product');
@@ -38,6 +38,8 @@ Route::get('/contact-us', function () {
 });
 
 
+Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 Route::get('/registration', 'FrontendController@registration');
 Route::post('/registration', 'FrontendController@postRegistration');

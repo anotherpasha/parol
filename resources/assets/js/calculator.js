@@ -3,6 +3,7 @@ import Slick from 'vue-slick';
 import 'slick-carousel/slick/slick.css';
 
 
+
 const calculator = new Vue({
     el: '#calculator',
 
@@ -26,6 +27,7 @@ const calculator = new Vue({
               slidesToShow: 1,
               centerMode: true,
               infinite: false,
+              adaptiveHeight: true
             },
         };
     },

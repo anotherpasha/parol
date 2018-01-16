@@ -1,4 +1,4 @@
-<section class="extra-padding home-contact extra-padding">
+<section class="extra-padding home-contact extra-padding" id="contact">
   <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 text-center">
