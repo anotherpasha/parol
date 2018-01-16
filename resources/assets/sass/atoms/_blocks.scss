@@ -49,8 +49,14 @@ section {
   &.home-contact {
     background:  url('/images/decoration-call.png')no-repeat bottom left, #fff;
   }
+
   &.extra-padding {
     padding: 50px 0;
+  }
+  &.faq {
+    background:  url('/images/decoration-people-chat.png')no-repeat bottom center, #fff;
+    background-size: 100%;
+    padding-bottom: 350px;
   }
   &.grey {
     background-color: #f7f7f7;
@@ -71,6 +77,17 @@ section {
         background: url('/images/banner-product.jpg')no-repeat center center;
         background-size: cover;
       }
+      &.about {
+        background: url('/images/banner-about.jpg')no-repeat center center;
+        background-size: cover;
+        height: 600px;
+      }
+      &.contact {
+        background:  url('/images/banner-contact.jpg')no-repeat bottom left, #fff;
+        background-size: cover;
+        height: 600px;
+      }
+
   }
 }
 .tab-content {
@@ -89,4 +106,18 @@ section {
       z-index: 1;
     }
   }
+}
+
+
+.contact-form-wrapper {
+  border-right: solid 1px #ededed;
+  padding-right: 80px;
+}
+
+.contact-information-detail {
+  background-color: #f7f7f7;
+  @include vendor((border-radius: 20px), webkit moz ms o);
+  padding: 10px 20px;
+  border-bottom: solid 20px $brand-primary;
+  @include vendor((box-shadow: 0px 1px 13px rgba(0,0,0,.2)), webkit moz  ms o);
 }

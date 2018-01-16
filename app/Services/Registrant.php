@@ -25,6 +25,6 @@ class Registrant
 
     public function exported()
     {
-        return RegistrantModel::select('name', 'email', 'phone', 'address')->get();
+        return RegistrantModel::select('name', 'email', 'phone', 'date', 'time', 'product')->get();
     }
 }

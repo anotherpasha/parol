@@ -212,3 +212,5 @@ Route::get('/tinymce-image', function() {
 //     Storage::makeDirectory('newdirectory');
 //     dd(Storage::exists('software_list.ods'));
 // });
+
+Route::get('/test/parse-id-date', 'TestController@parseIdDate');

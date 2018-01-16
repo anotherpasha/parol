@@ -18,11 +18,15 @@
 @import
   "molecules/card",
   "molecules/navigation",
-  "molecules/list"
+  "molecules/list",
+  "molecules/panel"
 ;
 
 @import
   "organisms/header",
   "organisms/slider",
   "organisms/footer"
+;
+@import
+  "pages/about"
 ;

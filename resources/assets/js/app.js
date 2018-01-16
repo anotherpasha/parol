@@ -20,7 +20,8 @@ import 'bootstrap-select';
 $(document).ready(()=> {
   $('.carousel').carousel();
   $('#datepicker').datetimepicker({
-    format: "dddd, MMMM Do YYYY"
+    format: "dddd, Do MMMM YYYY",
+    locale: 'id'
   });
   $('#hourpicker').datetimepicker({
     format: "LT"
@@ -46,5 +47,75 @@ $(document).ready(()=> {
      $calculator.animate({
       right: 0
     });
+  });
+
+  $('.panel-parolamas .panel-heading').click(function() {
+      $('.panel-parolamas .panel-heading').removeClass('active');
+      $(this).addClass('active');
   })
+});
+
+// Vue
+window.Vue = require('vue');
+
+const app = new Vue({
+    el: '#app',
+
+    components: {
+    },
+
+    data: {
+        contactForm: {
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          time: '',
+          type: 'Asuransi Rumah'
+        }
+    },
+
+    mounted() {
+    },
+
+    methods: {
+      changeTime(evt) {
+        this.contactForm.time = evt.target.value;
+      },
+      changeDate(evt) {
+        this.contactForm.date = evt.target.value;
+      },
+      submitContact() {
+        let formData = new FormData();
+        const {name, email, phone, date, time, type} = this.contactForm;
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('date', date);
+        formData.append('time', time);
+        formData.append('type', type);
+        axios.post('/registration', formData)
+        .then( (d) => {
+          alert('Terimakasih.');
+          this.resetForm();
+        })
+        .catch(error => {
+            const err = error.response.data;
+            alert(err.message);
+        });
+      },
+      resetForm() {
+        this.contactForm = {
+          name: '',
+          email: '',
+          phone: '',
+          date: '',
+          time: '',
+          type: 'Asuransi Rumah'
+        };
+      }
+    },
+
+    updated: function () {
+    }
 });

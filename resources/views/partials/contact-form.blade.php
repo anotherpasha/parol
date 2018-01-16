@@ -16,21 +16,21 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label for="">Nama Lengkap</label>
-                <input class="form-control grey" type="text" name="" value="">
+                <input class="form-control grey" type="text" v-model="contactForm.name" value="">
               </div>
             </div>
 
             <div class="col-md-7 col-xs-12">
               <div class="form-group">
                 <label for="">Alamat Email</label>
-                <input class="form-control grey" type="text" name="" value="">
+                <input class="form-control grey" type="email" v-model="contactForm.email" value="">
               </div>
             </div>
 
             <div class="col-md-5 col-xs-12">
               <div class="form-group">
                 <label for="">Nomor Telepon</label>
-                <input class="form-control grey" type="text" name="" value="">
+                <input class="form-control grey" type="text" v-model="contactForm.phone" value="">
               </div>
             </div>
 
@@ -42,7 +42,7 @@
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
 
-                     <input type='text' class="form-control grey  " id='datepicker' />
+                     <input type='text' class="form-control grey" id="datepicker" @blur="changeDate" />
                  </div>
               </div>
             </div>
@@ -55,7 +55,7 @@
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
 
-                     <input type='text' class="form-control grey"  id='hourpicker' />
+                     <input type='text' class="form-control grey" @blur="changeTime" id='hourpicker' value="" />
                  </div>
               </div>
             </div>
@@ -64,10 +64,10 @@
               <div class="form-group">
                 <label >Jenis Asuransi</label>
                 <div class="select-custom ">
-                  <select class="selectpicker">
-                    <option>Asuransi Rumah</option>
-                    <option>Asuransi Harta & Benda</option>
-                    <option>Asuransi Rumah & Harta Benda</option>
+                  <select class="selectpicker" v-model="contactForm.type">
+                    <option value="Asuransi Rumah">Asuransi Rumah</option>
+                    <option value="Asuransi Harta & Benda">Asuransi Harta & Benda</option>
+                    <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
                   </select>
                 </div>
               </div>
@@ -75,7 +75,7 @@
 
             <div class="col-xs-12 text-center">
                 <br><br>
-                <button type="button" name="button" class="btn btn-parolamas btn-md min-width">Kirim</button>
+                <button type="button" name="button" class="btn btn-parolamas btn-md min-width" @click="submitContact">Kirim</button>
             </div>
 
           </form>

@@ -9,6 +9,14 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'GothamBook-Italic';
+    src: url('/assets/fonts/GothamBook-Italic.woff2') format('woff2'),
+        url('/assets/fonts/GothamBook-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'GothamBook';
     src: url('/assets/fonts/GothamBook.woff2') format('woff2'),
         url('/assets/fonts/GothamBook.woff') format('woff');
@@ -57,7 +65,14 @@ hr{
         &.small {
           height: 3px;
         }
+        &.rounded {
+          @include vendor((border-radius: 30px), webkit moz ms o);
+          height: 13px;
+          width: 42px;
+          margin-bottom: 35px;
+        }
     }
+
     &.left {
       margin-left: 0;
     }
@@ -68,4 +83,10 @@ hr{
 
 h1 {
   font-size: 43px;
+}
+blockquote {
+  border-left: none;
+  font-family: $brand-font-book-italic;
+  color: $brand-primary;
+  font-size: 22px;
 }

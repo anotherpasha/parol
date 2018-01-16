@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRegistrant;
 use App\Mail\ClaimPosted;
 use App\Mail\UserRegistered;
 use App\Models\Registrant;
@@ -9,7 +10,9 @@ use App\Services\Claim;
 use App\Services\Doku;
 use App\Services\Parolamas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class FrontendController extends Controller
@@ -30,18 +33,26 @@ class FrontendController extends Controller
         return view('frontend/registration');
     }
 
-    public function postRegistration(Request $request)
+    public function postRegistration(PostRegistrant $request)
     {
+        // Log::warning($request->all());
+        // $callDate = $request->date != '' ? Carbon::createFromFormat('l, j F Y', $request->date, 'Asia/Jakarta') : '';
         $registrant = Registrant::create([
             'name' => $request->name,
             'email' => $request->email,
-            'phone' => $request->phone
+            'phone' => $request->phone,
+            'date' => $request->date,
+            'time' => $request->time,
+            'product' => $request->type
         ]);
-        if ($registrant) {
-            Mail::to('pasha.md5@gmail.com')
-                ->send(new UserRegistered($registrant));
-        }
-        return redirect('/registration');
+        // if ($registrant) {
+        //     Mail::to('pasha.md5@gmail.com')
+        //         ->send(new UserRegistered($registrant));
+        // }
+        // return redirect('/registration');
+
+        // Log::warning($request->all());
+        return response()->json(['status' => 'ok']);
     }
 
     public function claim()

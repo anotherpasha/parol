@@ -1,21 +1,6 @@
 @extends('layouts.default')
 
 @section('content')
-<div class="calculator-container">
-  <div class="title" id="calculator-toggle">
-    <h3 class="caps">Simulasi Premi <span class="glyphicon glyphicon-triangle-top"></span></h3>
-  </div>
-  <div class="content">
-    <label for="">Tipe Asuransi</label>
-    <div class="select-custom ">
-      <select class="selectpicker">
-        <option>Rumah</option>
-        <option>Harta & Benda</option>
-        <option>Rumah & Harta Benda</option>
-      </select>
-    </div>
-  </div>
-</div>
 
 <section class="sub-page-banner product">
   <div class="middler-wrapper">
@@ -176,7 +161,7 @@
                       <hr class="primary left"/>
                     </div>
                     <div class="col-xs-12 col-md-8">
-                      <ul class="dotted-list">
+                      <ul class="dotted-list ">
                         <li>Gempa bumi atau letusan gunung berapi</li>
                         <li>Pemogokan, kerusakan, kegaduhan sipil, perbuatan jahat</li>
                         <li>Perang atau akibat dari pemberontakan bersenjata</li>
@@ -200,4 +185,21 @@
 <!-- section contact -->
 @include('partials.contact-form')
 
+<div class="calculator-container">
+  <div class="title" id="calculator-toggle">
+    <h3 class="caps">Simulasi Premi <span class="glyphicon glyphicon-triangle-top"></span></h3>
+  </div>
+  <div class="content">
+    <label for="">Tipe Asuransi</label>
+    <div class="select-custom ">
+      <select class="selectpicker">
+        <option>Rumah</option>
+        <option>Harta & Benda</option>
+        <option>Rumah & Harta Benda</option>
+      </select>
+    </div>
+  </div>
+
+
+</div>
 @endsection
