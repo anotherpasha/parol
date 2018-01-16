@@ -9,11 +9,10 @@
             <h1>Tentang </br>Parolamas</h1>
             <hr class="primary left" />
             <p class="color-white">
-Di Indonesia, Parolamas memulai operasinya pada tahun 1964 dan telah berpengalaman lebih dari
-53 tahun dalam memberikan perlindungan asuransi umum kepada nasabah perorangan
-dan bisnis.
+              Di Indonesia, Parolamas memulai operasinya pada tahun 1964 dan telah berpengalaman lebih dari
+              53 tahun dalam memberikan perlindungan asuransi umum kepada nasabah perorangan
+              dan bisnis.
             </p>
-            <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
           </div>
 
         </div>

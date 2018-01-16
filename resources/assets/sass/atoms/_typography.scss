@@ -65,7 +65,14 @@ hr{
         &.small {
           height: 3px;
         }
+        &.rounded {
+          @include vendor((border-radius: 30px), webkit moz ms o);
+          height: 13px;
+          width: 42px;
+          margin-bottom: 35px;
+        }
     }
+
     &.left {
       margin-left: 0;
     }

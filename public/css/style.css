@@ -9152,6 +9152,13 @@ hr.primary.small {
   height: 3px;
 }
 
+hr.primary.rounded {
+  border-radius: 30px;
+  height: 13px;
+  width: 42px;
+  margin-bottom: 35px;
+}
+
 hr.left {
   margin-left: 0;
 }
@@ -9186,6 +9193,11 @@ blockquote {
 .btn-parolamas-secondary:hover {
   background: #0005bc;
   color: #e6e5e5;
+}
+
+.btn-parolamas.min-width,
+.min-width.btn-parolamas-secondary {
+  min-width: 150px;
 }
 
 .btn-parolamas-secondary {
@@ -9306,6 +9318,10 @@ input.form-control {
   color: #fff;
 }
 
+.form-group {
+  margin-bottom: 30px;
+}
+
 .half-center-transparent--top {
   position: relative;
 }
@@ -9407,6 +9423,12 @@ section.sub-page-banner.about {
   height: 600px;
 }
 
+section.sub-page-banner.contact {
+  background: url("/images/banner-contact.jpg") no-repeat bottom left, #fff;
+  background-size: cover;
+  height: 600px;
+}
+
 .tab-content section {
   position: relative;
   padding: 60px 0;
@@ -9424,6 +9446,22 @@ section.sub-page-banner.about {
 
 .tab-content section.guarantee-summary {
   z-index: 1;
+}
+
+.contact-form-wrapper {
+  border-right: solid 1px #ededed;
+  padding-right: 80px;
+}
+
+.contact-information-detail {
+  background-color: #f7f7f7;
+  border-radius: 20px;
+  padding: 10px 20px;
+  border-bottom: solid 20px #000498;
+  -webkit-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+  -ms-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
@@ -9610,6 +9648,31 @@ section.sub-page-banner.about {
 .summary-wrapper .description {
   width: 75%;
   padding: 0 15px;
+}
+
+.list-contact-information {
+  margin-top: 30px;
+}
+
+.list-contact-information dt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.list-contact-information dt .ico {
+  width: 15%;
+}
+
+.list-contact-information dt .details {
+  width: 85%;
+  font-size: 12px;
+  font-family: "GothamMedium";
+  color: #515151;
 }
 
 .panel {

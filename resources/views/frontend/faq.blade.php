@@ -13,7 +13,6 @@
               yang sering ditanyakan mengenai produk</br>
               Asuransi Harta Benda Parolamas
             </p>
-            <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
