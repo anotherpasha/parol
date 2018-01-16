@@ -20,7 +20,7 @@ const calculator = new Vue({
           earthquake: 0,
           building_value: 0,
           content_value: 0,
-          form_total: 6,
+          form_total: 11,
           indicators: 1,
             slickOptions: {
               arrows: false,
