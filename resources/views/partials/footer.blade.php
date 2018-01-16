@@ -21,7 +21,7 @@
       </div>
       <div class="col-xs-12 col-lg-4 col-md-6">
         <p>Call Center</p>
-        <h4 class="medium"><span class="icon icon-call"></span>&nbsp;&nbsp;&nbsp;1500 - 554</h4>
+        <h4 class="medium"><span class="icon icon-call"></span><a href="tel:+62211500554">&nbsp;&nbsp;&nbsp;1500 - 554</a></h4>
       </div>
       <div class="col-xs-12 col-lg-2 col-md-6">
         <dl class="logo-list">
