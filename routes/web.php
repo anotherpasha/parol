@@ -40,7 +40,7 @@ Route::get('/calculator/flood', 'CalculatorsController@flood');
 Route::post('/calculator/flood', 'CalculatorsController@floodResult');
 Route::get('/calculator/earthquake', 'CalculatorsController@earthquake');
 Route::post('/calculator/earthquake', 'CalculatorsController@earthquakeResult');
-Route::get('/migrate/city', 'FrontendController@migrateCity');
+// Route::get('/migrate/city', 'FrontendController@migrateCity');
 
 Auth::routes();
 
@@ -53,6 +53,7 @@ Route::group([
     'middleware' => ['auth', 'authorization'],
     'prefix' => $adminPrefix
 ], function () {
+    Route::get('/', 'HomeController@dashboard');
     Route::get('dashboard', 'HomeController@dashboard');
 
     Route::get('permissions', 'PermissionsController@index')->name('permissions');
@@ -101,6 +102,13 @@ Route::group([
     Route::post('product/{post}/update', 'ProductsController@update')->name('product.edit');
     Route::get('product/{post}/delete', 'ProductsController@delete')->name('product.delete');
 
+    Route::get('sliders', 'SlidersController@index')->name('sliders');
+    Route::get('sliders/create', 'SlidersController@create')->name('sliders.add');
+    Route::post('sliders', 'SlidersController@store')->name('sliders.add');
+    Route::get('sliders/{post}/edit', 'SlidersController@edit')->name('sliders.edit');
+    Route::post('sliders/{post}/update', 'SlidersController@update')->name('sliders.edit');
+    Route::get('sliders/{post}/delete', 'SlidersController@delete')->name('sliders.delete');
+
     Route::get('categories/{postType}', 'CategoriesController@index')->name('categories');
     Route::get('categories/{postType}/create', 'CategoriesController@create')->name('categories.add');
     Route::post('categories/{postType}', 'CategoriesController@store')->name('categories.add');
@@ -115,7 +123,8 @@ Route::group([
     Route::post('posts/{post}/update', 'PostsController@update')->name('posts.edit');
     Route::get('posts/{post}/delete', 'PostsController@delete')->name('posts.delete');
 
-    Route::get('/registrants', 'RegistrantsController@index')->name('registrants');
+    Route::get('registrants', 'RegistrantsController@index')->name('registrants');
+    Route::get('registrants/download', 'RegistrantsController@download')->name('registrants');
 
     Route::get('/claims', 'ClaimsController@index')->name('claims');
 });
@@ -131,8 +140,12 @@ Route::group([
     Route::get('pages/datatable', 'PagesController@datatableList')->name('pages');
     Route::get('faq/datatable', 'FaqController@datatableList')->name('faq');
     Route::get('product/datatable', 'ProductsController@datatableList')->name('product');
+    Route::get('sliders/datatable', 'SlidersController@datatableList')->name('sliders');
     Route::get('registrant/datatable', 'RegistrantsController@datatableList')->name('registrant');
     Route::get('claim/datatable', 'ClaimsController@datatableList')->name('claim');
+
+    Route::post('/tinymce/image-upload', 'MediaController@uploadImage');
+    Route::get('/tinymce/get-medias', 'MediaController@getMedias');
 });
 
 Route::get('/tests/editor', function() {
@@ -141,7 +154,7 @@ Route::get('/tests/editor', function() {
 Route::get('/tinymce-image', function() {
     return view('tests.image');
 });
-Route::get('/get-medias', 'MediaController@getMedias');
+
 
 
 

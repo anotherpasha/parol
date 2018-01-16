@@ -11,21 +11,32 @@
 
                 <ul class="uk-switcher uk-margin">
                     <li>
-                        <div class="k-modal-h2"><button type="button" id="browse">Upload</button></div>
+                        <div class="k-modal-h2">
+                            <div uk-form-custom>
+                                <input type="file" @change="uploadFile">
+                                <button class="uk-button uk-button-default" type="button" tabindex="-1">Upload</button>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <div class="uk-grid-small uk-grid-match" uk-grid>
                             <div class="uk-width-2-3 k-modal-h2">
-                                <div class="uk-child-width-1-4 uk-grid-small uk-text-center image-list-container" uk-grid></div>
+                                <div class="uk-child-width-1-4 uk-grid-small uk-text-center image-list-container" uk-grid>
+                                    <div v-for="image in imageList">
+                                        <img :src="image.fullpath" @click="selectImage(image)" class="uk-padding-small" />
+                                    </div>
+                                </div>
                             </div>
                             <div class="uk-width-1-3 k-modal-h2">
-                                <div class="image-view-container uk-margin"></div>
-                                <div class="image-modifier-container">
+                                <div class="image-view-container uk-margin">
+                                    <img v-show="image != ''" :src="image" />
+                                </div>
+                                <!-- <div class="image-modifier-container">
                                     <div class="uk-form-row">
                                         <label class="uk-form-label" for="">Alternative Text</label>
                                         <input class="uk-input image_alt" name="alt" type="text" />
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </li>
@@ -33,7 +44,7 @@
             </div>
             <div class="uk-modal-footer uk-text-right">
                 <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
-                <button class="uk-button uk-button-primary featured-submit" type="button">Submit</button>
+                <button class="uk-button uk-button-primary" @click="submitImage('featured')" type="button">Submit</button>
             </div>
         </form>
     </div>

@@ -15,4 +15,6 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .js('resources/assets/js/dashboard.js', 'public/js')
     .js('resources/assets/js/product.js', 'public/js')
     .js('resources/assets/js/calculator.js', 'public/js')
-    .sass('resources/assets/sass/style.scss', 'public/css');;
+    .js('resources/assets/js/media.js', 'public/js')
+    .sass('resources/assets/sass/wysiwyg.scss', 'public/css')
+    .sass('resources/assets/sass/style.scss', 'public/css');

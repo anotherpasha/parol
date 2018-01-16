@@ -10,10 +10,34 @@ const app = new Vue({
         imageList: [],
         nextPageUrl: '',
         prevPageUrl: '',
-        image: ''
+        image: '',
+        imageId: '',
+        file: ''
     },
 
     methods: {
+        uploadFile(e) {
+            let vm = this;
+            let fileList = e.target.files || e.dataTransfer.files;
+            console.log(fileList);
+            if (fileList.length > 0) {
+                const formData = new FormData();
+                formData.append('file', fileList[0]);
+                console.log(formData);
+                axios.post('/tinymce/image-upload', formData)
+                .then(function({data}) {
+                    console.log(data);
+                    UIkit.tab('.image-tab').show(1);
+                    vm.imageList.push(data);
+                    vm.image = data.fullpath;
+                    vm.imageId = data.id;
+                })
+                .catch(function(err) {
+                    console.log(err);
+                });
+            }
+        },
+
         nextMedia() {
             this.loadMedias(this.nextPageUrl)
         },
@@ -24,7 +48,7 @@ const app = new Vue({
 
         loadMedias(url) {
             let vm = this;
-            const mediaUrl = (url != '' ? url : '/get-medias');
+            const mediaUrl = (url != '' ? url : '/tinymce/get-medias');
             axios.get(mediaUrl)
             .then(({data}) => {
                 // console.log(data);
@@ -40,13 +64,25 @@ const app = new Vue({
         },
 
         selectImage(image) {
-            this.image = image.path;
+            this.image = image.fullpath;
+            this.imageId = image.id;
         },
 
-        submitImage() {
-            let content = `<img style="margin: 0px 10px; float: left;" src="/${this.image}" alt="" />`;
-            top.tinymce.activeEditor.insertContent(content);
-            top.tinymce.activeEditor.windowManager.close();
+        submitImage(type) {
+            let content = `<img style="margin: 0px 10px; float: left;" src="${this.image}" alt="" />`;
+            if (type == 'tinymce') {
+                top.tinymce.activeEditor.insertContent(content);
+                top.tinymce.activeEditor.windowManager.close();
+            }
+            if (type == 'featured') {
+
+                UIkit.modal('#featured-image-modal').hide();
+            }
+        },
+
+        removeImage() {
+            this.image = '';
+            this.imageId = '';
         }
     },
 

@@ -1,7 +1,6 @@
 <div class="k-sidenav uk-overflow-auto">
     <ul class="uk-nav-default uk-nav-parent-icon" uk-nav="duration: 300; transition: linear;">
         {{--@include('admin.includes.menu', array('items' => $g_menu->roots()))--}}
-
         <li>
             <a href="{!! backendUrl('dashboard') !!}">
                 <span class="uk-margin-small-right" uk-icon="icon: home"></span> Dashboard
@@ -56,25 +55,25 @@
             </a>
             <ul class="uk-nav-sub" >
                 <li>
-                    <a href="">Slider List</a>
+                    <a href="{!! backendUrl('sliders') !!}">Slider List</a>
                 </li>
                 <li>
-                    <a href="">Add Slider</a>
+                    <a href="{!! backendUrl('sliders/create') !!}">Add Slider</a>
                 </li>
             </ul>
         </li>
 
         <li>
             <a href="{!! backendUrl('registrants') !!}">
-                <span class="uk-margin-small-right" uk-icon="icon: users"></span> Registrations
+                <span class="uk-margin-small-right" uk-icon="icon: users"></span> Leads
             </a>
         </li>
 
-        <li>
+        <!-- <li>
             <a href="">
                 <span class="uk-margin-small-right" uk-icon="icon: credit-card"></span> Payments
             </a>
-        </li>
+        </li> -->
 
         <li>
             <a href="{!! backendUrl('claims') !!}">
@@ -82,6 +81,7 @@
             </a>
         </li>
 
+        @if (in_array(1, $g_roles))
         <li class="uk-parent">
             <a href="javascript:;">
                 <span class="uk-margin-small-right" uk-icon="icon: cog"></span> Settings
@@ -101,6 +101,7 @@
                 </li>
             </ul>
         </li>
+        @endif
 
     </ul>
 </div>

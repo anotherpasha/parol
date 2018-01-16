@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{!! asset('assets/css/lib/uikit.min.css') !!}" />
     <link rel="stylesheet" href="{!! asset('assets/css/admin.css') !!}" />
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+
 </head>
 <body class="white">
     <div id="app">
@@ -16,7 +17,12 @@
 
                 <ul class="uk-switcher uk-margin">
                     <li>
-                        <div class="k-modal-h"><button type="button" id="browse">Upload</button></div>
+                        <div class="k-modal-h">
+                            <div uk-form-custom>
+                                <input type="file" @change="uploadFile">
+                                <button class="uk-button uk-button-default" type="button" tabindex="-1">Upload</button>
+                            </div>
+                        </div>
                     </li>
                     <li>
                         <div class="uk-grid-small uk-grid-match" uk-grid>
@@ -49,7 +55,7 @@
                 </ul>
             </div>
             <div class="uk-modal-footer uk-text-right">
-                <button class="uk-button uk-button-primary" @click="submitImage" type="button" id="submitButton">Submit</button>
+                <button class="uk-button uk-button-primary" @click="submitImage('tinymce')" type="button" id="submitButton">Submit</button>
             </div>
         </form>
     </div>

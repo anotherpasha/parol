@@ -4,7 +4,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{!! asset('assets/css/lib/datepicker.min.css') !!}" />
     <link rel="stylesheet" href="{!! asset('assets/css/lib/flag-icon.css') !!}" />
-    <link rel="stylesheet" href="{{ mix('/css/app.css') }}" />
+    <link rel="stylesheet" href="{{ mix('/css/wysiwyg.css') }}" />
 @endsection
 
 @section('content')

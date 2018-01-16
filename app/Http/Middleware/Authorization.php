@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\View;
 
 class Authorization
 {
@@ -20,8 +21,9 @@ class Authorization
         if (! $user) {
             abort(403, 'Unauthorized user');
         } else {
+            View::share('g_roles', array_pluck($user->roles, 'id'));
             if (! $user->can($routeName)) {
-                abort(403, 'Unauthorized action');
+                return backendRedirect('/')->with('error', 'Unauthorized Action.');
             }
         }
 

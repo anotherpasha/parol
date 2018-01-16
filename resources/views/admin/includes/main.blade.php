@@ -22,6 +22,7 @@
                 @include('admin.includes.product')
             @endif
 
+            @if (! isset($withoutMeta))
             <ul uk-accordion="multiple: true" class="uk-margin-top">
                 <li class="">
                     <h5 class="uk-accordion-title">Excerpt</h5>
@@ -46,6 +47,7 @@
                     </div>
                 </li>
             </ul>
+            @endif
         </li>
         @endforeach
     </ul>

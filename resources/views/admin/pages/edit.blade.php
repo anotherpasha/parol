@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                @include('admin.includes.featured-sidebar-edit')
+                <!-- @include('admin.includes.featured-sidebar-edit') -->
 
             </div>
         </div>
