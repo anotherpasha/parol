@@ -17,6 +17,9 @@ class CreateMediaTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('path');
+            $table->string('fullpath');
+            $table->string('type')->default('featured');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

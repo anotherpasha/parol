@@ -84,6 +84,29 @@ class Post
         }
     }
 
+    public function addMedia($post, $mediaId)
+    {
+        if ($mediaId != '') {
+            $post->medias()->sync($mediaId);
+        } else {
+            $post->medias()->detach();
+        }
+    }
+
+
+    public function updateTranslation($post, $request)
+    {
+        $post->translations()->delete();
+        $this->addTranslation($post, $request);
+    }
+
+    public function updateMeta($post, $metas)
+    {
+        $post->metas()->delete();
+        $this->addMeta($post, $metas);
+    }
+
+
     public function datatable($postTypeId, $baseUrl)
     {
         $this->baseUrl = $baseUrl;

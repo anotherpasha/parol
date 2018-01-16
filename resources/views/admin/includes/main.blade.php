@@ -22,8 +22,9 @@
                 @include('admin.includes.product')
             @endif
 
+            @if (! isset($withoutMeta))
             <ul uk-accordion="multiple: true" class="uk-margin-top">
-                <li class="">
+                <li class="uk-margin-top">
                     <h5 class="uk-accordion-title">Excerpt</h5>
                     <div class="uk-accordion-content uk-margin-small-top">
                         <textarea class="uk-textarea uk-width-1-1" name="excerpt[{{ $lang }}]" rows="5"
@@ -46,6 +47,7 @@
                     </div>
                 </li>
             </ul>
+            @endif
         </li>
         @endforeach
     </ul>

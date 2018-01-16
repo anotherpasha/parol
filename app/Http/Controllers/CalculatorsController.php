@@ -22,7 +22,7 @@ class CalculatorsController extends Controller
     {
         $data['types'] = EqConstructionType::all();
         $data['zipcodes'] = EqZipcode::take(100)->get();
-        return view('frontend.calculators.calculator', $data);
+        return view('frontend.calculators.calculator-id', $data);
     }
 
     public function calculatorResult(Request $request)

@@ -38,7 +38,7 @@
                     </div>
                 </div>
 
-                @include('admin.includes.featured-sidebar')
+                <!-- @include('admin.includes.featured-sidebar') -->
 
             </div>
         </div>

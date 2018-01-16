@@ -22,4 +22,9 @@ class Registrant
     {
         return RegistrantModel::all();
     }
+
+    public function exported()
+    {
+        return RegistrantModel::select('name', 'email', 'phone', 'date', 'time', 'product')->get();
+    }
 }

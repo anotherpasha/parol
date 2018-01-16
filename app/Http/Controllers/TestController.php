@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Tymon\JWTAuth\Facades\JWTAuth;
@@ -52,5 +53,12 @@ class TestController extends Controller
 
         // the token is valid and we have found the user via the sub claim
         return response()->json(compact('user'));
+    }
+
+
+    public function parseIdDate()
+    {
+        $date = Carbon::createFromFormat('l, j F Y', 'Thursday, 25 January 2018', 'Asia/Jakarta');
+        dd($date);
     }
 }

@@ -9,8 +9,6 @@
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
       </ol>
 
-
-
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
 
@@ -131,6 +129,7 @@
     </div>
   </section>
 
+<<<<<<< HEAD
   <section class="extra-padding grey with-scroll-bottom calculator">
     <div class="container">
       <div class="row">
@@ -199,42 +198,9 @@ Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda 
                    </div>
                 </div>
               </div>
+=======
+  <!-- section contact -->
+  @include('partials.contact-form')
+>>>>>>> 7e0dbc502ddc0e50c9d5bb4fc81dc0c1ddf2b84b
 
-              <div class="col-md-6 col-xs-12">
-                <div class="form-group">
-                  <label >&nbsp;</label>
-                  <div class='input-group date'>
-                      <span class="input-group-addon">
-                          <span class="glyphicon glyphicon-time"></span>
-                      </span>
-
-                       <input type='text' class="form-control grey"  id='hourpicker' />
-                   </div>
-                </div>
-              </div>
-
-              <div class=" col-xs-12">
-                <div class="form-group">
-                  <label >Jenis Asuransi</label>
-                  <div class="select-custom ">
-                    <select class="selectpicker">
-                      <option>Asuransi Rumah</option>
-                      <option>Asuransi Harta & Benda</option>
-                      <option>Asuransi Rumah & Harta Benda</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-xs-12 text-center">
-                  <br><br>
-                  <button type="button" name="button" class="btn btn-parolamas btn-md min-width">Kirim</button>
-              </div>
-
-            </form>
-          </div>
-      </div>
-    </div>
-
-  </section>
 @endsection
