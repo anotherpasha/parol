@@ -127,6 +127,6 @@
   </section>
 
   @include('partials.contact-form')
-  @include('partials.quiz')
+  <!-- @include('partials.quiz') -->
 
 @endsection

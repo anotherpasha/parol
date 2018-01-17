@@ -24,6 +24,20 @@
         </div>
     </div>
 
+    <!-- <div class="card form zipcode">
+        <hr class="primary rounded"/>
+        <div class="form-group">
+            <label for="">Kode Pos</label>
+            <div class="select-custom">
+            <select class="selectPostal" name="kode_pos" v-model="zipcode">
+              @foreach($zipcodes as $zipcode)
+              <option value="{!! $zipcode->id !!}">{!! $zipcode->zipcode !!}</option>
+              @endforeach
+            </select>
+          </div>
+        </div>
+    </div> -->
+
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group">
