@@ -27,6 +27,14 @@
     <div class="row">
       <div class="col-xs-12 col-sm-8">
         <div class="contact-form-wrapper">
+        @if (session('message'))
+          <div class="alert alert-success alert-dismissible">
+          {{ session('message') }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+        @endif
         <h1 class="color-dark-grey ">Kontak Kami<br>Secara Online</h1>
         <hr class="primary left"/>
         <br><br>
@@ -72,7 +80,7 @@
                   <div class="col-xs-12">
                     <div class="form-group">
                       <label for="">Pertanyaan Anda</label>
-                      <textarea class="form-control" name="message"></textarea>
+                      <textarea class="form-control grey" name="message"></textarea>
                     </div>
                   </div>
 

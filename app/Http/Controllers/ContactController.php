@@ -20,6 +20,6 @@ class ContactController extends Controller
  			'message' => $request->message
  		]);
 
- 		return redirect('contact-us')->with(['message' => 'Data has been saved.']);
+ 		return redirect('contact-us')->with('message', 'Data has been saved.');
     }
 }
