@@ -9330,6 +9330,18 @@ input.form-control {
   margin-bottom: 30px;
 }
 
+@media all and (min-width: 52.9375em) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media all and (min-width: 30em) {
+  .container {
+    width: 80%;
+  }
+}
+
 .half-center-transparent--top {
   position: relative;
 }
@@ -9378,7 +9390,7 @@ input.form-control {
   text-align: center;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   .icon-scroll {
     z-index: 10;
   }
@@ -9801,7 +9813,7 @@ header .header-info {
   float: right;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .header-info {
     width: 100%;
     clear: both;
@@ -9831,7 +9843,7 @@ header .navbar-primary {
   padding: 15px 0;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary {
     padding: 0;
   }
@@ -9845,7 +9857,7 @@ header .navbar-primary .right-content {
   width: 85%;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary .right-content {
     position: fixed;
     top: 0;
@@ -9865,7 +9877,7 @@ header .navbar-primary .nav-link {
   float: right;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary .nav-link {
     width: 100%;
     clear: both;
@@ -9873,7 +9885,7 @@ header .navbar-primary .nav-link {
   }
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary .nav-link li {
     display: block;
     padding: 10px 0;
@@ -9885,7 +9897,7 @@ header .navbar-primary .nav-link li a {
   color: #fff;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary .nav-link li a {
     width: 100%;
   }
@@ -9900,7 +9912,7 @@ header .navbar-primary .nav-link form {
   display: inline-block;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .navbar-primary .nav-link form {
     padding: 10px;
   }
@@ -9908,6 +9920,7 @@ header .navbar-primary .nav-link form {
 
 header .navbar-primary .nav-link form input {
   padding: 0 10px;
+  max-width: 100px;
 }
 
 header .toggle-menu {
@@ -9919,7 +9932,7 @@ header .toggle-menu {
   display: none;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .toggle-menu {
     display: inline-block;
   }
@@ -9939,7 +9952,7 @@ header .close-toggle {
   display: none;
 }
 
-@media all and (max-width: 39.9375em) {
+@media all and (max-width: 52.875em) {
   header .close-toggle {
     display: inline-block;
   }

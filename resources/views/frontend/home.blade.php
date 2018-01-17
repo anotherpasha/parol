@@ -107,7 +107,7 @@
                 <br><br><br>
             </div>
 
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-sm-4">
                 <dl class="card product">
                   <dt><span class="product-icon home"></span></dt>
                   <dt>
@@ -124,7 +124,7 @@
                 </dl>
             </div>
 
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-sm-4">
                 <dl class="card product">
                   <dt><span class="product-icon goods"></span></dt>
                   <dt>
@@ -143,7 +143,7 @@
                 </dl>
             </div>
 
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-sm-4">
                 <dl class="card product">
                   <dt><span class="product-icon goods-home"></span></dt>
                   <dt>

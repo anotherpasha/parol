@@ -1,3 +1,12 @@
+.container {
+  @include mappy-bp(small) {
+    width: 90%;
+  }
+  @include mappy-bp(xs) {
+    width: 80%;
+  }
+
+}
 .half-center-transparent--top {
   position:relative;
     &:after {

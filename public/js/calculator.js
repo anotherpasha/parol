@@ -11700,113 +11700,113 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#calculator',
+    el: '#calculator',
 
-  components: { Slick: __WEBPACK_IMPORTED_MODULE_1_vue_slick___default.a },
+    components: { Slick: __WEBPACK_IMPORTED_MODULE_1_vue_slick___default.a },
 
-  beforeCreate: function beforeCreate() {
-    console.log(this.$refs);
-  },
-  updated: function updated() {
-    $('.selectpicker').selectpicker('refresh');
-  },
-  data: function data() {
-    return {
-      buildingStatus: 1,
-      zipcode: 1,
-      type: 1,
-      houseType: 1,
-      woodElement: 1,
-      floor: '',
-      beenFire: 0,
-      package: 'both',
-      buildingValue: 0,
-      contentValue: 0,
-      rsmdcc: 0,
-      dlv: 0,
-      flood: 0,
-      earthquake: 0,
-      eqType: 1,
-
-      form_total: 9,
-      indicators: 1,
-      slickOptions: {
-        arrows: false,
-        slidesToShow: 1,
-        centerMode: true,
-        infinite: false,
-        adaptiveHeight: true
-      },
-      result: 0
-    };
-  },
-
-
-  // All slick methods can be used too, example here
-  methods: {
-    next: function next() {
-      this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
-      this.$refs.slick.next();
-      this.reInit;
+    beforeCreate: function beforeCreate() {
+        console.log(this.$refs);
     },
-    prev: function prev() {
-      this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
-      this.$refs.slick.prev();
-      this.reInit;
+    updated: function updated() {
+        $('.selectpicker').selectpicker('refresh');
     },
-    slickSwipe: function slickSwipe(evt, slick, direction) {
-      if (direction == 'left') {
-        this.next();
-      } else {
-        this.prev();
-      }
-      // console.log(evt);
-      // console.log(slick);
-      // console.log(direction);
-    },
-    reInit: function reInit() {
-      var _this = this;
+    data: function data() {
+        return {
+            buildingStatus: 1,
+            zipcode: 1,
+            type: 1,
+            houseType: 1,
+            woodElement: 1,
+            floor: '',
+            beenFire: 0,
+            package: 'both',
+            buildingValue: 0,
+            contentValue: 0,
+            rsmdcc: 0,
+            dlv: 0,
+            flood: 0,
+            earthquake: 0,
+            eqType: 1,
 
-      // Helpful if you have to deal with v-for to update dynamic lists
-      this.$nextTick(function () {
-        _this.$refs.slick.reSlick();
-      });
+            form_total: 9,
+            indicators: 1,
+            slickOptions: {
+                arrows: false,
+                slidesToShow: 1,
+                centerMode: true,
+                infinite: false,
+                adaptiveHeight: true
+            },
+            result: 0
+        };
     },
-    changeType: function changeType(evt) {
-      this.type = evt.target.value;
-      // console.log(evt.target.value)
-    },
-    buildingStatusChange: function buildingStatusChange(evt) {
-      this.buildingStatus = evt.target.value;
-    },
-    hitungSimulasi: function hitungSimulasi() {
-      var vm = this;
-      var formData = new FormData();
-      formData.append('building_type', this.buildingStatus);
-      formData.append('zipcode', this.zipcode);
-      formData.append('house_type', this.type);
-      formData.append('floor', this.floor);
-      formData.append('been_fire', this.beenFire);
-      formData.append('package', this.package);
-      formData.append('wood_element', this.woodElement);
-      formData.append('building_value', this.buildingValue);
-      formData.append('content_value', this.contentValue);
-      if (this.rsmdcc != 0) formData.append('rsmdcc', this.rsmdcc);
-      if (this.dlv != 0) formData.append('dlv', this.dlv);
-      if (this.flood != 0) formData.append('flood', this.flood);
-      if (this.earthquake != 0) formData.append('earthquake', this.earthquake);
-      if (this.earthquake != 0) formData.append('eq_type', this.eqType);
 
-      axios.post('/calculator', formData).then(function (_ref) {
-        var data = _ref.data;
 
-        console.log(data);
-        vm.result = data.result;
-      }).catch(function (err) {
-        console.log(err);
-      });
+    // All slick methods can be used too, example here
+    methods: {
+        next: function next() {
+            this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
+            this.$refs.slick.next();
+            this.reInit;
+        },
+        prev: function prev() {
+            this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
+            this.$refs.slick.prev();
+            this.reInit;
+        },
+        slickSwipe: function slickSwipe(evt, slick, direction) {
+            if (direction == 'left') {
+                this.next();
+            } else {
+                this.prev();
+            }
+            // console.log(evt);
+            // console.log(slick);
+            // console.log(direction);
+        },
+        reInit: function reInit() {
+            var _this = this;
+
+            // Helpful if you have to deal with v-for to update dynamic lists
+            this.$nextTick(function () {
+                _this.$refs.slick.reSlick();
+            });
+        },
+        changeType: function changeType(evt) {
+            this.type = evt.target.value;
+            // console.log(evt.target.value)
+        },
+        buildingStatusChange: function buildingStatusChange(evt) {
+            this.buildingStatus = evt.target.value;
+        },
+        hitungSimulasi: function hitungSimulasi() {
+            var vm = this;
+            var formData = new FormData();
+            formData.append('building_type', this.buildingStatus);
+            formData.append('zipcode', this.zipcode);
+            formData.append('house_type', this.type);
+            formData.append('floor', this.floor);
+            formData.append('been_fire', this.beenFire);
+            formData.append('package', this.package);
+            formData.append('wood_element', this.woodElement);
+            formData.append('building_value', this.buildingValue);
+            formData.append('content_value', this.contentValue);
+            if (this.rsmdcc != 0) formData.append('rsmdcc', this.rsmdcc);
+            if (this.dlv != 0) formData.append('dlv', this.dlv);
+            if (this.flood != 0) formData.append('flood', this.flood);
+            if (this.earthquake != 0) formData.append('earthquake', this.earthquake);
+            if (this.earthquake != 0) formData.append('eq_type', this.eqType);
+
+            axios.post('/calculator', formData).then(function (_ref) {
+                var data = _ref.data;
+
+                console.log(data);
+                vm.result = data.result;
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
     }
-  }
 });
 
 /***/ }),
@@ -11836,7 +11836,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "node_modules\\vue-slick\\slickCarousel.vue"
+Component.options.__file = "node_modules/vue-slick/slickCarousel.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -11845,9 +11845,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11ae86ee", Component.options)
+    hotAPI.createRecord("data-v-14c5b163", Component.options)
   } else {
-    hotAPI.reload("data-v-11ae86ee", Component.options)
+    hotAPI.reload("data-v-14c5b163", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15056,7 +15056,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-11ae86ee", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-14c5b163", module.exports)
   }
 }
 
