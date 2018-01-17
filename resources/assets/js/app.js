@@ -7,11 +7,8 @@
 
 require('./bootstrap');
 import Vue from 'vue';
-import $ from "jquery";
 import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
-import Validator from 'validator';
-import isEmpty from 'lodash/isEmpty';
 import query from 'query-string';
 import select2 from 'select2';
 import 'select2/dist/css/select2.min.css';
