@@ -178,7 +178,7 @@
           <h1 class="color-primary ">Asuransi Rumah & Harta Benda</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
-Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
+            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
         </div>
         <div class="col-xs-12 col-md-7">
           @include('partials.calculator')

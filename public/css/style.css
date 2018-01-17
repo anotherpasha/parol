@@ -9067,6 +9067,10 @@ select.selectpicker {
   text-align: center;
 }
 
+.text-left {
+  text-align: left !important;
+}
+
 .medium {
   font-family: "GothamBold";
 }
@@ -9574,13 +9578,22 @@ section.sub-page-banner.contact {
   background-color: #fff;
   border-radius: 20px;
   padding: 20px 40px;
-  margin: 40px 0;
+  margin: 20px 0;
   min-height: 200px;
   border-bottom: solid 20px #000498;
   -webkit-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
   -o-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
+}
+
+.card.form.zipcode {
+  padding: 40px;
+  margin: 20px 0 50px 0;
+}
+
+.card.form.product-package {
+  max-width: 95%;
 }
 
 .tabs-navigation {

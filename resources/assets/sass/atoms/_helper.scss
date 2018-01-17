@@ -13,6 +13,9 @@
 .text-center {
   text-align: center;
 }
+.text-left {
+    text-align: left !important;
+}
 
 .medium {
   font-family: $brand-font-medium;
@@ -20,6 +23,8 @@
 .book {
   font-family: $brand-font-book;
 }
+
+
 
 .flush-t {
   margin-top: 0;

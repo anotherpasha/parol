@@ -35,8 +35,9 @@ $(document).ready(()=> {
 
   $('.selectPostal').selectpicker({
     style: 'btn-info',
-    size: 1,
-    liveSearch: true
+    size: 3,
+    liveSearch: true,
+    liveSearchPlaceholder: 'Search kodepos'
   });
 
   if(!localStorage.quiz) {

@@ -13,7 +13,7 @@
           </div>
       </div>
 
-    <div class="card form">
+    <div class="card form zipcode">
         <hr class="primary rounded"/>
         <div class="form-group">
             <label for="">Kode Pos</label>
@@ -129,14 +129,26 @@
         </div>
     </div>
 
-    <div class="card form">
+    <div class="card form text-left product-package">
         <hr class="primary rounded"/>
         <div class="form-group">
           <label for="">Paket standar hanya melindungi anda dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin anda tambahkan.</label>
-          <input type="checkbox" name="rsmdcc" value="1"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara<br/><br/>
-          <input type="checkbox" name="dlv" value="1"> Pembersihan puing, Longsor, Properti tertabrak kendaraan<br/><br/>
-          <input type="checkbox" name="flood" value="1"> Taifun, Badai, dan Kerusakan akibat air<br/><br/>
-          <input type="checkbox" name="earthquake" value="1" v-model="earthquake"> Gempa Bumi<br/><br/>
+          <br/><br/>
+          <label for="rsmdcc" class="book">
+            <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara
+          </label>
+          <br/>
+          <label for="dlv" class="book">
+            <input id="dlv" type="checkbox" name="dlv" value="1"> Pembersihan puing, Longsor, Properti tertabrak kendaraan
+          </label>
+          <br/>
+          <label for="flood" class="book">
+            <input id="flood" type="checkbox" name="flood" value="1"> Taifun, Badai, dan Kerusakan akibat air
+          </label>
+          <br/>
+          <label for="earthquake" class="book">
+            <input id="earthquake" type="checkbox" name="earthquake" value="1">  Gempa Bumi
+          </label>
         </div>
     </div>
 

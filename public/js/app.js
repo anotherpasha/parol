@@ -58984,8 +58984,9 @@ __WEBPACK_IMPORTED_MODULE_1_jquery___default()(document).ready(function () {
 
   __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.selectPostal').selectpicker({
     style: 'btn-info',
-    size: 1,
-    liveSearch: true
+    size: 3,
+    liveSearch: true,
+    liveSearchPlaceholder: 'Search kodepos'
   });
 
   if (!localStorage.quiz) {}
