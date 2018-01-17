@@ -1,8 +1,8 @@
 .container {
-  @include mappy-bp(small) {
+  @include mappy-bp(max-width small) {
     width: 90%;
   }
-  @include mappy-bp(xs) {
+  @include mappy-bp(max-width xs) {
     width: 80%;
   }
 
