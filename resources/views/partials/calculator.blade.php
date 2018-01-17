@@ -133,7 +133,6 @@
         <hr class="primary rounded"/>
         <div class="form-group">
           <label for="">Paket standar hanya melindungi anda dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin anda tambahkan.</label>
-<<<<<<< HEAD
           <br/><br/>
           <label for="rsmdcc" class="book">
             <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara
@@ -150,12 +149,6 @@
           <label for="earthquake" class="book">
             <input id="earthquake" type="checkbox" name="earthquake" value="1">  Gempa Bumi
           </label>
-=======
-          <input type="checkbox" name="rsmdcc" value="1" v-model="rsmdcc"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara<br/><br/>
-          <input type="checkbox" name="dlv" value="1" v-model="dlv"> Pembersihan puing, Longsor, Properti tertabrak kendaraan<br/><br/>
-          <input type="checkbox" name="flood" value="1" v-model="flood"> Taifun, Badai, dan Kerusakan akibat air<br/><br/>
-          <input type="checkbox" name="earthquake" value="1" v-model="earthquake"> Gempa Bumi<br/><br/>
->>>>>>> 2762ef9e276c94f4c3fb29c399548051dbb5d428
         </div>
     </div>
 
@@ -177,7 +170,10 @@
           <button type="button" name="button" class="btn btn-parolamas btn-medium" @click="hitungSimulasi">Hitung Simulasi</button>
         </div>
         <div v-if="result != 0">
-          <label for="">Estimasi premi Anda adalah Rp. @{{ result }}</label>
+          <label for="">Estimasi premi Anda adalah </label>
+          <h2 class="color-primary">Rp. @{{ result }}</h2>
+          </br>
+          </br>
         </div>
     </div>
 
