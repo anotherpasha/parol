@@ -10167,6 +10167,13 @@ footer .logo-list dt {
   margin-bottom: 15px;
 }
 
+@media all and (max-width: 52.875em) {
+  footer .wrapper {
+    padding-left: 40px;
+    margin: 20px 0;
+  }
+}
+
 footer .copyright {
   margin-top: 40px;
   background: #6b6b6b;

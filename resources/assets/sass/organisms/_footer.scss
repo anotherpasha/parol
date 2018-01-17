@@ -28,6 +28,12 @@ footer {
 
      }
    }
+   .wrapper {
+     @include mappy-bp(max-width small) {
+       padding-left: 40px;
+       margin: 20px 0;
+     }
+   }
    .copyright {
      margin-top: 40px;
      background: #6b6b6b;
