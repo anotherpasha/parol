@@ -1,9 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/wysiwyg.css": "/css/wysiwyg.css",
-    "/css/style.css": "/css/style.css",
     "/js/product.js": "/js/product.js",
     "/js/media.js": "/js/media.js",
     "/js/dashboard.js": "/js/dashboard.js",
-    "/js/calculator.js": "/js/calculator.js"
+    "/js/calculator.js": "/js/calculator.js",
+    "/css/style.css": "/css/style.css"
 }

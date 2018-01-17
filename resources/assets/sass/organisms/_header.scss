@@ -1,13 +1,17 @@
 header {
   position: absolute;
   top: 0;
-
   left: 0;
   width: 100%;
   padding: 10px;
   z-index: 100;
   .header-info {
     float: right;
+    @include mappy-bp(max-width small) {
+      width: 100%;
+      clear: both;
+      padding: 10px 20px;
+    }
     li {
       display: inline-block;
       padding: 5px 10px;
@@ -24,23 +28,47 @@ header {
     .navbar-primary {
       display: flex;
       padding: 15px 0;
+      @include mappy-bp(max-width small) {
+        padding: 0;
+      }
       .left-content {
         width: 15%;
       }
       .right-content {
         width: 85%;
+        @include mappy-bp(max-width small) {
+          position: fixed;
+          top: 0;
+          height: 100%;
+          right: -100%;
+          z-index: 100;
+          background-color: $brand-primary;
+        }
       }
       .wrapper {
         width: 100%;
         display: inline-block;
+
       }
 
     .nav-link {
       float: right;
+      @include mappy-bp(max-width small) {
+        width: 100%;
+        clear: both;
+        padding: 10px 20px;
+      }
       li {
+        @include mappy-bp(max-width small) {
+          display: block;
+          padding: 10px 0;
+        }
         a {
           padding: 10px;
           color: #fff;
+          @include mappy-bp(max-width small) {
+            width: 100%;
+          }
           &:hover {
             text-decoration: none;
             color: $brand-primary;
@@ -49,7 +77,40 @@ header {
       }
       form {
         display: inline-block;
+        @include mappy-bp(max-width small) {
+          padding: 10px;
+        }
+        input {
+          padding: 0 10px;
+        }
       }
+    }
+  }
+  .toggle-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #fff;
+    display: none;
+    @include mappy-bp(max-width small) {
+      display: inline-block;
+    }
+  }
+  .close-toggle {
+    display: inline-block;
+    float: right;
+    color: #fff;
+    margin: 10px;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    border: solid 1px #ededed;
+    @include vendor((border-radius: 50%), webkit moz ms o);
+    display: none;
+    @include mappy-bp(max-width small) {
+      display: inline-block;
     }
   }
 }

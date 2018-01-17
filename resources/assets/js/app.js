@@ -60,6 +60,29 @@ $(document).ready(()=> {
     });
   });
 
+  $('.toggle-menu').click(function() {
+    var $menu = $('#menu-mobile');
+    if($menu.hasClass('active')) {
+      $menu.removeClass('active');
+      $menu.animate({
+        right: '-100%'
+      }, 300);
+
+      return;
+    }
+    $menu.addClass('active');
+     $menu.animate({
+      right: "0"
+    });
+  });
+  $('.close-toggle').click(function() {
+    var $menu = $('#menu-mobile');
+    $menu.removeClass('active');
+    $menu.animate({
+      right: '-100%'
+    }, 300);
+  });
+
   $('.panel-parolamas .panel-heading').click(function() {
       $('.panel-parolamas .panel-heading').removeClass('active');
       $(this).addClass('active');

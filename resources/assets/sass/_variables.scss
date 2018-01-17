@@ -1,3 +1,13 @@
+$breakpoints: (
+  'xs': 320px,
+  'small' : 640px,
+  'medium': 1024px,
+  'large': 1420px
+  );
+$mappy-queries: (
+  'phone' : mappy-bp(small medium),
+  'landscape-phone': mappy-bp(h max-height medium)
+);
 
 // boostrap select variables
 

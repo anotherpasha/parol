@@ -1,12 +1,16 @@
 <header>
   <div class="container">
     <nav class="navbar-primary">
+        <a class="toggle-menu">
+          <span class="glyphicon glyphicon-align-justify"></span>
+        </a>
         <div class="left-content">
             <a href="{{url('/')}}" class="brand">
               <img src="{{url('/images/logo-parolamas.png')}}" alt="">
             </a>
         </div>
-        <div class="right-content">
+        <div class="right-content"   id="menu-mobile">
+            <a href="javasript:;" class="close-toggle">x</a>
             <div class="wrapper">
                 <ul class="undotted-list inline  header-info ">
                     <li class="color-white"><span class="icon-call-small"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;1500 - 554</a></li>

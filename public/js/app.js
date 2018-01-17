@@ -59009,6 +59009,29 @@ __WEBPACK_IMPORTED_MODULE_1_jquery___default()(document).ready(function () {
     });
   });
 
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.toggle-menu').click(function () {
+    var $menu = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#menu-mobile');
+    if ($menu.hasClass('active')) {
+      $menu.removeClass('active');
+      $menu.animate({
+        right: '-100%'
+      }, 300);
+
+      return;
+    }
+    $menu.addClass('active');
+    $menu.animate({
+      right: "0"
+    });
+  });
+  __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.close-toggle').click(function () {
+    var $menu = __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#menu-mobile');
+    $menu.removeClass('active');
+    $menu.animate({
+      right: '-100%'
+    }, 300);
+  });
+
   __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.panel-parolamas .panel-heading').click(function () {
     __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.panel-parolamas .panel-heading').removeClass('active');
     __WEBPACK_IMPORTED_MODULE_1_jquery___default()(this).addClass('active');
