@@ -70,9 +70,25 @@
                       <label for="">Keperluan Anda</label>
                       <div class="select-custom ">
                         <select class="selectpicker" name="occupation">
+                          <option value="register">Daftar</option>
                           <option value="ask">Bertanya</option>
                           <option value="product_info">Informasi Produk</option>
                         </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class=" col-xs-12">
+                    <div class="form-group">
+                      <label >Jenis Asuransi</label>
+                      <div class="select-custom ">
+                        <select class="selectpicker" v-model="contactForm.type">
+                          <option value="Asuransi Rumah">Asuransi Rumah</option>
+                          <option value="Asuransi Harta & Benda">Asuransi Harta & Benda</option>
+                          <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
+                        </select>
+                        <br>
+                        * Anda akan dilayani petugas layanan nasabah kami pada hari kerja Senin - Jumat di jam kerja.
                       </div>
                     </div>
                   </div>
