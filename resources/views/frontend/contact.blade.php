@@ -123,13 +123,8 @@
                   <img src="{{url('/images/icon-locs.png')}}" alt="">
                 </span>
                 <span class="details">
-<<<<<<< HEAD
-                    Pondok Indah Office Tower 2 16th floor suite 1601,
-                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang,
-=======
                     Pondok Indah Office Tower 2 16th floor suite 1601 
                     Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, 
->>>>>>> 969c4c6b3a024a0f8ba03048a58572c7ec5a3f1c
                     Jakarta Selatan 12310
                 </span>
               </dt>
