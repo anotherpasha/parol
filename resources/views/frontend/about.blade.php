@@ -56,71 +56,9 @@
     <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
   </div>
 </section>
+
+
 <section class="extra-padding with-scroll-bottom grey ">
-  <div class="container">
-      <div class="row">
-          <div class="col-sm-12">
-              <h1 class="color-primary text-center">Produk Kami</h1>
-              <hr class="primary"/>
-              <br><br><br>
-          </div>
-
-          <div class="col-xs-12 col-md-4">
-              <dl class="card product">
-                <dt><span class="product-icon home"></span></dt>
-                <dt>
-                  <h4 class="color-dark-grey medium">Asuransi</br>Rumah</h4>
-                  <hr class="primary small"/>
-                </dt>
-                <dt class="description">
-                  <p class="color-dark-grey book">
-                      Perlindungan terhadap<br>tempat tinggal Anda</p>
-                </dt>
-                <dt>
-                  <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
-                </dt>
-              </dl>
-          </div>
-
-          <div class="col-xs-12 col-md-4">
-              <dl class="card product">
-                <dt><span class="product-icon goods"></span></dt>
-                <dt>
-                  <h4 class="color-dark-grey medium">Asuransi<br/>Harta Benda</h4>
-                  <hr class="primary small"/>
-                </dt>
-                <dt class="description">
-                  <p class="color-dark-grey book">
-                    Asuransi perlindungan terhadap</br>
-                    harta benda di dalam rumah Anda
-                  </p>
-                </dt>
-                <dt>
-                  <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
-                </dt>
-              </dl>
-          </div>
-
-          <div class="col-xs-12 col-md-4">
-              <dl class="card product">
-                <dt><span class="product-icon goods-home"></span></dt>
-                <dt>
-                  <h4 class="color-dark-grey medium">Asuransi Rumah </br> & Harta Benda</h4>
-                  <hr class="primary small"/>
-                </dt>
-                <dt class="description">
-                  <p class="color-dark-grey book">
-                    Asuransi perlindungan gabungan antara tempat tinggal Anda dan seluruh
-                    harta benda di dalam rumah Anda
-                  </p>
-                </dt>
-                <dt>
-                  <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
-                </dt>
-              </dl>
-          </div>
-
-      </div>
-  </div>
+  @include('partials.our-product')
 </section>
 @endsection

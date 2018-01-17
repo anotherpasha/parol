@@ -25,7 +25,10 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    @if(isset($isHomepage))
+    @if(isset($isContact))
+    <script src="{{ asset('js/contact.js') }}"></script>
+    @endif
+    @if(isset($isCalculator))
     <script src="{{ asset('js/calculator.js') }}"></script>
     @endif
 

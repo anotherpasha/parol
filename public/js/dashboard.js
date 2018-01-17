@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 275);
+/******/ 	return __webpack_require__(__webpack_require__.s = 285);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -31401,56 +31401,6 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 /***/ }),
 
-/***/ 275:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(276);
-
-
-/***/ }),
-
-/***/ 276:
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-__webpack_require__(17);
-
-window.Vue = __webpack_require__(13);
-
-var app = new Vue({
-    el: '#dashboard',
-
-    data: {
-        user: ''
-    },
-
-    methods: {
-        getUser: function getUser() {
-            var _this = this;
-
-            var token = localStorage.getItem('token');
-            // console.log(token);
-            axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
-            axios.get('/api/user').then(function (res) {
-                _this.user = res.data;
-            }).catch(function (err) {
-                //console.log(err);
-                location.href = '/client/login';
-            });
-        }
-    },
-
-    mounted: function mounted() {}
-});
-
-/***/ }),
-
 /***/ 28:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31493,6 +31443,56 @@ module.exports = function parseHeaders(headers) {
   return parsed;
 };
 
+
+/***/ }),
+
+/***/ 285:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(286);
+
+
+/***/ }),
+
+/***/ 286:
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+__webpack_require__(17);
+
+window.Vue = __webpack_require__(13);
+
+var app = new Vue({
+    el: '#dashboard',
+
+    data: {
+        user: ''
+    },
+
+    methods: {
+        getUser: function getUser() {
+            var _this = this;
+
+            var token = localStorage.getItem('token');
+            // console.log(token);
+            axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+            axios.get('/api/user').then(function (res) {
+                _this.user = res.data;
+            }).catch(function (err) {
+                //console.log(err);
+                location.href = '/client/login';
+            });
+        }
+    },
+
+    mounted: function mounted() {}
+});
 
 /***/ }),
 
