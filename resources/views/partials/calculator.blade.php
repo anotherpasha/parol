@@ -1,5 +1,5 @@
 <div class="" id="calculator">
-  <slick ref="slick" :options="slickOptions">
+  <slick ref="slick" :options="slickOptions" @swipe="slickSwipe">
       <div class="card form">
           <hr class="primary rounded"/>
           <div class="form-group">

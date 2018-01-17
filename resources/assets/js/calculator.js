@@ -62,6 +62,17 @@ const calculator = new Vue({
             this.reInit;
         },
 
+        slickSwipe(evt, slick, direction) {
+          if (direction == 'left') {
+            this.next();
+          } else {
+            this.prev();
+          }
+          // console.log(evt);
+          // console.log(slick);
+          // console.log(direction);
+        },
+
         reInit() {
             // Helpful if you have to deal with v-for to update dynamic lists
             this.$nextTick(() => {
