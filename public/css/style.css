@@ -9300,6 +9300,29 @@ textarea.form-control {
   border-bottom-left-radius: 10px;
 }
 
+.select-custom .select2 {
+  width: 100% !important;
+  text-align: left;
+}
+
+.select-custom .select2-container--default .select2-selection--single {
+  background-color: #dfdfdf;
+  border-radius: 10px !important;
+  border: none;
+}
+
+.select-custom .select2-container--default .select2-selection--single .select2-selection__arrow {
+  -moz-border-top-right-radius: 21px !important;
+  border-top-right-radius: 21px !important;
+  -moz-border-bottom-right-radius: 21px !important;
+  border-bottom-right-radius: 21px !important;
+  background-color: #d2d2d2;
+}
+
+.select-custom .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: #fff transparent transparent transparent;
+}
+
 .select-custom button {
   color: #000;
 }

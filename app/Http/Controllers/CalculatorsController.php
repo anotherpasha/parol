@@ -167,8 +167,7 @@ class CalculatorsController extends Controller
     }
 
     public function getZipcode(Request $request) {
-        $zipcode = '823';
-        $zips = EqZipcode::where('zipcode', 'like', '%' . $zipcode . '%')
+        $zips = EqZipcode::where('zipcode', 'like', '%' . $request->q . '%')
             ->select(['id', 'zipcode'])->get();
         return response()->json($zips);
     }

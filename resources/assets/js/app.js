@@ -13,7 +13,8 @@ import 'bootstrap-select';
 import Validator from 'validator';
 import isEmpty from 'lodash/isEmpty';
 import query from 'query-string';
-
+import select2 from 'select2';
+import 'select2/dist/css/select2.min.css';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -33,7 +34,36 @@ $(document).ready(()=> {
     style: 'btn-info',
     size: 4
   });
+  $('.postal-code').select2({
+    ajax: {
+      url: `${window.location.href}/get-zipcode`,
+      dataType: 'json',
+      data: function (params) {
+        return {
+          q: params.term,
+        };
+      },
+      delay: 250,
+      processResults: function (data) {
 
+
+        return {
+          results: $.map(data, function (item) {
+              return {
+                  text: item.zipcode,
+                  id: item.zipcode
+              }
+          })
+        };
+      },
+      cache: true,
+      placeholder: 'Cari kodepos...'
+
+    }
+  });
+  function formatRepo (repo) {
+    console.log(repo);
+  }
 
   $('.selectPostal').selectpicker({
     style: 'btn-info',
@@ -100,5 +130,3 @@ $(document).ready(()=> {
   }
 
 });
-
-

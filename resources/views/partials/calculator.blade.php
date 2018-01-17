@@ -18,10 +18,7 @@
         <div class="form-group">
             <label for="">Kode Pos</label>
             <div class="select-custom">
-            <select class="selectPostal" name="kode_pos" v-model="zipcode">
-              @foreach($zipcodes as $zipcode)
-              <option value="{!! $zipcode->id !!}">{!! $zipcode->zipcode !!}</option>
-              @endforeach
+            <select class="postal-code" name="kode_pos"  v-model="zipcode">
             </select>
           </div>
         </div>
