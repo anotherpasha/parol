@@ -12,6 +12,11 @@ const calculator = new Vue({
     beforeCreate() {
       console.log(this.$refs)
     },
+
+    updated() {
+      $('.selectpicker').selectpicker('refresh');
+    },
+
     data() {
         return {
           buildingStatus: 1,
@@ -20,7 +25,7 @@ const calculator = new Vue({
           earthquake: 0,
           building_value: 0,
           content_value: 0,
-          form_total: 11,
+          form_total: 9,
           indicators: 1,
             slickOptions: {
               arrows: false,
@@ -37,11 +42,13 @@ const calculator = new Vue({
         next() {
             this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
             this.$refs.slick.next();
+            this.reInit;
         },
 
         prev() {
             this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
             this.$refs.slick.prev();
+            this.reInit;
         },
 
         reInit() {
@@ -50,10 +57,15 @@ const calculator = new Vue({
                 this.$refs.slick.reSlick();
             });
         },
+
         changeType(evt) {
-            // this.type = evt.target.value;
-            console.log(evt.target.value)
+            this.type = evt.target.value;
+            // console.log(evt.target.value)
         },
+
+        buildingStatusChange(evt) {
+          this.buildingStatus = evt.target.value;
+        }
 
     },
 });

@@ -11707,6 +11707,9 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     beforeCreate: function beforeCreate() {
         console.log(this.$refs);
     },
+    updated: function updated() {
+        $('.selectpicker').selectpicker('refresh');
+    },
     data: function data() {
         return {
             buildingStatus: 1,
@@ -11715,7 +11718,7 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             earthquake: 0,
             building_value: 0,
             content_value: 0,
-            form_total: 11,
+            form_total: 9,
             indicators: 1,
             slickOptions: {
                 arrows: false,
@@ -11733,10 +11736,12 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         next: function next() {
             this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
             this.$refs.slick.next();
+            this.reInit;
         },
         prev: function prev() {
             this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
             this.$refs.slick.prev();
+            this.reInit;
         },
         reInit: function reInit() {
             var _this = this;
@@ -11747,8 +11752,11 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             });
         },
         changeType: function changeType(evt) {
-            // this.type = evt.target.value;
-            console.log(evt.target.value);
+            this.type = evt.target.value;
+            // console.log(evt.target.value)
+        },
+        buildingStatusChange: function buildingStatusChange(evt) {
+            this.buildingStatus = evt.target.value;
         }
     }
 });
@@ -11780,7 +11788,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "node_modules/vue-slick/slickCarousel.vue"
+Component.options.__file = "node_modules\\vue-slick\\slickCarousel.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -11789,9 +11797,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14c5b163", Component.options)
+    hotAPI.createRecord("data-v-11ae86ee", Component.options)
   } else {
-    hotAPI.reload("data-v-14c5b163", Component.options)
+    hotAPI.reload("data-v-11ae86ee", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -15000,7 +15008,7 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-14c5b163", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-11ae86ee", module.exports)
   }
 }
 
