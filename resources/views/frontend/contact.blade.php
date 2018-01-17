@@ -106,8 +106,8 @@
                   <img src="{{url('/images/icon-locs.png')}}" alt="">
                 </span>
                 <span class="details">
-                    Pondok Indah Office Tower 2 16th floor suite 1601, 
-                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, 
+                    Pondok Indah Office Tower 2 16th floor suite 1601,
+                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang,
                     Jakarta Selatan 12310
                 </span>
               </dt>
@@ -116,7 +116,7 @@
                   <img src="{{url('/images/icon-message.png')}}" alt="">
                 </span>
                 <span class="details">
-                    <a href="mailto:info@parolamas.com">info@parolamas.com</a>
+                    <a class="color-dark-grey" href="mailto:info@parolamas.com">info@parolamas.com</a>
                 </span>
               </dt>
               <dt>
@@ -124,7 +124,7 @@
                   <img src="{{url('/images/icon-call-blue.png')}}" alt="">
                 </span>
                 <span class="details">
-                    <a href="tel:+1500554">1500 - 554</a>
+                    <a class="color-dark-grey" href="tel:+1500554">1500 - 554</a>
                 </span>
               </dt>
 
