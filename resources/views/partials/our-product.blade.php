@@ -20,7 +20,7 @@
                     </p>
                   </dt>
                   <dt>
-                    <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
+                    <a href="{{ url('product') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
                   </dt>
                 </dl>
             </div>
@@ -38,7 +38,7 @@
                     </p>
                   </dt>
                   <dt>
-                    <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
+                    <a href="{{ url('product?page=goods') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
                   </dt>
                 </dl>
             </div>
@@ -56,7 +56,7 @@
                     </p>
                   </dt>
                   <dt>
-                    <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
+                    <a href="{{ url('product?page=home_goods') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
                   </dt>
                 </dl>
             </div>
