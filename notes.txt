@@ -86,11 +86,11 @@ flexas => double
     -informasi produk (3 jenis produk, wrong description and leads) (DONE)
     -copy on header persetujuan dalam 7 hari, praktis dan ekonomis, FAQ, hubungi kami is not revised yet as per my feedback (DONE)
 
-2. The image in FAQ is wrong because it’s the same as the Tentang Parolamas page. It shouldn’t be. Please change it to the correct image. Please check the PSD file that I’ve sent to you.
+2. The image in FAQ is wrong because it’s the same as the Tentang Parolamas page. It shouldn’t be. Please change it to the correct image. Please check the PSD file that I’ve sent to you. (DONE)
 
-3. FAQ - The content copy is all switched up (the correct copy is in the PPT attachment). Also, please check why when we click the button it leads to nowhere
+3. The content copy is all switched up (the correct copy is in the PPT attachment). Also, please check why when we click the button it leads to nowhere
 
-4. When I am clicking on the 3 product icons on home page it’s not leading me anywhere. It should take me to product info page
+4. When I am clicking on the 3 product icons on home page it’s not leading me anywhere. It should take me to product info page (DONE)
 
 5. The call button is not working. when we tap the call button it calls +6221 1500-554. It should call to 1500-554. That’s why, the call button doesn’t connect me to Parolamas’s call centre.
 
