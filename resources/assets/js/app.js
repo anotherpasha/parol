@@ -56,7 +56,6 @@ $(document).ready(()=> {
       cache: true,
       placeholder: 'Cari kodepos...',
       minimumInputLength: 3
-
     }
   });
   function formatRepo (repo) {
