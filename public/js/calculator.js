@@ -11713,12 +11713,12 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     data: function data() {
         return {
             buildingStatus: 1,
-            zipcode: '',
+            zipcode: 1,
             type: 1,
-            houseType: '',
-            woodElement: '',
+            houseType: 1,
+            woodElement: 1,
             floor: '',
-            beenFire: '',
+            beenFire: 0,
             package: 'both',
             buildingValue: 0,
             contentValue: 0,
@@ -11726,7 +11726,7 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
             dlv: 0,
             flood: 0,
             earthquake: 0,
-            eqType: '',
+            eqType: 1,
 
             form_total: 9,
             indicators: 1,

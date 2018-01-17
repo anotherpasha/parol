@@ -20,12 +20,12 @@ const calculator = new Vue({
     data() {
         return {
           buildingStatus: 1,
-          zipcode: '',
+          zipcode: 1,
           type: 1,
-          houseType: '',
-          woodElement: '',
+          houseType: 1,
+          woodElement: 1,
           floor: '',
-          beenFire: '',
+          beenFire: 0,
           package: 'both',
           buildingValue: 0,
           contentValue: 0,
@@ -33,7 +33,7 @@ const calculator = new Vue({
           dlv: 0,
           flood: 0,
           earthquake: 0,
-          eqType:'',
+          eqType:1,
 
           form_total: 9,
           indicators: 1,
