@@ -9266,20 +9266,24 @@ ul.dotted-list li {
   display: inline;
 }
 
-input {
+input,
+textarea {
   border: none;
   outline: none;
 }
 
-input.rounded {
+input.rounded,
+textarea.rounded {
   border-radius: 50px;
 }
 
-input.grey {
+input.grey,
+textarea.grey {
   background-color: #dfdfdf;
 }
 
-input.form-control {
+input.form-control,
+textarea.form-control {
   border: none;
   border-radius: 10px;
 }

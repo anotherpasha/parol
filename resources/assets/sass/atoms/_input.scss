@@ -1,4 +1,4 @@
-input{
+input, textarea{
   border: none;
   &.rounded {
     @include vendor((border-radius: 50px), webkit moz ms o);
