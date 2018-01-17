@@ -92,10 +92,10 @@ flexas => double
 
 4. When I am clicking on the 3 product icons on home page it’s not leading me anywhere. It should take me to product info page (DONE)
 
-5. The call button is not working. when we tap the call button it calls +6221 1500-554. It should call to 1500-554. That’s why, the call button doesn’t connect me to Parolamas’s call centre.
+5. The call button is not working. when we tap the call button it calls +6221 1500-554. It should call to 1500-554. That’s why, the call button doesn’t connect me to Parolamas’s call centre. (DONE)
 
 6. Please add the Office address in the page Hubungi Kami:
-Alamat kantor Parolamas: Pondok Indah Office Tower 2 16th floor suite 1601, Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, Jakarta Selatan 12310
+Alamat kantor Parolamas: Pondok Indah Office Tower 2 16th floor suite 1601, Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, Jakarta Selatan 12310 (DONE)
 
 7. Bisa tolong make sure bisa apa gak, untuk bagian section Simulasi Premi, bagian itu digedein aja supaya kotak-kotak pertanyaannya gak bikin border naik-turun gitu?
 
@@ -103,6 +103,6 @@ Alamat kantor Parolamas: Pondok Indah Office Tower 2 16th floor suite 1601, Jl S
 
 9. Can you please confirm that we can remove the arrows (left and right) in the premium calculator? We need to make sure that there’s no one skips the question, we can be sure that they answer the question first then they can move to the next question.
 
-10. I’ve also attached the brochure for button “unduh brosur” see attachment.
+10. I’ve also attached the brochure for button “unduh brosur” see attachment. (DONE)
 
 11. Contact us form / Lead form is not letting me submit my details. Please fix

@@ -57,6 +57,8 @@ Route::get('/calculator/flood', 'CalculatorsController@flood');
 Route::post('/calculator/flood', 'CalculatorsController@floodResult');
 Route::get('/calculator/earthquake', 'CalculatorsController@earthquake');
 Route::post('/calculator/earthquake', 'CalculatorsController@earthquakeResult');
+Route::get('/get-zipcode', 'CalculatorsController@getZipcode');
+
 // Route::get('/migrate/city', 'FrontendController@migrateCity');
 
 Auth::routes();

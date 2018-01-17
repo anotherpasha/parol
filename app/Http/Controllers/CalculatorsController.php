@@ -165,4 +165,11 @@ class CalculatorsController extends Controller
         $rate = $qRate->rate;
         return ($rate/100) * $tsi;
     }
+
+    public function getZipcode(Request $request) {
+        $zipcode = '823';
+        $zips = EqZipcode::where('zipcode', 'like', '%' . $zipcode . '%')
+            ->select(['id', 'zipcode'])->get();
+        return response()->json($zips);
+    }
 }
