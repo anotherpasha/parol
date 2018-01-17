@@ -60,12 +60,12 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 283);
+/******/ 	return __webpack_require__(__webpack_require__.s = 246);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 13:
+/***/ 12:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10879,11 +10879,11 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(14).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(13).setImmediate))
 
 /***/ }),
 
-/***/ 14:
+/***/ 13:
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -10936,14 +10936,14 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(15);
+__webpack_require__(14);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
 
-/***/ 15:
+/***/ 14:
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -11137,7 +11137,7 @@ exports.clearImmediate = clearImmediate;
 
 /***/ }),
 
-/***/ 271:
+/***/ 234:
 /***/ (function(module, exports) {
 
 /*
@@ -11220,7 +11220,7 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 272:
+/***/ 235:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -11266,7 +11266,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(273);
+var	fixUrls = __webpack_require__(236);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -11580,7 +11580,7 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 
-/***/ 273:
+/***/ 236:
 /***/ (function(module, exports) {
 
 
@@ -11676,158 +11676,158 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 283:
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(284);
+module.exports = __webpack_require__(247);
 
 
 /***/ }),
 
-/***/ 284:
+/***/ 247:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_slick__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_slick__ = __webpack_require__(248);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_slick___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_slick__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel_slick_slick_css__ = __webpack_require__(289);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel_slick_slick_css__ = __webpack_require__(252);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel_slick_slick_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_slick_carousel_slick_slick_css__);
 
 
 
 
 var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#calculator',
+    el: '#calculator',
 
-  components: { Slick: __WEBPACK_IMPORTED_MODULE_1_vue_slick___default.a },
+    components: { Slick: __WEBPACK_IMPORTED_MODULE_1_vue_slick___default.a },
 
-  beforeCreate: function beforeCreate() {
-    console.log(this.$refs);
-  },
-  updated: function updated() {
-    $('.selectpicker').selectpicker('refresh');
-  },
-  data: function data() {
-    return {
-      buildingStatus: 1,
-      zipcode: 1,
-      type: 1,
-      houseType: 1,
-      woodElement: 1,
-      floor: '',
-      beenFire: 0,
-      package: 'both',
-      buildingValue: 0,
-      contentValue: 0,
-      rsmdcc: 0,
-      dlv: 0,
-      flood: 0,
-      earthquake: 0,
-      eqType: 1,
-
-      form_total: 9,
-      indicators: 1,
-      slickOptions: {
-        arrows: false,
-        slidesToShow: 1,
-        centerMode: true,
-        infinite: false,
-        adaptiveHeight: true
-      },
-      result: 0
-    };
-  },
-
-
-  // All slick methods can be used too, example here
-  methods: {
-    next: function next() {
-      this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
-      this.$refs.slick.next();
-      this.reInit;
+    beforeCreate: function beforeCreate() {
+        console.log(this.$refs);
     },
-    prev: function prev() {
-      this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
-      this.$refs.slick.prev();
-      this.reInit;
+    updated: function updated() {
+        $('.selectpicker').selectpicker('refresh');
     },
-    slickSwipe: function slickSwipe(evt, slick, direction) {
-      if (direction == 'left') {
-        this.next();
-      } else {
-        this.prev();
-      }
-      // console.log(evt);
-      // console.log(slick);
-      // console.log(direction);
-    },
-    reInit: function reInit() {
-      var _this = this;
+    data: function data() {
+        return {
+            buildingStatus: 1,
+            zipcode: 1,
+            type: 1,
+            houseType: 1,
+            woodElement: 1,
+            floor: '',
+            beenFire: 0,
+            package: 'both',
+            buildingValue: 0,
+            contentValue: 0,
+            rsmdcc: 0,
+            dlv: 0,
+            flood: 0,
+            earthquake: 0,
+            eqType: 1,
 
-      // Helpful if you have to deal with v-for to update dynamic lists
-      this.$nextTick(function () {
-        _this.$refs.slick.reSlick();
-      });
+            form_total: 9,
+            indicators: 1,
+            slickOptions: {
+                arrows: false,
+                slidesToShow: 1,
+                centerMode: true,
+                infinite: false,
+                adaptiveHeight: true
+            },
+            result: 0
+        };
     },
-    changeType: function changeType(evt) {
-      this.type = evt.target.value;
-      // console.log(evt.target.value)
-    },
-    buildingStatusChange: function buildingStatusChange(evt) {
-      this.buildingStatus = evt.target.value;
-    },
-    checkContentValue: function checkContentValue(evt) {
-      var maxContent = this.buildingValue / 10;
-      if (this.contentValue > maxContent) {
-        alert('Harga isi bangunan Anda maksimal ' + maxContent);
-        this.contentValue = maxContent;
-        evt.target.focus();
-      }
-    },
-    hitungSimulasi: function hitungSimulasi() {
-      var vm = this;
-      var formData = new FormData();
-      formData.append('building_type', this.buildingStatus);
-      formData.append('zipcode', this.zipcode);
-      formData.append('house_type', this.type);
-      formData.append('floor', this.floor);
-      formData.append('been_fire', this.beenFire);
-      formData.append('package', this.package);
-      formData.append('wood_element', this.woodElement);
-      formData.append('building_value', this.buildingValue);
-      formData.append('content_value', this.contentValue);
-      if (this.rsmdcc != 0) formData.append('rsmdcc', this.rsmdcc);
-      if (this.dlv != 0) formData.append('dlv', this.dlv);
-      if (this.flood != 0) formData.append('flood', this.flood);
-      if (this.earthquake != 0) formData.append('earthquake', this.earthquake);
-      if (this.earthquake != 0) formData.append('eq_type', this.eqType);
 
-      axios.post('/calculator', formData).then(function (_ref) {
-        var data = _ref.data;
 
-        console.log(data);
-        vm.result = data.result;
-      }).catch(function (err) {
-        console.log(err);
-      });
+    // All slick methods can be used too, example here
+    methods: {
+        next: function next() {
+            this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
+            this.$refs.slick.next();
+            this.reInit;
+        },
+        prev: function prev() {
+            this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
+            this.$refs.slick.prev();
+            this.reInit;
+        },
+        slickSwipe: function slickSwipe(evt, slick, direction) {
+            if (direction == 'left') {
+                this.next();
+            } else {
+                this.prev();
+            }
+            // console.log(evt);
+            // console.log(slick);
+            // console.log(direction);
+        },
+        reInit: function reInit() {
+            var _this = this;
+
+            // Helpful if you have to deal with v-for to update dynamic lists
+            this.$nextTick(function () {
+                _this.$refs.slick.reSlick();
+            });
+        },
+        changeType: function changeType(evt) {
+            this.type = evt.target.value;
+            // console.log(evt.target.value)
+        },
+        buildingStatusChange: function buildingStatusChange(evt) {
+            this.buildingStatus = evt.target.value;
+        },
+        checkContentValue: function checkContentValue(evt) {
+            var maxContent = this.buildingValue / 10;
+            if (this.contentValue > maxContent) {
+                alert('Harga isi bangunan Anda maksimal ' + maxContent);
+                this.contentValue = maxContent;
+                evt.target.focus();
+            }
+        },
+        hitungSimulasi: function hitungSimulasi() {
+            var vm = this;
+            var formData = new FormData();
+            formData.append('building_type', this.buildingStatus);
+            formData.append('zipcode', this.zipcode);
+            formData.append('house_type', this.type);
+            formData.append('floor', this.floor);
+            formData.append('been_fire', this.beenFire);
+            formData.append('package', this.package);
+            formData.append('wood_element', this.woodElement);
+            formData.append('building_value', this.buildingValue);
+            formData.append('content_value', this.contentValue);
+            if (this.rsmdcc != 0) formData.append('rsmdcc', this.rsmdcc);
+            if (this.dlv != 0) formData.append('dlv', this.dlv);
+            if (this.flood != 0) formData.append('flood', this.flood);
+            if (this.earthquake != 0) formData.append('earthquake', this.earthquake);
+            if (this.earthquake != 0) formData.append('eq_type', this.eqType);
+
+            axios.post('/calculator', formData).then(function (_ref) {
+                var data = _ref.data;
+
+                console.log(data);
+                vm.result = data.result;
+            }).catch(function (err) {
+                console.log(err);
+            });
+        }
     }
-  }
 });
 
 /***/ }),
 
-/***/ 285:
+/***/ 248:
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-var normalizeComponent = __webpack_require__(47)
+var normalizeComponent = __webpack_require__(43)
 /* script */
-var __vue_script__ = __webpack_require__(286)
+var __vue_script__ = __webpack_require__(249)
 /* template */
-var __vue_template__ = __webpack_require__(288)
+var __vue_template__ = __webpack_require__(251)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -11844,7 +11844,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "node_modules\\vue-slick\\slickCarousel.vue"
+Component.options.__file = "node_modules/vue-slick/slickCarousel.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -11853,9 +11853,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-11ae86ee", Component.options)
+    hotAPI.createRecord("data-v-14c5b163", Component.options)
   } else {
-    hotAPI.reload("data-v-11ae86ee", Component.options)
+    hotAPI.reload("data-v-14c5b163", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -11867,12 +11867,12 @@ module.exports = Component.exports
 
 /***/ }),
 
-/***/ 286:
+/***/ 249:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(13);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
@@ -11887,7 +11887,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 // Check if request comes from browser and is not server rendered
 if (typeof window !== 'undefined') {
-  var slick = __webpack_require__(287);
+  var slick = __webpack_require__(250);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -12028,7 +12028,7 @@ if (typeof window !== 'undefined') {
 
 /***/ }),
 
-/***/ 287:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -15049,7 +15049,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ 288:
+/***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -15064,19 +15064,19 @@ module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-11ae86ee", module.exports)
+    require("vue-hot-reload-api")      .rerender("data-v-14c5b163", module.exports)
   }
 }
 
 /***/ }),
 
-/***/ 289:
+/***/ 252:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(290);
+var content = __webpack_require__(253);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -15084,7 +15084,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(272)(content, options);
+var update = __webpack_require__(235)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -15102,10 +15102,10 @@ if(false) {
 
 /***/ }),
 
-/***/ 290:
+/***/ 253:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(271)(false);
+exports = module.exports = __webpack_require__(234)(false);
 // imports
 
 
@@ -15145,7 +15145,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 47:
+/***/ 43:
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */

@@ -9336,13 +9336,13 @@ input.form-control {
   margin-bottom: 30px;
 }
 
-@media all and (min-width: 52.9375em) {
+@media all and (max-width: 52.875em) {
   .container {
     width: 90%;
   }
 }
 
-@media all and (min-width: 30em) {
+@media all and (max-width: 29.9375em) {
   .container {
     width: 80%;
   }
