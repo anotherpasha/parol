@@ -53,7 +53,7 @@
             </div>
         </div>
         <footer class="k-footer uk-position-bottom uk-text-center">
-            Copyright &copy; <?php echo date('Y'); ?> <a class="" href="{!! url('/') !!}" target="_blank" title="Site Name">Site Name</a> | Powered by <a class="" href="http://kleur.id" target="_blank" title="Kleur CMS">Kleur CMS</a>
+            Copyright &copy; <?php echo date('Y'); ?> <a class="" href="{!! url('/') !!}" target="_blank" title="Site Name">{{ config('app.name', 'Laravel') }}
         </footer>
     </section>
 @endsection

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@if(isset($pageTitle)) {!! $pageTitle !!} - @endif Kleur</title>
+        <title>@if(isset($pageTitle)) {!! $pageTitle !!} - @endif {{ config('app.name', 'Laravel') }}</title>
 
         <link href="{!! asset('assets/img/favicon.png') !!}" rel="shortcut icon">
 
