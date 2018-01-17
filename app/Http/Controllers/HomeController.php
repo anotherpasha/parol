@@ -33,6 +33,7 @@ class HomeController extends Controller
     {
         $data['types'] = EqConstructionType::all();
         $data['zipcodes'] = EqZipcode::take(1000)->get();
+        $data['isHomepage'] = true;
         // $data['zipcodes'] = EqZipcode::all();
         return view('frontend.home', $data);
     }

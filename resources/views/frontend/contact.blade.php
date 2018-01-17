@@ -9,8 +9,7 @@
             <h1>Hubungi Kami</h1>
             <hr class="primary left" />
             <p class="color-white">
-              Hubungi kami untuk mendapatkan informasi lebih
-              melalui petugas layanan nasabah kami.
+              Dapatkan informasi lebih lengkap melalui petugas layanan nasabah kami.
             </p>
           </div>
 
@@ -33,31 +32,38 @@
         <br><br>
         <div class="row">
           <div class="col-xs-12">
-            <form class="" action="javascript:;" method="post">
+            <form class="" method="post" action="{{ url('contact-us') }}">
+                {{ csrf_field() }}
                 <div class="row">
 
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">Nama Lengkap</label>
-                      <input class="form-control grey" type="text" name="" value="">
+                      <input class="form-control grey" type="text" name="name" value="">
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
-                      <label for="">Nama Lengkap</label>
-                      <input class="form-control grey" type="text" name="" value="">
+                      <label for="">Alamat Email</label>
+                      <input class="form-control grey" type="text" name="email" value="">
                     </div>
                   </div>
 
-                  <div class="col-xs-12">
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="form-group">
+                      <label for="">No Telepon</label>
+                      <input class="form-control grey" type="text" name="phone" value="">
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">Keperluan Anda</label>
                       <div class="select-custom ">
-                        <select class="selectpicker">
-                          <option>Asuransi Rumah</option>
-                          <option>Asuransi Harta & Benda</option>
-                          <option>Asuransi Rumah & Harta Benda</option>
+                        <select class="selectpicker" name="occupation">
+                          <option value="ask">Bertanya</option>
+                          <option value="product_info">Informasi Produk</option>
                         </select>
                       </div>
                     </div>
@@ -65,13 +71,13 @@
 
                   <div class="col-xs-12">
                     <div class="form-group">
-                      <label for="">Nama Lengkap</label>
-                      <input class="form-control grey" type="text" name="" value="">
+                      <label for="">Pertanyaan Anda</label>
+                      <textarea class="form-control" name="message"></textarea>
                     </div>
                   </div>
 
                   <div class="col-xs-12 text-center">
-                    <button type="button" class="btn btn-parolamas btn-medium min-width" name="button">Kirim</button>
+                    <button type="submit" class="btn btn-parolamas btn-medium min-width" name="button">Kirim</button>
                   </div>
                 </div>
 

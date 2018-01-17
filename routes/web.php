@@ -33,9 +33,9 @@ Route::get('/about', function () {
 Route::get('/faq', function () {
     return view('frontend/faq');
 });
-Route::get('/contact-us', function () {
-    return view('frontend/contact');
-});
+
+Route::get('/contact-us', 'ContactController@contact');
+Route::post('/contact-us', 'ContactController@postContact');
 
 
 Route::get('/', 'HomeController@index');

@@ -46,7 +46,26 @@
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Parolamas memberikan kepastian atas klaim Anda dalam jangka waktu 7 hari sehingga Anda tidak lagi harus cemas menunggu lama.
+                  Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim Anda dalam 7 hari kerja sehingga Anda tidak lagi harus cemas menunggu lama.
+                </p>
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-04.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table"> -->
+          <div class="custom-carousel-caption">
+              <div class="container">
+                <h1>
+                  Praktis dan</br>
+                  Ekonomis
+                </h1>
+                <hr class="primary left" />
+                <p class="paragraph">
+                  Asuransi Parolamas menawarkan fleksibilitas premi dengan harga terjangkau, serta proses pendaftaran yang ringkas.
                 </p>
                 <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
@@ -72,26 +91,7 @@
               </div>
 
           </div>
-        </div>
-
-        <div class="item">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-04.jpg')}})"></div>
-          <!-- <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table"> -->
-          <div class="custom-carousel-caption">
-              <div class="container">
-                <h1>
-                  Praktis dan</br>
-                  Ekonomis
-                </h1>
-                <hr class="primary left" />
-                <p class="paragraph">
-                  Asuransi Parolamas menawarkan fleksibilitas premi dengan harga terjangkau, serta proses pendaftaran yang ringkas kurang dari 10 menit.
-                </p>
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
-              </div>
-
-          </div>
-        </div>
+        </div>       
 
       </div>
       <div class="icon-scroll">
@@ -120,7 +120,8 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                        Perlindungan terhadap<br>harta benda di dalam<br>rumah, kost, & apartemen Anda</p>
+                      Perlindungan terhadap bangunan dan tempat tinggal Anda
+                    </p>
                   </dt>
                   <dt>
                     <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
@@ -137,9 +138,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan gabungan<br>
-                      untuk tempat tinggal dan</br>
-                      harta benda di dalamnya
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Anda.
                     </p>
                   </dt>
                   <dt>
@@ -152,13 +151,12 @@
                 <dl class="card product">
                   <dt><span class="product-icon goods-home"></span></dt>
                   <dt>
-                    <h4 class="color-dark-grey medium">Asuransi Rumah </br> & Harta Benda</h4>
+                    <h4 class="color-dark-grey medium">Asuransi</br>Rumah & Harta Benda</h4>
                     <hr class="primary small"/>
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Asuransi perlindungan gabungan antara tempat tinggal Anda dan seluruh
-                      harta benda di dalam rumah Anda
+                      Perlindungan gabungan untuk tempat tinggal dan harta benda di dalamnya
                     </p>
                   </dt>
                   <dt>

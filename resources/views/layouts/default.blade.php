@@ -25,7 +25,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    @if(isset($isHomepage))
     <script src="{{ asset('js/calculator.js') }}"></script>
+    @endif
 
 </body>
 </html>

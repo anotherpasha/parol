@@ -11,7 +11,7 @@
             <p class="color-white">
               Dapatkan jawaban untuk beberapa pertanyaan</br>
               yang sering ditanyakan mengenai produk</br>
-              Asuransi Harta Benda Parolamas
+              Asuransi Rumah & Harta Benda Parolamas
             </p>
           </div>
 
