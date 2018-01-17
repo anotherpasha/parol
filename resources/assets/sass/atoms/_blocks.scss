@@ -167,6 +167,10 @@ section {
   padding: 10px;
   font-size: 14px;
   text-align: center;
+  display: none;
+    &.active {
+      display: inline-block;
+    }
   span {
     font-size: 22px;
   }

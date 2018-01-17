@@ -91,7 +91,7 @@
         </div>
     </div>
   </div>
-  <div  v-if="notif" class="notification">
+  <div  v-bind:class="{ active: notif }"   v-if="notif" class="notification">
     <span class="glyphicon glyphicon-ok-sign"></span></br>
     Your message has sent. </br>Thank you!
   </div>

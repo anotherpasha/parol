@@ -9538,6 +9538,11 @@ section.sub-page-banner.faq-banner {
   padding: 10px;
   font-size: 14px;
   text-align: center;
+  display: none;
+}
+
+.notification.active {
+  display: inline-block;
 }
 
 .notification span {
