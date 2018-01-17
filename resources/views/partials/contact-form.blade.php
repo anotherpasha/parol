@@ -1,4 +1,5 @@
 <section class="extra-padding home-contact extra-padding" id="contact">
+
   <div class="container-fluid">
     <div class="row">
         <div class="col-sm-12 text-center">
@@ -77,6 +78,9 @@
             </div>
 
             <div class="col-xs-12 text-center">
+                <div v-if="loader" class="loader-container">
+                    <img src="{{url('/images/ajax-loader.gif')}}" alt="">
+                </div>
                 <br><br>
                 <button type="button" name="button" class="btn btn-parolamas btn-md min-width" @click="submitContact">Kirim</button>
             </div>
@@ -84,5 +88,9 @@
           </form>
         </div>
     </div>
+  </div>
+  <div  v-if="notif" class="notification">
+    <span class="glyphicon glyphicon-ok-sign"></span></br>
+    Your message has sent. </br>Thank you!
   </div>
 </section>

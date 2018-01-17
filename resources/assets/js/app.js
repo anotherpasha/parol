@@ -101,6 +101,8 @@ const contact = new Vue({
       console.log('contact created');
     },
     data: {
+        notif: false,
+        loader: false,
         contactForm: {
           name: '',
           email: '',
@@ -142,10 +144,14 @@ const contact = new Vue({
         formData.append('date', date);
         formData.append('time', time);
         formData.append('type', type);
+        this.loader = true;
         axios.post('/registration', formData)
         .then( (d) => {
-          alert('Terimakasih.');
+          this.notif = true;
           this.resetForm();
+          setTimeout(function() {
+            this.notif = false;
+          }, 600);
         })
         .catch(error => {
             const err = error.response.data;
