@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('resources/assets/js/app.js', 'public/js')
 	.js('resources/assets/js/contact.js', 'public/js')
+	.js('resources/assets/js/contact-us.js', 'public/js')
 	.js('resources/assets/js/calculator.js', 'public/js')
     .js('resources/assets/js/dashboard.js', 'public/js')
     .js('resources/assets/js/product.js', 'public/js')

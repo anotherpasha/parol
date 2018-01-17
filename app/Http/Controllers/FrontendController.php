@@ -42,6 +42,7 @@ class FrontendController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'date' => $request->date,
+            'occupation' => 'Daftar',
             'time' => $request->time,
             'product' => $request->type
         ]);

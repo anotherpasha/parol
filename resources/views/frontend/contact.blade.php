@@ -23,7 +23,7 @@
 </section>
 
 <section class="half-center-transparent--top extra-padding with-scroll-bottom ">
-  <div class="container">
+  <div class="container" id="contactus">
     <div class="row">
       <div class="col-xs-12 col-sm-8">
         <div class="contact-form-wrapper">
@@ -47,21 +47,24 @@
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">Nama Lengkap</label>
-                      <input class="form-control grey" type="text" name="name" value="">
+                      <input class="form-control grey" type="text" name="name" value="{{ old('name') }}">
+                      @if($errors->has('name'))<div class="alert alert-danger" role="alert">{{ $errors->first('name') }}</div>@endif
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">Alamat Email</label>
-                      <input class="form-control grey" type="text" name="email" value="">
+                      <input class="form-control grey" type="text" name="email" value="{{ old('email') }}">
+                      @if($errors->has('email'))<div class="alert alert-danger" role="alert">{{ $errors->first('email') }}</div>@endif
                     </div>
                   </div>
 
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">No Telepon</label>
-                      <input class="form-control grey" type="text" name="phone" value="">
+                      <input class="form-control grey" type="text" name="phone" value="{{ old('phone') }}">
+                      @if($errors->has('phone'))<div class="alert alert-danger" role="alert">{{ $errors->first('phone') }}</div>@endif
                     </div>
                   </div>
 
@@ -69,34 +72,32 @@
                     <div class="form-group">
                       <label for="">Keperluan Anda</label>
                       <div class="select-custom ">
-                        <select class="selectpicker" name="occupation">
-                          <option value="register">Daftar</option>
-                          <option value="ask">Bertanya</option>
-                          <option value="product_info">Informasi Produk</option>
+                        <select class="selectpicker" name="occupation" v-model="occupation">
+                          <option value="Daftar">Daftar</option>
+                          <option value="Bertanya">Bertanya</option>
+                          <option value="Informasi Produk">Informasi Produk</option>
                         </select>
                       </div>
                     </div>
                   </div>
 
-                  <div class=" col-xs-12">
+                  <div class=" col-xs-12" v-if="occupation == 'Daftar'">
                     <div class="form-group">
                       <label >Jenis Asuransi</label>
                       <div class="select-custom ">
-                        <select class="selectpicker" v-model="contactForm.type">
+                        <select class="selectpicker" name="package">
                           <option value="Asuransi Rumah">Asuransi Rumah</option>
                           <option value="Asuransi Harta & Benda">Asuransi Harta & Benda</option>
                           <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
                         </select>
-                        <br>
-                        * Anda akan dilayani petugas layanan nasabah kami pada hari kerja Senin - Jumat di jam kerja.
                       </div>
                     </div>
                   </div>
 
-                  <div class="col-xs-12">
+                  <div class="col-xs-12" v-if="occupation != 'Daftar'">
                     <div class="form-group">
                       <label for="">Pertanyaan Anda</label>
-                      <textarea class="form-control grey" name="message"></textarea>
+                      <textarea class="form-control grey" name="message">{{ old('message') }}</textarea>
                     </div>
                   </div>
 
@@ -122,8 +123,13 @@
                   <img src="{{url('/images/icon-locs.png')}}" alt="">
                 </span>
                 <span class="details">
+<<<<<<< HEAD
                     Pondok Indah Office Tower 2 16th floor suite 1601,
                     Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang,
+=======
+                    Pondok Indah Office Tower 2 16th floor suite 1601 
+                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, 
+>>>>>>> 969c4c6b3a024a0f8ba03048a58572c7ec5a3f1c
                     Jakarta Selatan 12310
                 </span>
               </dt>

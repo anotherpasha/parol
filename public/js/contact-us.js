@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 278);
+/******/ 	return __webpack_require__(__webpack_require__.s = 280);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -15834,14 +15834,16 @@ module.exports = nodeUtil;
 /* 275 */,
 /* 276 */,
 /* 277 */,
-/* 278 */
+/* 278 */,
+/* 279 */,
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(279);
+module.exports = __webpack_require__(281);
 
 
 /***/ }),
-/* 279 */
+/* 281 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -15857,122 +15859,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
-  el: '#contact',
+    el: '#contactus',
 
-  components: {},
-  beforeCreate: function beforeCreate() {
-    console.log('contact created');
-  },
+    components: {},
 
-  data: {
-    notif: false,
-    loader: false,
-    contactForm: {
-      name: '',
-      email: '',
-      phone: '',
-      date: '',
-      time: '',
-      type: 'Asuransi Rumah'
+    beforeCreate: function beforeCreate() {
+        // console.log('contact created');
     },
-    errors: {
-      errEmail: '',
-      errName: '',
-      errPhone: '',
-      errDate: '',
-      errTime: ''
+
+
+    data: {
+        occupation: 'Daftar'
     },
-    isValid: false
-  },
 
-  mounted: function mounted() {},
+    mounted: function mounted() {},
 
 
-  methods: {
-    changeTime: function changeTime(evt) {
-      this.contactForm.time = evt.target.value;
+    updated: function updated() {
+        $('.selectpicker').selectpicker('refresh');
     },
-    changeDate: function changeDate(evt) {
-      this.contactForm.date = evt.target.value;
-    },
-    submitContact: function submitContact() {
-      var vm = this;
-      var formData = new FormData();
-      var _contactForm = this.contactForm,
-          name = _contactForm.name,
-          email = _contactForm.email,
-          phone = _contactForm.phone,
-          date = _contactForm.date,
-          time = _contactForm.time,
-          type = _contactForm.type;
 
-      if (!vm.validate().isValid) {
-        console.log('invalid');
-        vm.errors = vm.validate().errors;
-        return;
-      }
-      vm.loader = true;
-      formData.append('name', name);
-      formData.append('email', email);
-      formData.append('phone', phone);
-      formData.append('date', date);
-      formData.append('time', time);
-      formData.append('type', type);
-      axios.post('/registration', formData).then(function (d) {
-        vm.notif = true;
-        setTimeout(function () {
-          vm.notif = false;
-          vm.loader = false;
-          vm.resetForm();
-          vm.errors = {};
-        }, 1200);
-      }).catch(function (error) {
-        var err = error.response.data;
-        alert(err.message);
-        vm.loader = false;
-      });
-    },
-    validate: function validate() {
-      var contactForm = this.contactForm;
+    methods: {}
 
-      var errors = {};
-      if (!__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmail(contactForm.email)) {
-        errors.errEmail = 'This field must be a valid email address.';
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmpty(contactForm.email)) {
-        errors.errEmail = 'This field is required.';
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmpty(contactForm.name)) {
-        errors.errName = 'This field is required.';
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmpty(contactForm.phone)) {
-        errors.errPhone = 'This field is required.';
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmpty(contactForm.date)) {
-        errors.errDate = 'This field is required.';
-      }
-      if (__WEBPACK_IMPORTED_MODULE_1_validator___default.a.isEmpty(contactForm.time)) {
-        errors.errTime = 'This field is required.';
-      }
-      // console.log(errors);
-      return {
-        errors: errors,
-        isValid: __WEBPACK_IMPORTED_MODULE_2_lodash_isEmpty___default()(errors)
-      };
-    },
-    resetForm: function resetForm() {
-      this.contactForm = {
-        name: '',
-        email: '',
-        phone: '',
-        date: '',
-        time: '',
-        type: 'Asuransi Rumah'
-      };
-    }
-  },
-
-  updated: function updated() {}
 });
 
 /***/ })
