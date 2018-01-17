@@ -35,10 +35,13 @@ $(document).ready(()=> {
 
   $('.selectPostal').selectpicker({
     style: 'btn-info',
-    size: 4,
+    size: 1,
     liveSearch: true
   });
 
+  if(!localStorage.quiz) {
+    // $('#modal-quiz').modal('show');
+  }
 // Tooggle sticky calculator
   $('#calculator-toggle').click(()=> {
     const $calculator = $('.calculator-container');

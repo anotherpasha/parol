@@ -9,7 +9,7 @@
         <div class="right-content">
             <div class="wrapper">
                 <ul class="undotted-list inline  header-info ">
-                    <li class="color-white"><span class="icon-call-small"></span><a href="tel:+62211500554">&nbsp;&nbsp;1500 - 554</a></li>
+                    <li class="color-white"><span class="icon-call-small"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;1500 - 554</a></li>
                     <li>
                         <span class="icon-globe"></span>
                         <select class="select-lang" name="">

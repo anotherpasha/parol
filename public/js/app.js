@@ -58984,9 +58984,12 @@ __WEBPACK_IMPORTED_MODULE_1_jquery___default()(document).ready(function () {
 
   __WEBPACK_IMPORTED_MODULE_1_jquery___default()('.selectPostal').selectpicker({
     style: 'btn-info',
-    size: 4,
+    size: 1,
     liveSearch: true
   });
+
+  if (!localStorage.quiz) {}
+  // $('#modal-quiz').modal('show');
 
   // Tooggle sticky calculator
   __WEBPACK_IMPORTED_MODULE_1_jquery___default()('#calculator-toggle').click(function () {

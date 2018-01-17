@@ -7,6 +7,8 @@
       <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -17,14 +19,15 @@
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
-                  Persetujuan</br>
-                  Klaim Dalam</br>
-                  7 Hari
+                  Asuransi</br>
+                  Harta Benda
                 </h1>
                 <hr class="primary left" />
-                <p class="paragraph">Parolamas memberikan kepastian atas klaim Anda dalam jangka waktu 7 hari sehingga Anda tidak lagi harus cemas menunggu lama.
+                <p class="paragraph">
+                  Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang Anda pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md">Lihat Lebih Lanjut</a>
+
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
 
           </div>
@@ -40,9 +43,47 @@
                   7 Hari
                 </h1>
                 <hr class="primary left" />
-                <p class="paragraph">Parolamas memberikan kepastian atas klaim Anda dalam jangka waktu 7 hari sehingga Anda tidak lagi harus cemas menunggu lama.
+                <p class="paragraph">
+                  Parolamas memberikan kepastian atas klaim Anda dalam jangka waktu 7 hari sehingga Anda tidak lagi harus cemas menunggu lama.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md">Lihat Lebih Lanjut</a>
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table">
+          <div class="custom-carousel-caption">
+              <div class="container">
+                <h1>
+                  Persyaratan</br>
+                  Mudah
+                </h1>
+                <hr class="primary left" />
+                <p class="paragraph">
+                  Kini daftar asuransi tidak perlu rumit.
+                  Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit.
+                </p>
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table">
+          <div class="custom-carousel-caption">
+              <div class="container">
+                <h1>
+                  Praktis dan</br>
+                  Ekonomis
+                </h1>
+                <hr class="primary left" />
+                <p class="paragraph">
+                  Asuransi Parolamas menawarkan fleksibilitas premi dengan harga terjangkau, serta proses pendaftaran yang ringkas kurang dari 10 menit.
+                </p>
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
 
           </div>
@@ -151,5 +192,6 @@ Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda 
   </section>
 
   @include('partials.contact-form')
+  @include('partials.quiz')
 
 @endsection
