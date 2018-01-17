@@ -72,6 +72,8 @@
                     <option value="Asuransi Harta & Benda">Asuransi Harta & Benda</option>
                     <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
                   </select>
+                  <br>
+                  * Anda akan dilayani petugas layanan nasabah kami pada hari kerja Senin - Jumat di jam kerja.
                 </div>
               </div>
             </div>
