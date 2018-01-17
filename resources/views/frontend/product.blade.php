@@ -12,7 +12,7 @@
             <p class="color-white">
                 Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah Anda dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
             </p>
-            <a href="" class="btn btn-parolamas btn-md">Lihat Lebih Lanjut</a>
+            <a href="#" class="btn btn-parolamas btn-md">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
@@ -46,7 +46,7 @@
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javascript:;" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
                         </div>
                       </div>
                     </div>
@@ -77,7 +77,7 @@
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javascript:;" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
                         </div>
                       </div>
                     </div>
@@ -109,7 +109,7 @@
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javascript:;" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
                         </div>
                       </div>
                     </div>
