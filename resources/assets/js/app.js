@@ -54,9 +54,8 @@ $(document).ready(()=> {
         };
       },
       cache: true,
-      minimumInputLength: 3,
-      placeholder: 'Cari kodepos...'
-
+      placeholder: 'Cari kodepos...',
+      minimumInputLength: 3
     }
   });
   function formatRepo (repo) {
