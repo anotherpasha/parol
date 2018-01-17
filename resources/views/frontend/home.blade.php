@@ -20,8 +20,8 @@
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
-                  Asuransi Rumah &</br>
-                  Harta Benda
+                  Asuransi Rumah</br>
+                  & Harta Benda
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">

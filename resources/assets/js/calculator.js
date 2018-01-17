@@ -99,6 +99,7 @@ const calculator = new Vue({
         },
 
         hitungSimulasi() {
+          console.log('simulasi');
           let vm = this;
           let formData = new FormData();
           formData.append('building_type', this.buildingStatus);

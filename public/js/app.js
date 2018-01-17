@@ -59695,8 +59695,7 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       this.contactForm.date = evt.target.value;
     },
     submitContact: function submitContact() {
-      var _this = this;
-
+      var vm = this;
       var formData = new FormData();
       var _contactForm = this.contactForm,
           name = _contactForm.name,
@@ -59706,26 +59705,30 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
           time = _contactForm.time,
           type = _contactForm.type;
 
-      if (!this.validate().isValid) {
-        this.errors = this.validate().errors;
+      if (!vm.validate().isValid) {
+        console.log('invalid');
+        vm.errors = vm.validate().errors;
         return;
       }
+      vm.loader = true;
       formData.append('name', name);
       formData.append('email', email);
       formData.append('phone', phone);
       formData.append('date', date);
       formData.append('time', time);
       formData.append('type', type);
-      this.loader = true;
       axios.post('/registration', formData).then(function (d) {
-        _this.notif = true;
-        _this.resetForm();
+        vm.notif = true;
         setTimeout(function () {
-          this.notif = false;
-        }, 600);
+          vm.notif = false;
+          vm.loader = false;
+          vm.resetForm();
+          vm.errors = {};
+        }, 1200);
       }).catch(function (error) {
         var err = error.response.data;
         alert(err.message);
+        vm.loader = false;
       });
     },
     validate: function validate() {
@@ -59750,9 +59753,10 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       if (__WEBPACK_IMPORTED_MODULE_4_validator___default.a.isEmpty(contactForm.time)) {
         errors.errTime = 'This field is required.';
       }
+      // console.log(errors);
       return {
         errors: errors,
-        isValid: __WEBPACK_IMPORTED_MODULE_5_lodash_isEmpty___default()(this.errors)
+        isValid: __WEBPACK_IMPORTED_MODULE_5_lodash_isEmpty___default()(errors)
       };
     },
     resetForm: function resetForm() {

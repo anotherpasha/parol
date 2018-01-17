@@ -81,7 +81,7 @@ class CalculatorsController extends Controller
         $data['eq'] = $eq;
         $data['package'] = $request->package;
         $data['result'] = number_format($flexa + $flood + $eq, 0, ',', '.');
-
+        Log::warning(json_encode($data));
         if ($request->ajax()) {
             return response()->json($data);
         }
@@ -147,7 +147,10 @@ class CalculatorsController extends Controller
 
     protected function calculateFlood($tsi, $zipcode)
     {
-        $qRate = FloZipcode::where('id', $zipcode)->first();
+        $qZc = EqZipcode::where('id', $zipcode)->first();
+        $zc = $qZc->zipcode;
+        Log::warning(json_encode($zc));
+        $qRate = FloZipcode::where('code', $zc)->first();
         $rate = $qRate->rate;
         return ($rate/100) * $tsi;
     }

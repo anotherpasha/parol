@@ -137,19 +137,19 @@
           <label for="">Paket standar hanya melindungi anda dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin anda tambahkan.</label>
           <br/><br/>
           <label for="rsmdcc" class="book">
-            <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara
+            <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1" v-model="rsmdcc"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara
           </label>
           <br/>
           <label for="dlv" class="book">
-            <input id="dlv" type="checkbox" name="dlv" value="1"> Pembersihan puing, Longsor, Properti tertabrak kendaraan
+            <input id="dlv" type="checkbox" name="dlv" value="1" v-model="dlv"> Pembersihan puing, Longsor, Properti tertabrak kendaraan
           </label>
           <br/>
           <label for="flood" class="book">
-            <input id="flood" type="checkbox" name="flood" value="1"> Taifun, Badai, dan Kerusakan akibat air
+            <input id="flood" type="checkbox" name="flood" value="1" v-model="flood"> Taifun, Badai, dan Kerusakan akibat air
           </label>
           <br/>
           <label for="earthquake" class="book">
-            <input id="earthquake" type="checkbox" name="earthquake" value="1">  Gempa Bumi
+            <input id="earthquake" type="checkbox" name="earthquake" value="1" v-model="earthquake">  Gempa Bumi
           </label>
         </div>
     </div>
