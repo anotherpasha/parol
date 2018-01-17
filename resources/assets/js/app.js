@@ -54,6 +54,7 @@ $(document).ready(()=> {
         };
       },
       cache: true,
+      minimumInputLength: 3,
       placeholder: 'Cari kodepos...'
 
     }
