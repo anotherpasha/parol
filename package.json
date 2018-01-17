@@ -24,6 +24,7 @@
     "i": "^0.3.6",
     "lodash": "^4.17.4",
     "mappy-breakpoints": "^0.2.3",
+    "query-string": "^5.0.1",
     "slick-carousel": "^1.8.1",
     "validator": "^9.2.0",
     "vue-form-wizard": "^0.8.2",

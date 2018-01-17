@@ -12,6 +12,7 @@ import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
 import Validator from 'validator';
 import isEmpty from 'lodash/isEmpty';
+import query from 'query-string';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -87,7 +88,17 @@ $(document).ready(()=> {
   $('.panel-parolamas .panel-heading').click(function() {
       $('.panel-parolamas .panel-heading').removeClass('active');
       $(this).addClass('active');
-  })
+  });
+
+  const params = query.parse(window.location.search);
+  const tab    = $('.tab-pane');
+  if(params.page) {
+      tab.removeClass('active');
+      $(`.nav-tabs a`).parents().removeClass('active');
+      $(`#${params.page}`).addClass('active');
+      $(`.nav-tabs a[href="#${params.page}"]`).parents().addClass('active');
+  }
+
 });
 
 // Vue
