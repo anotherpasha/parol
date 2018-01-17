@@ -20,7 +20,7 @@
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
-                  Asuransi</br>
+                  Asuransi Rumah &</br>
                   Harta Benda
                 </h1>
                 <hr class="primary left" />
@@ -120,7 +120,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                        Perlindungan terhadap<br>tempat tinggal Anda</p>
+                        Perlindungan terhadap<br>harta benda di dalam<br>rumah, kost, & apartemen Anda</p>
                   </dt>
                   <dt>
                     <a href="#" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
@@ -137,8 +137,9 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Asuransi perlindungan terhadap</br>
-                      harta benda di dalam rumah Anda
+                      Perlindungan gabungan<br>
+                      untuk tempat tinggal dan</br>
+                      harta benda di dalamnya
                     </p>
                   </dt>
                   <dt>

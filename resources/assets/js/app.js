@@ -176,7 +176,7 @@ const contact = new Vue({
         if (Validator.isEmpty(contactForm.date)) {
             errors.errDate = 'This field is required.';
         }
-        if (Validator.isEmpty(contactForm.phone)) {
+        if (Validator.isEmpty(contactForm.time)) {
             errors.errTime = 'This field is required.';
         }
         return {
