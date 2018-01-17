@@ -26,7 +26,7 @@
           <h4 class="medium"><span class="icon icon-call"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;&nbsp;1500 - 554</a></h4>
           <ul class="undotted-list inline list-socmed">
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com/AsuransiParolamasIndonesia/" target="_blank">
                 <img src="{{url('/images/icon-fb.png')}}" alt="">
               </a>
             </li>
