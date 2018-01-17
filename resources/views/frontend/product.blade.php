@@ -12,7 +12,7 @@
             <p class="color-white">
                 Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah Anda dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
             </p>
-            <a href="#" class="btn btn-parolamas btn-md">Lihat Lebih Lanjut</a>
+            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
@@ -28,7 +28,7 @@
 </section>
 
 
-<main class="tab-content">
+<main class="tab-content" id="main">
   <div role="tabpanel" class="tab-pane active" id="home">
     <section class="with-scroll-bottom  product-summary  ">
           <!-- Tabs pane -->
