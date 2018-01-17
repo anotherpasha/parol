@@ -10,7 +10,8 @@ import Vue from 'vue';
 import $ from "jquery";
 import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
-
+import Validator from 'validator';
+import isEmpty from 'lodash/isEmpty';
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -107,7 +108,15 @@ const contact = new Vue({
           date: '',
           time: '',
           type: 'Asuransi Rumah'
-        }
+        },
+        errors: {
+          errEmail:'',
+          errName:'',
+          errPhone:'',
+          errDate:'',
+          errTime: '',
+        },
+        isValid: false,
     },
 
     mounted() {
@@ -123,6 +132,10 @@ const contact = new Vue({
       submitContact() {
         let formData = new FormData();
         const {name, email, phone, date, time, type} = this.contactForm;
+        if(!this.validate().isValid) {
+          this.errors = this.validate().errors;
+          return;
+        }
         formData.append('name', name);
         formData.append('email', email);
         formData.append('phone', phone);
@@ -138,6 +151,32 @@ const contact = new Vue({
             const err = error.response.data;
             alert(err.message);
         });
+      },
+      validate() {
+        const {contactForm}  = this;
+        let errors = {};
+        if (!Validator.isEmail(contactForm.email)) {
+            errors.errEmail = 'This field must be a valid email address.';
+        }
+        if (Validator.isEmpty(contactForm.email)) {
+            errors.errEmail = 'This field is required.';
+        }
+        if (Validator.isEmpty(contactForm.name)) {
+            errors.errName = 'This field is required.';
+        }
+        if (Validator.isEmpty(contactForm.phone)) {
+            errors.errPhone = 'This field is required.';
+        }
+        if (Validator.isEmpty(contactForm.date)) {
+            errors.errDate = 'This field is required.';
+        }
+        if (Validator.isEmpty(contactForm.phone)) {
+            errors.errTime = 'This field is required.';
+        }
+        return {
+          errors,
+          isValid: isEmpty(this.errors)
+        };
       },
       resetForm() {
         this.contactForm = {

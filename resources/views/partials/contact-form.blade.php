@@ -7,7 +7,6 @@
             <p class="color-dark-grey">Untuk mendapatkan perlindungan, silahkan tinggalkan informasi diri Anda<br>
             dan tentukan kapan Anda bersedia dihubungi oleh petugas layanan nasabah kami.</p>
             <br><br><br>
-
         </div>
     </div>
     <div class="row">
@@ -17,6 +16,7 @@
               <div class="form-group">
                 <label for="">Nama Lengkap</label>
                 <input class="form-control grey" type="text" v-model="contactForm.name" value="">
+                <div v-if="errors.errName" class="alert alert-danger" role="alert">@{{errors.errName}}</div>
               </div>
             </div>
 
@@ -24,6 +24,7 @@
               <div class="form-group">
                 <label for="">Alamat Email</label>
                 <input class="form-control grey" type="email" v-model="contactForm.email" value="">
+                <div v-if="errors.errEmail" class="alert alert-danger" role="alert">@{{errors.errEmail}}</div>
               </div>
             </div>
 
@@ -31,6 +32,7 @@
               <div class="form-group">
                 <label for="">Nomor Telepon</label>
                 <input class="form-control grey" type="text" v-model="contactForm.phone" value="">
+                <div v-if="errors.errPhone" class="alert alert-danger" role="alert">@{{errors.errPhone}}</div>
               </div>
             </div>
 
@@ -41,9 +43,10 @@
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-
                      <input type='text' class="form-control grey" id="datepicker" @blur="changeDate" />
                  </div>
+                 <div v-if="errors.errDate" class="alert alert-danger" role="alert">@{{errors.errDate}}</div>
+
               </div>
             </div>
 
@@ -54,9 +57,9 @@
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>
-
                      <input type='text' class="form-control grey" @blur="changeTime" id='hourpicker' value="" />
                  </div>
+                 <div v-if="errors.errTime" class="alert alert-danger" role="alert">@{{errors.errTime}}</div>
               </div>
             </div>
 
