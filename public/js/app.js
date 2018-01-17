@@ -60030,6 +60030,7 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
           vm.notif = false;
           vm.loader = false;
           vm.resetForm();
+          vm.errors = {};
         }, 1200);
       }).catch(function (error) {
         var err = error.response.data;

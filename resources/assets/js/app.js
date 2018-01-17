@@ -154,6 +154,7 @@ const contact = new Vue({
             vm.notif = false;
             vm.loader = false;
             vm.resetForm();
+            vm.errors = {};
           }, 1200);
         })
         .catch(error => {
