@@ -106,8 +106,9 @@
                   <img src="{{url('/images/icon-locs.png')}}" alt="">
                 </span>
                 <span class="details">
-                    Jl. Street Magazine
-                    Tower Kencana, 121. Meroeya
+                    Pondok Indah Office Tower 2 16th floor suite 1601, 
+                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, 
+                    Jakarta Selatan 12310
                 </span>
               </dt>
               <dt>
@@ -115,7 +116,7 @@
                   <img src="{{url('/images/icon-message.png')}}" alt="">
                 </span>
                 <span class="details">
-                    info@parolamas.com
+                    <a href="mailto:info@parolamas.com">info@parolamas.com</a>
                 </span>
               </dt>
               <dt>
@@ -123,7 +124,7 @@
                   <img src="{{url('/images/icon-call-blue.png')}}" alt="">
                 </span>
                 <span class="details">
-                    1500 - 554
+                    <a href="tel:+1500554">1500 - 554</a>
                 </span>
               </dt>
 
