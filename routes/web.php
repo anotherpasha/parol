@@ -25,7 +25,8 @@ $adminPrefix = config('misc.admin-prefix');
 // });
 
 Route::get('/product', function () {
-    return view('frontend/product');
+    $data['isContact'] = true;
+    return view('frontend/product', $data);
 });
 Route::get('/about', function () {
     return view('frontend/about');
