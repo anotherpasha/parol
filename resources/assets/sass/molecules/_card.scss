@@ -15,7 +15,7 @@
       @include vendor((border-radius: 20px), webkit moz ms o);
       padding: 20px 40px;
       margin: 20px 0;
-      min-height: 200px;
+      min-height: 450px;
       border-bottom: solid 20px $brand-primary;
       @include vendor((box-shadow: 0px 1px 13px rgba(0,0,0,.2)), webkit moz  ms o);
       @include mappy-bp(max-width medium) {
@@ -23,7 +23,7 @@
       }
 
       &.zipcode {
-        padding: 40px;
+        // padding: 40px;
         margin: 20px 0 50px 0;
       }
       &.product-package {

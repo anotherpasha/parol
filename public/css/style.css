@@ -9761,7 +9761,7 @@ section.sub-page-banner.faq-banner {
   border-radius: 20px;
   padding: 20px 40px;
   margin: 20px 0;
-  min-height: 200px;
+  min-height: 450px;
   border-bottom: solid 20px #000498;
   -webkit-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0px 1px 13px rgba(0, 0, 0, 0.2);
@@ -9776,7 +9776,6 @@ section.sub-page-banner.faq-banner {
 }
 
 .card.form.zipcode {
-  padding: 40px;
   margin: 20px 0 50px 0;
 }
 
