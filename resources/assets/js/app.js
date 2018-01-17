@@ -57,7 +57,8 @@ $(document).ready(()=> {
         };
       },
       cache: true,
-      placeholder: 'Cari kodepos...'
+      placeholder: 'Cari kodepos...',
+      minimumInputLength: 3
 
     }
   });
