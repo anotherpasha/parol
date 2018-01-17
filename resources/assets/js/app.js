@@ -132,30 +132,34 @@ const contact = new Vue({
         this.contactForm.date = evt.target.value;
       },
       submitContact() {
+        let vm = this;
         let formData = new FormData();
         const {name, email, phone, date, time, type} = this.contactForm;
-        if(!this.validate().isValid) {
-          this.errors = this.validate().errors;
+        if(!vm.validate().isValid) {
+          console.log('invalid');
+          vm.errors = vm.validate().errors;
           return;
         }
+        vm.loader = true;
         formData.append('name', name);
         formData.append('email', email);
         formData.append('phone', phone);
         formData.append('date', date);
         formData.append('time', time);
         formData.append('type', type);
-        this.loader = true;
         axios.post('/registration', formData)
         .then( (d) => {
-          this.notif = true;
-          this.resetForm();
+          vm.notif = true;
           setTimeout(function() {
-            this.notif = false;
-          }, 600);
+            vm.notif = false;
+            vm.loader = false;
+            vm.resetForm();
+          }, 1200);
         })
         .catch(error => {
             const err = error.response.data;
             alert(err.message);
+            vm.loader = false;
         });
       },
       validate() {
@@ -179,9 +183,10 @@ const contact = new Vue({
         if (Validator.isEmpty(contactForm.time)) {
             errors.errTime = 'This field is required.';
         }
+        // console.log(errors);
         return {
           errors,
-          isValid: isEmpty(this.errors)
+          isValid: isEmpty(errors)
         };
       },
       resetForm() {
