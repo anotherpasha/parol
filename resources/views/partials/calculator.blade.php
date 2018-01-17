@@ -143,13 +143,15 @@
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group">
-          <label for="">Construction Type</label>
-          <div class="select-custom">
-            <select class="selectpicker" name="building_status">
-              @foreach($types as $type)
-              <option value="{!! $type->id !!}">{!! $type->name_en !!}</option>
-              @endforeach
-            </select>
+          <div v-if="1==earthquake">
+            <label for="">Construction Type</label>
+            <div class="select-custom">
+              <select class="selectpicker" name="building_status">
+                @foreach($types as $type)
+                <option value="{!! $type->id !!}">{!! $type->name_en !!}</option>
+                @endforeach
+              </select>
+            </div>
           </div>
         </div>
         <button type="button" name="button" class="btn btn-parolamas btn-medium">Hitung Simulasi</button>
