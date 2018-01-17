@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<section class="sub-page-banner faq">
+<section class="sub-page-banner faq-banner">
   <div class="middler-wrapper">
     <div class="container">
         <div class="row">
