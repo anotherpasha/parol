@@ -59971,6 +59971,8 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
 
   data: {
+    notif: false,
+    loader: false,
     contactForm: {
       name: '',
       email: '',
@@ -60021,9 +60023,13 @@ var contact = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       formData.append('date', date);
       formData.append('time', time);
       formData.append('type', type);
+      this.loader = true;
       axios.post('/registration', formData).then(function (d) {
-        alert('Terimakasih.');
+        _this.notif = true;
         _this.resetForm();
+        setTimeout(function () {
+          this.notif = false;
+        }, 600);
       }).catch(function (error) {
         var err = error.response.data;
         alert(err.message);

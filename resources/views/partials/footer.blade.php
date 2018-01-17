@@ -20,18 +20,23 @@
 
       </div>
       <div class="col-xs-12 col-lg-4 col-md-6">
-        <p>Call Center</p>
-        <h4 class="medium"><span class="icon icon-call"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;&nbsp;1500 - 554</a></h4>
+        <div class="wrapper">
+          <p>Call Center</p>
+          <h4 class="medium"><span class="icon icon-call"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;&nbsp;1500 - 554</a></h4>
+        </div>
       </div>
       <div class="col-xs-12 col-lg-2 col-md-6">
-        <dl class="logo-list">
-          <dt>
-            <img class="img-responsive" src="{{url('/images/logo-ojk.png')}}" alt="">
-          </dt>
-          <dt>
-            <img class="img-responsive" src="{{url('/images/logo-berasuransi.png')}}" alt="">
-          </dt>
-        </dl>
+        <div class="wrapper">
+          <dl class="logo-list">
+            <dt>
+              <img class="img-responsive" src="{{url('/images/logo-ojk.png')}}" alt="">
+            </dt>
+            <dt>
+              <img class="img-responsive" src="{{url('/images/logo-berasuransi.png')}}" alt="">
+            </dt>
+          </dl>
+          
+        </div>
       </div>
 
     </div>
