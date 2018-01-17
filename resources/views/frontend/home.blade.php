@@ -66,7 +66,7 @@
                 <hr class="primary left" />
                 <p class="paragraph">
                   Kini daftar asuransi tidak perlu rumit.
-                  Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit.
+                  Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit-belit untuk nilai pertanggungan hingga Rp 1 Miliar.
                 </p>
                 <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
