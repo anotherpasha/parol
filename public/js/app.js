@@ -59715,6 +59715,12 @@ $(document).ready(function () {
     $(this).addClass('active');
   });
 
+  $('.to-section').click(function () {
+    var to = $(this).attr('data-target-to');
+    var offset = $('#' + to).offset().top;
+    $('html, body').animate({ scrollTop: offset }, 2000);
+  });
+
   var params = __WEBPACK_IMPORTED_MODULE_3_query_string___default.a.parse(window.location.search);
   var tab = $('.tab-pane');
   if (params.page) {

@@ -117,6 +117,12 @@ $(document).ready(()=> {
       $(this).addClass('active');
   });
 
+  $('.to-section').click(function() {
+      const to = $(this).attr('data-target-to');
+      const offset  = $(`#${to}`).offset().top;
+      $('html, body').animate({scrollTop: offset}, 2000)  ;
+  });
+
   const params = query.parse(window.location.search);
   const tab    = $('.tab-pane');
   if(params.page) {
