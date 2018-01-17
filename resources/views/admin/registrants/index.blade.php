@@ -18,6 +18,7 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
+                <th>Occupation</th>
                 <!-- <th>Status</th> -->
                 <!-- <th class="uk-text-center">Action</th> -->
             </tr>
@@ -40,8 +41,9 @@
             columns: [
                 {data: 'id', name: 'id', width: '10%'},
                 {data: 'name', name: 'name', width: '30%'},
-                {data: 'email', name: 'email', width: '40%'},
-                {data: 'phone', name: 'phone', width: '40%'}
+                {data: 'email', name: 'email', width: '30%'},
+                {data: 'phone', name: 'phone', width: '30%'},
+                {data: 'occupation', name: 'occupation', width: '40%'}
                 // {data: 'status', name: 'status', width: '10%'},
                 // {data: 'action', name: 'action', orderable: false, searchable: false, width: '20%'}
             ]

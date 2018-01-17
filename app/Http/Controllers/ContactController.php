@@ -2,24 +2,40 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\PostRegistrant;
 use App\Models\Contact;
+use App\Models\Registrant;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
     
     public function contact() {
-    	return view('frontend/contact');
+    	$data['isContactUs'] = true;
+    	return view('frontend/contact', $data);
     }
 
-    public function postContact(Request $request) {
- 		$contact = Contact::create([
- 			'name' => $request->name,
+    public function postContact(PostRegistrant $request) {
+    	$params = [
+    		'name' => $request->name,
  			'email' => $request->email,
+ 			'phone' => $request->phone,
  			'occupation' => $request->occupation,
- 			'message' => $request->message
- 		]);
+ 			
+    	];
+
+    	if ($request->has('package')) {
+    		$params['product'] = $request->package;
+    	}
+
+    	if ($request->has('message')) {
+    		$params['message'] = $request->message;
+    	}
+
+ 		$contact = Registrant::create($params);
 
  		return redirect('contact-us')->with('message', 'Data has been saved.');
     }
+
+
 }
