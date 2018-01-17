@@ -10182,6 +10182,27 @@ footer .copyright {
   color: #cccccc;
 }
 
+.list-socmed {
+  padding-left: 0;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.list-socmed li {
+  float: left;
+}
+
+.list-socmed li a {
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  border: solid 1px #fff;
+  margin-right: 10px;
+  text-align: center;
+  padding-top: 3px;
+  border-radius: 50%;
+}
+
 .about-description-wrapper {
   padding: 0 60px;
 }

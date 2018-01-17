@@ -42,3 +42,21 @@ footer {
      color: scale-color(#fff, $lightness: -20%);
    }
 }
+.list-socmed {
+  padding-left: 0;
+  display: inline-block;
+  margin-top: 20px;
+  li {
+    float: left;
+    a {
+      width: 30px;
+      display: inline-block;
+      height: 30px;
+      border: solid 1px #fff;
+      margin-right: 10px;
+      text-align: center;
+      padding-top: 3px;
+      @include vendor((border-radius: 50%), webkit moz ms o);
+    }
+  }
+}

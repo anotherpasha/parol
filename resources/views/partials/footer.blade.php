@@ -23,6 +23,18 @@
         <div class="wrapper">
           <p>Call Center</p>
           <h4 class="medium"><span class="icon icon-call"></span><a href="tel:+62211500554" class="color-white">&nbsp;&nbsp;&nbsp;1500 - 554</a></h4>
+          <ul class="undotted-list inline list-socmed">
+            <li>
+              <a href="#">
+                <img src="{{url('/images/icon-fb.png')}}" alt="">
+              </a>
+            </li>
+            <li class="hidden">
+              <a href="#">
+                <img src="{{url('/images/icon-ig.png')}}" alt="">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="col-xs-12 col-lg-2 col-md-6">
@@ -35,7 +47,7 @@
               <img class="img-responsive" src="{{url('/images/logo-berasuransi.png')}}" alt="">
             </dt>
           </dl>
-          
+
         </div>
       </div>
 
