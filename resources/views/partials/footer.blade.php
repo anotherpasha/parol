@@ -3,18 +3,19 @@
     <div class="row">
       <div class="col-xs-12 col-lg-2 col-md-6">
         <ul class="undotted-list menu-list">
-          <li><a href="javascript:;">Tentang Parolamas</a></li>
-          <li><a href="javascript:;">Prosedur Klaim</a></li>
-          <li><a href="javascript:;">Pembayaran Premi</a></li>
-          <li><a href="javascript:;">FAQ</a></li>
+          <li><a href="{{url('/about')}}">Tentang Parolamas</a></li>
+          <!-- <li><a href="javascript:;">Prosedur Klaim</a></li>
+          <li><a href="javascript:;">Pembayaran Premi</a></li> -->
+          <li><a href="{{url('/faq')}}">FAQ</a></li>
+          <li><a href="{{url('/contact-us')}}">Hubungi Kami</a></li>
         </ul>
       </div>
       <div class="col-xs-12 col-lg-4 col-md-6">
         <ul class="undotted-list menu-list">
           <li><a href="javascript:;">Informasi Produk</a></li>
-          <li class="sub-menu "><a href="javascript:;">Asuransi Rumah</a></li>
-          <li class="sub-menu "><a href="javascript:;">Asuransi Harta Benda</a></li>
-          <li class="sub-menu "><a href="javascript:;">Asuransi Rumah & Harta Benda</a></li>
+          <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Rumah</a></li>
+          <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Harta Benda</a></li>
+          <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Rumah & Harta Benda</a></li>
         </ul>
 
 
