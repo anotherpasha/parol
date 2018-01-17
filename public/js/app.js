@@ -59667,9 +59667,9 @@ $(document).ready(function () {
     liveSearchPlaceholder: 'Search kodepos'
   });
 
-  if (!localStorage.quiz) {}
-  // $('#modal-quiz').modal('show');
-
+  if (!localStorage.quiz) {
+    $('#modal-quiz').modal('show');
+  }
   // Tooggle sticky calculator
   $('#calculator-toggle').click(function () {
     var $calculator = $('.calculator-container');
