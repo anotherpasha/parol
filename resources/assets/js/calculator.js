@@ -89,6 +89,15 @@ const calculator = new Vue({
           this.buildingStatus = evt.target.value;
         },
 
+        checkContentValue(evt) {
+          let maxContent = this.buildingValue / 10;
+          if (this.contentValue > maxContent) {
+            alert(`Harga isi bangunan Anda maksimal ${maxContent}`);
+            this.contentValue = maxContent;
+            evt.target.focus();
+          }
+        },
+
         hitungSimulasi() {
           let vm = this;
           let formData = new FormData();

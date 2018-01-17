@@ -118,15 +118,17 @@
     </div>
 
     <div class="card form">
-        <hr class="primary rounded"/>
-        <div class="form-group">
-          <label for="">Berapa Harga Bangunan Anda ?</label>
-          <input type="text" name="building_value" value="" class="form-control grey" v-model="buildingValue" />
-        </div>
+      <hr class="primary rounded"/>
+      <div class="form-group">
+        <label for="">Berapa Harga Bangunan Anda ?</label>
+        <input type="text" name="building_value" value="" class="form-control grey" v-model="buildingValue" />
+      </div>
+      <div v-if="package == 'both' || package == 'content'">
         <div class="form-group">
           <label for="">Berapa Harga Isi Bangunan Anda (maksimal 10% dari harga bangunan) ?</label>
-          <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue"/>
+          <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue" @blur="checkContentValue"/>
         </div>
+      </div>
     </div>
 
     <div class="card form text-left product-package">
