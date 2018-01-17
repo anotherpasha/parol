@@ -15,7 +15,8 @@
       <div class="carousel-inner" role="listbox">
 
         <div class="item active">
-          <img src="{{url('/uploads/dummies/img-slider-01.jpg')}}" alt="image contains people and home">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-01.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-01.jpg')}}" alt="image contains people and home"> -->
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
@@ -34,7 +35,8 @@
         </div>
 
         <div class="item">
-          <img src="{{url('/uploads/dummies/img-slider-02.jpg')}}" alt="image contains clock and table">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-02.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-02.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
@@ -53,7 +55,8 @@
         </div>
 
         <div class="item">
-          <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-03.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
@@ -72,7 +75,8 @@
         </div>
 
         <div class="item">
-          <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-04.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>

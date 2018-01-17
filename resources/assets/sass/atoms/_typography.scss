@@ -83,6 +83,9 @@ hr{
 
 h1 {
   font-size: 43px;
+    @include mappy-bp(max-width small) {
+      font-size: 36px;
+    }
 }
 blockquote {
   border-left: none;

@@ -20,6 +20,9 @@
       left: 0;
       background: url('/images/half-circle-decor.png')no-repeat center center;
       background-size:100%;
+      @include mappy-bp(max-width small) {
+        background-size: 270%;
+      }
     }
 }
 
