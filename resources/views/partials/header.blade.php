@@ -25,7 +25,7 @@
                     <li><a href="{{url('/')}}">Home</a></li>
                     <li><a href="{{url('/about')}}">About</a></li>
                     <li><a href="{{url('/product')}}">Product</a></li>
-                    <li><a href="{{url('/claim')}}">Claim</a></li>
+                    <!-- <li><a href="{{url('/claim')}}">Claim</a></li> -->
                     <li><a href="">Payment</a></li>
                     <li><a href="{{url('/faq')}}">FAQ</a></li>
                     <li><a href="{{url('/contact-us')}}">Contact Us</a></li>

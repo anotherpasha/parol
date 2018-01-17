@@ -10,6 +10,7 @@ use App\Models\FlConstructionType;
 use App\Models\FlRate;
 use App\Models\FloZipcode;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class CalculatorsController extends Controller
 {
@@ -27,6 +28,7 @@ class CalculatorsController extends Controller
 
     public function calculatorResult(Request $request)
     {
+        Log::warning(json_encode($request->all()));
         $constType = '';
         $constClass = '';
         // apartment
@@ -78,6 +80,11 @@ class CalculatorsController extends Controller
         $data['flood'] = $flood;
         $data['eq'] = $eq;
         $data['package'] = $request->package;
+        $data['result'] = number_format($flexa + $flood + $eq, 0, ',', '.');
+
+        if ($request->ajax()) {
+            return response()->json($data);
+        }
 
         return view('frontend.calculators.calculator-result', $data);
     }
