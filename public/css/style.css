@@ -9478,6 +9478,12 @@ section.sub-page-banner.contact {
   height: 600px;
 }
 
+section.sub-page-banner.faq {
+  background: url("/images/banner-faq.jpg") no-repeat bottom left, #fff;
+  background-size: cover;
+  height: 600px;
+}
+
 .tab-content section {
   position: relative;
   padding: 60px 0;
