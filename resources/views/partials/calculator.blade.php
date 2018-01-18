@@ -5,7 +5,8 @@
           <div class="form-group">
               <label for="">Status kepemilikan</label>
               <div class="select-custom">
-              <select class="selectpicker" name="building_status" v-model="buildingStatus">
+              <select class="selectpicker" name="building_status" @change="buildingStatusChange">
+                  <option value="0">==Pilih==</option>
                   <option value="1">Pribadi</option>
                   <option value="2">Sewa</option>
               </select>
@@ -17,9 +18,11 @@
         <hr class="primary rounded"/>
         <div class="form-group">
             <label for="">Kode Pos</label>
-            <div class="select-custom">
+            <!-- <div class="select-custom">
             <select class="postal-code" name="kode_pos"  v-model="zipcode">
-            </select>
+            </select> -->
+            <div class="select-custom">
+            <vselect label="label" :filterable="false" :options="options" @search="onSearch" v-model="fakeZipcode"></vselect>
           </div>
         </div>
     </div>
@@ -44,6 +47,7 @@
           <label for="">Jenis Bangunan</label>
           <div class="select-custom">
             <select class="selectpicker" name="building_type" @change="changeType">
+              <option value="0">==Pilih==</option>
                 <option value="1">Apartment</option>
                 <option value="2">Rumah Tinggal</option>
             </select>
@@ -66,9 +70,10 @@
         <div class="form-group" v-show="type == 2">
           <label for="">Jenis Konstruksi bangunan</label>
           <div class="select-custom">
-            <select class="selectpicker" name="wood_element" v-model="woodElement">
+            <select class="selectpicker" name="wood_element" @change="woodChanged">
+              <option value="0">==Pilih==</option>
               <option value="1">Kayu (> 20% dari total konstruksi)</option>
-              <option value="0">Tembok/Beton</option>
+              <option value="2">Tembok/Beton</option>
             </select>
           </div>
         </div>
@@ -76,6 +81,8 @@
         <div class="form-group" v-show="type == 1">
           <label for="">Lantai</label>
           <input type="text" name="floor" value="" v-model="floor" class="form-control grey"/>
+          <br>
+          <button class="btn btn-medium" @click="next">Next</button>
         </div>
     </div>
 
@@ -97,9 +104,10 @@
         <div class="form-group">
           <label for="">Dalam 5 Tahun terakhir, apakah pernah terjadi kebakaran atau ledakan pada bangunan anda ?</label>
           <div class="select-custom">
-            <select class="selectpicker" name="been_fire" v-model="beenFire">
+            <select class="selectpicker" name="been_fire" @change="beenFiredChanged">
+                <option value="0">==Pilih==</option>
                 <option value="1">Yes</option>
-                <option value="0">No</option>
+                <option value="2">No</option>
             </select>
           </div>
         </div>
@@ -111,7 +119,8 @@
           <label for="">Pilih perlindungan yang anda inginkan</label>
           <div class="select-custom">
             <div v-if="1==buildingStatus">
-            <select  name="package" class="selectpicker" v-model="package">
+            <select  name="package" class="selectpicker" @change="packageChanged">
+              <option value="0">==Pilih==</option>
               <option value="both">Bangunan + Isi</option>
               <option value="building">Bangunan Saja</option>
               <option value="content">Isi Saja</option>
@@ -120,7 +129,8 @@
           </div>
           <div class="select-custom">
             <div v-if="2==buildingStatus">
-              <select  name="package" class="selectpicker" v-model="package">
+              <select  name="package" class="selectpicker" @change="package2Changed">
+                <option value="0">==Pilih==</option>
                 <option value="content">Isi Saja</option>
               </select>
             </div>
@@ -140,6 +150,7 @@
           <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue" @blur="checkContentValue"/>
         </div>
       </div>
+      <button class="btn btn-medium" @click="next">Next</button>
     </div>
 
     <div class="card form text-left product-package">
@@ -163,6 +174,7 @@
             <input id="earthquake" type="checkbox" name="earthquake" value="1" v-model="earthquake">  Gempa Bumi
           </label>
         </div>
+        <button class="btn btn-medium" @click="next">Next</button>
     </div>
 
     <div class="card form">
