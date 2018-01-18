@@ -32,7 +32,7 @@
             <div class="col-md-5 col-xs-12">
               <div class="form-group">
                 <label for="">Nomor Telepon</label>
-                <input class="form-control grey" type="text" v-model="contactForm.phone" value="">
+                <input class="form-control grey" type="number" v-model="contactForm.phone" value="">
                 <div v-if="errors.errPhone" class="alert alert-danger" role="alert">@{{errors.errPhone}}</div>
               </div>
             </div>
@@ -54,7 +54,7 @@
             <div class="col-md-6 col-xs-12">
               <div class="form-group">
                 <label >&nbsp;</label>
-                <div class='input-group date'>
+                <div class='input-group date' id="hour-input">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>

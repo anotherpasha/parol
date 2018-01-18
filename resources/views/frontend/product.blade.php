@@ -46,7 +46,7 @@
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="javacript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact">Daftar</a>
                         </div>
                       </div>
                     </div>

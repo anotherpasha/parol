@@ -25,7 +25,8 @@ $(document).ready(()=> {
     locale: 'id'
   });
   $('#hourpicker').datetimepicker({
-    format: "LT"
+    format: "LT",
+    keepOpen: true
   });
   $('.selectpicker').selectpicker({
     style: 'btn-info',

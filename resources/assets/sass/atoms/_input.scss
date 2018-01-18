@@ -71,11 +71,50 @@ input, textarea{
   }
 
 }
+.v-select.searchable .dropdown-toggle {
+  background-color: #dfdfdf;
+  @include vendor((border-radius: 10px), webkit moz ms o);
+  border: none;
+  &.v-select input[type=search], .v-select input[type=search]:focus {
+    height: 28px;
+  }
 
+}
+.v-select .dropdown-toggle .clear {
+  color: #dfdfdf !important;
+}
+.v-select .open-indicator:before  {
+  border-color: #fff !important;
+  vertical-align: middle;
+  margin-top: 10px;
+}
 .select-lang {
   background-color: transparent;
   border: none;
   color: #fff;
+}
+.v-select .open-indicator  {
+  width: 30px !important;
+  height: 100% !important;
+  top: 0;
+  right: 0 !important;
+  background: #d2d2d2;
+  @include vendor((border-top-right-radius: 10px), webkit moz ms o);
+  @include vendor((border-bottom-right-radius: 10px), webkit moz ms o);
+
+}
+#hour-input {
+  .bootstrap-datetimepicker-widget {
+    width: 140px !important;
+    // height: 140px;
+  }
+  .bootstrap-datetimepicker-widget table td span {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+  }
+
+
 }
 .form-group {
   margin-bottom: 30px;

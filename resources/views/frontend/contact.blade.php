@@ -63,7 +63,7 @@
                   <div class="col-sm-6 col-xs-12">
                     <div class="form-group">
                       <label for="">No Telepon</label>
-                      <input class="form-control grey" type="text" name="phone" value="{{ old('phone') }}">
+                      <input class="form-control grey" type="number" name="phone" value="{{ old('phone') }}">
                       @if($errors->has('phone'))<div class="alert alert-danger" role="alert">{{ $errors->first('phone') }}</div>@endif
                     </div>
                   </div>
@@ -123,8 +123,8 @@
                   <img src="{{url('/images/icon-locs.png')}}" alt="">
                 </span>
                 <span class="details">
-                    Pondok Indah Office Tower 2 16th floor suite 1601 
-                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang, 
+                    Pondok Indah Office Tower 2 16th floor suite 1601
+                    Jl Sultan Iskandar Muda Kav. V-TA, Pondok Pinang,
                     Jakarta Selatan 12310
                 </span>
               </dt>
