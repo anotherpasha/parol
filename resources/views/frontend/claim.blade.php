@@ -12,6 +12,8 @@
               Siapa bilang asuransi itu rumit?<br>
               Dengan Asuransi Harta Benda Parolamas,<br> Anda tidak perlu mengalami proses klaim yang berbelit.
             </p>
+            <br/>
+            <a href="{{ url('uploads/brochures/Claims_Form_Rumah_Harta_Benda_Parolamas.pdf') }}" class="btn btn-parolamas btn-md to-section" data-target-to="main">Download Formulir</a>
           </div>
 
         </div>

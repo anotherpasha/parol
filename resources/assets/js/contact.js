@@ -65,7 +65,7 @@ const contact = new Vue({
             vm.loader = false;
             vm.resetForm();
             vm.errors = {};
-          }, 1200);
+          }, 6000);
         })
         .catch(error => {
             const err = error.response.data;
@@ -87,6 +87,9 @@ const contact = new Vue({
         }
         if (Validator.isEmpty(contactForm.phone)) {
             errors.errPhone = 'This field is required.';
+        }
+        if (!Validator.isNumeric(contactForm.phone)) {
+            errors.errPhone = 'This field must be a number.';
         }
         if (Validator.isEmpty(contactForm.date)) {
             errors.errDate = 'This field is required.';

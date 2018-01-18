@@ -32,7 +32,7 @@
             <div class="col-md-5 col-xs-12">
               <div class="form-group">
                 <label for="">Nomor Telepon</label>
-                <input class="form-control grey" type="text" v-model="contactForm.phone" value="">
+                <input class="form-control grey" type="number" v-model="contactForm.phone" value="">
                 <div v-if="errors.errPhone" class="alert alert-danger" role="alert">@{{errors.errPhone}}</div>
               </div>
             </div>

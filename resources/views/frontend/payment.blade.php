@@ -12,7 +12,7 @@
                 Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi Anda fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan Anda
             </p>
             </br>
-            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a>
+            <!-- <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a> -->
 
           </div>
 
@@ -41,7 +41,7 @@
                   Selamat! Anda sudah resmi terlindungi oleh Asuransi Harta Benda Parolamas.         </li>
             </ol>
             </br></br>
-            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>
+            <a href="http://pembayaran.parolamas.co.id/" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>
 
       </div>
 
