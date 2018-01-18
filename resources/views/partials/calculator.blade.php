@@ -82,7 +82,7 @@
           <label for="">Lantai</label>
           <input type="text" name="floor" value="" v-model="floor" class="form-control grey"/>
           <br>
-          <button class="btn btn-medium" @click="next">Next</button>
+          <button class="btn btn-medium" @click="nextFloor">Next</button>
         </div>
     </div>
 
@@ -150,7 +150,7 @@
           <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue" @blur="checkContentValue"/>
         </div>
       </div>
-      <button class="btn btn-medium" @click="next">Next</button>
+      <button class="btn btn-medium" @click="nextValue">Next</button>
     </div>
 
     <div class="card form text-left product-package">

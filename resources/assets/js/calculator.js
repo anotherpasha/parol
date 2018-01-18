@@ -154,7 +154,20 @@ const calculator = new Vue({
             this.next();
           }
         },
-
+        nextFloor() {
+          if (this.floor == '') {
+            alert(`Lantai harus diisi.`);
+          } else {
+            this.next();
+          }
+        },
+        nextValue() {
+          if (this.buildingValue + this.contentValue == 0) {
+            alert(`Nilai harus diisi.`);
+          } else {
+            this.next();
+          }
+        },
         checkContentValue(evt) {
           let maxContent = this.buildingValue / 10;
           if (this.contentValue > maxContent) {

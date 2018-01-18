@@ -602,6 +602,20 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         this.next();
       }
     },
+    nextFloor: function nextFloor() {
+      if (this.floor == '') {
+        alert('Lantai harus diisi.');
+      } else {
+        this.next();
+      }
+    },
+    nextValue: function nextValue() {
+      if (this.buildingValue + this.contentValue == 0) {
+        alert('Nilai harus diisi.');
+      } else {
+        this.next();
+      }
+    },
     checkContentValue: function checkContentValue(evt) {
       var maxContent = this.buildingValue / 10;
       if (this.contentValue > maxContent) {
