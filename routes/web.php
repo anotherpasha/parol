@@ -44,7 +44,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/registration', 'FrontendController@registration');
 Route::post('/registration', 'FrontendController@postRegistration');
-Route::get('/payment', 'FrontendController@payment');
+Route::get('/pembayaran', 'FrontendController@payment');
 Route::post('/payment', 'FrontendController@paymentDetail');
 Route::get('/claim', 'FrontendController@claim');
 Route::post('/claim', 'FrontendController@postClaim');

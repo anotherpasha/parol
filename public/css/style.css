@@ -9457,6 +9457,12 @@ section.extra-padding {
   padding: 50px 0;
 }
 
+section.claim-video {
+  padding: 50px 0 220px 0;
+  background: url("/images/decoration-claim.png") no-repeat center center, #fff;
+  background-size: contain;
+}
+
 section.faq {
   background: url("/images/decoration-people-chat.png") no-repeat bottom center, #fff;
   background-size: 100%;
