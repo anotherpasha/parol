@@ -47,11 +47,15 @@ class CalculatorsController extends Controller
         } else {
             $constClass = 1;
             $constType = $request->house_type;
+            Log::warning('housttype' . $request->house_type);
             $wood = $request->wood_element;
-            if ($wood) {
+            if ($wood == 1) {
                 $constClass = 2;
             }
         }
+
+        Log::warning('constclass ' . $constClass);
+        Log::warning('constType' . $constType);
 
         $rsmdcc = $request->has('rsmdcc') ? 0.025 : 0;
         $dlv = $request->has('dlv') ? 0.01 : 0;
@@ -141,6 +145,7 @@ class CalculatorsController extends Controller
                     ->where('fl_construction_class_id', $class)
                     ->first();
         $rate = $qRate->rate;
+        Log::warning('flexarate ' . $rate);
         $allRate = $rate + $rsdmcc + $dlv;
         return ($allRate * $tsi)/100;
     }
@@ -167,8 +172,13 @@ class CalculatorsController extends Controller
     }
 
     public function getZipcode(Request $request) {
-        $zips = EqZipcode::where('zipcode', 'like', '%' . $request->q . '%')
+        // Log::warning($request->all());
+        $zips = EqZipcode::where('zipcode', 'like', '%' . $request->search . '%')
             ->select(['id', 'zipcode'])->get();
-        return response()->json($zips);
+        $rets = [];
+        foreach ($zips as $zip) {
+            $rets[] = ['label' => $zip->zipcode, 'value'=> $zip->id];
+        }
+        return response()->json($rets);
     }
 }

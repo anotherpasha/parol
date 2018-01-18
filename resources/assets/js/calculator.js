@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import Slick from 'vue-slick';
 import 'slick-carousel/slick/slick.css';
+import VueSelect from 'vue-select';
+// Vue.component('v-select', vSelect.VueSelect);
 
-
+Vue.component("vselect", VueSelect);
 
 const calculator = new Vue({
     el: '#calculator',
@@ -20,9 +22,10 @@ const calculator = new Vue({
     data() {
         return {
           buildingStatus: 1,
-          zipcode: 1,
+          fakeZipcode: '',
+          zipcode: '',
           type: 1,
-          houseType: 1,
+          houseType: 6,
           woodElement: 1,
           floor: '',
           beenFire: 0,
@@ -42,10 +45,25 @@ const calculator = new Vue({
             slidesToShow: 1,
             centerMode: true,
             infinite: false,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            swipe: false,
+            swipeToSlide: false,
+            touchMove: false,
+            draggable: false,
+            accessibility: false
           },
-          result: 0
+          result: 0,
+
+          options:[]
         };
+    },
+
+    watch: {
+      fakeZipcode: function() {
+        this.next();
+        this.zipcode = this.fakeZipcode.value;
+        console.log('zipcode watched');
+      }
     },
 
     // All slick methods can be used too, example here
@@ -80,15 +98,76 @@ const calculator = new Vue({
             });
         },
 
-        changeType(evt) {
-            this.type = evt.target.value;
-            // console.log(evt.target.value)
+        onSearch(search, loading) {
+          loading(true);
+          this.search(loading, search, this);
         },
+        search: _.debounce((loading, search, vm) => {
+          console.log(search);
+          axios.get(`/get-zipcode?search=${search}`)
+          .then(function(res) {
+            vm.options = res.data;
+            loading(false);
+          })
+        }, 350),
 
         buildingStatusChange(evt) {
-          this.buildingStatus = evt.target.value;
+          let buildingStatus = evt.target.value;
+          if (buildingStatus != 0) {
+            this.buildingStatus = buildingStatus;
+            this.next();
+          }
         },
 
+        changeType(evt){
+          let tp = evt.target.value;
+          if (tp != 0) {
+            this.type = tp;
+            this.next();
+          }
+        },
+        woodChanged(evt){
+          let woodElement = evt.target.value;
+          if (woodElement != 0) {
+            this.woodElement = woodElement;
+            this.next();
+          }
+        },
+        beenFiredChanged(evt){
+          let beenFire = evt.target.value;
+          if (beenFire != 0) {
+            this.beenFire = beenFire;
+            this.next();
+          }
+        },
+        packageChanged(evt){
+          let pckg = evt.target.value;
+          if (pckg != 0) {
+            this.package = pckg;
+            this.next();
+          }
+        },
+        package2Changed(evt){
+          let pckg = evt.target.value;
+          if (pckg != 0) {
+            this.package = pckg;
+            this.next();
+          }
+        },
+        nextFloor() {
+          if (this.floor == '') {
+            alert(`Lantai harus diisi.`);
+          } else {
+            this.next();
+          }
+        },
+        nextValue() {
+          if (this.buildingValue + this.contentValue == 0) {
+            alert(`Nilai harus diisi.`);
+          } else {
+            this.next();
+          }
+        },
         checkContentValue(evt) {
           let maxContent = this.buildingValue / 10;
           if (this.contentValue > maxContent) {
@@ -102,9 +181,9 @@ const calculator = new Vue({
           console.log('simulasi');
           let vm = this;
           let formData = new FormData();
-          formData.append('building_type', this.buildingStatus);
+          formData.append('building_type', this.type);
           formData.append('zipcode', this.zipcode);
-          formData.append('house_type', this.type);
+          formData.append('house_type', this.houseType);
           formData.append('floor', this.floor);
           formData.append('been_fire', this.beenFire);
           formData.append('package', this.package);
