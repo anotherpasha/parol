@@ -50,7 +50,15 @@ const calculator = new Vue({
             swipeToSlide: false,
             touchMove: false,
             draggable: false,
-            accessibility: false
+            accessibility: false,
+            responsive: [
+              {
+                breakpoint: 480,
+                settings: {
+                  centerMode: false,
+                }
+              }
+            ]
           },
           result: 0,
 
