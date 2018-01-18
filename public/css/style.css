@@ -9197,6 +9197,7 @@ blockquote {
   transition: all 400ms;
   text-transform: uppercase;
   font-family: "GothamBold", sans-serif;
+  letter-spacing: 1px;
 }
 
 .btn-parolamas:hover,
@@ -9476,6 +9477,15 @@ section.calculator {
   padding: 100px 0;
 }
 
+section.payment-description {
+  background: url("/images/decoration-payment.png") no-repeat bottom left, #fff;
+  padding-bottom: 150px;
+}
+
+section.payment-description ol {
+  padding-left: 15px;
+}
+
 section.sub-page-banner {
   position: relative;
   min-height: 500px;
@@ -9499,6 +9509,12 @@ section.sub-page-banner.about {
   height: 600px;
 }
 
+section.sub-page-banner.payment {
+  background: url("/images/banner-payment.jpg") no-repeat center center;
+  background-size: cover;
+  height: 600px;
+}
+
 section.sub-page-banner.contact {
   background: url("/images/banner-contact.jpg") no-repeat bottom left, #fff;
   background-size: cover;
@@ -9507,6 +9523,12 @@ section.sub-page-banner.contact {
 
 section.sub-page-banner.faq-banner {
   background: url("/images/banner-faq.jpg") no-repeat bottom left, #fff;
+  background-size: cover;
+  height: 600px;
+}
+
+section.sub-page-banner.claim {
+  background: url("/images/banner-claim.jpg") no-repeat bottom left, #fff;
   background-size: cover;
   height: 600px;
 }

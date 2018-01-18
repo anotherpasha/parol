@@ -5,6 +5,7 @@
   @include vendor((transition: all 400ms), webkit moz ms o);
   text-transform: uppercase;
   font-family: $brand-font-medium, sans-serif;
+  letter-spacing: 1px;
   &:hover {
     background: scale-color($brand-primary, $lightness: 10%);
     color: scale-color(#fff, $lightness: -10%);

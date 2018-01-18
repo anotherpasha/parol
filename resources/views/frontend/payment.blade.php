@@ -1,13 +1,52 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Payment Page</title>
-</head>
-<body>
-    <form method="post" action="/payment">
-        {!! csrf_field() !!}
-        <input type="text" name="policy_number" placeholder="Policy Number" /><br/>
-        <button type="submit">Get Billing Detail</button>
-    </form>
-</body>
-</html>
+@extends('layouts.default')
+
+@section('content')
+<section class="sub-page-banner payment">
+  <div class="middler-wrapper">
+    <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-5">
+            <h1>Metode<br/>Pembayaran</h1>
+            <hr class="primary left" />
+            <p class="color-white">
+                Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi Anda fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan Anda
+            </p>
+            </br>
+            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a>
+
+          </div>
+
+        </div>
+    </div>
+  </div>
+  <div class="icon-scroll">
+    <a href="#"><img src="{{url('/images/icon-scroll.png')}}"></a>
+  </div>
+
+</section>
+<section class="half-center-transparent--top extra-padding payment-description " id="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-4 ">
+            <h1 class="color-primary">
+                Bagaimana Cara</br>
+                Membayar Premi?
+            </h1>
+            <hr class="primary left"/>
+            <ol>
+              <li>Pilih produk yang Anda inginkan.</li>
+              <li>Kami akan mengirimkan tautan ke alamat email Anda, klik tautan tersebut dan pilih cara pembayaran.</li>
+              <li>Pilih rencana pembayaran premi.</li>
+              <li>Lakukan pembayaran premi sesuai dengan cara yang telah Anda pilih sebelumnya dan...
+                  Selamat! Anda sudah resmi terlindungi oleh Asuransi Harta Benda Parolamas.         </li>
+            </ol>
+            </br></br>
+            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+@endsection

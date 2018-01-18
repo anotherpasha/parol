@@ -70,7 +70,7 @@ $(document).ready(()=> {
   });
 
   if(!localStorage.quiz) {
-    $('#modal-quiz').modal('show');
+    // $('#modal-quiz').modal('show');
   }
 // Tooggle sticky calculator
   $('#calculator-toggle').click(()=> {

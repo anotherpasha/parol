@@ -65,6 +65,7 @@ section {
   &.home-contact {
     background:  url('/images/decoration-call.png')no-repeat bottom left, #fff;
   }
+
   &.info-product {
     z-index: 2;
     position: relative;
@@ -89,6 +90,13 @@ section {
       position: relative;
       padding: 100px 0;
   }
+  &.payment-description {
+    background:  url('/images/decoration-payment.png')no-repeat bottom left, #fff;
+    padding-bottom: 150px;
+    ol {
+      padding-left: 15px;
+    }
+  }
 
   &.sub-page-banner {
     position: relative;
@@ -108,6 +116,11 @@ section {
         background-size: cover;
         height: 600px;
       }
+      &.payment {
+        background: url('/images/banner-payment.jpg')no-repeat center center;
+        background-size: cover;
+        height: 600px;
+      }
       &.contact {
         background:  url('/images/banner-contact.jpg')no-repeat bottom left, #fff;
         background-size: cover;
@@ -115,6 +128,11 @@ section {
       }
       &.faq-banner {
         background:  url('/images/banner-faq.jpg')no-repeat bottom left, #fff;
+        background-size: cover;
+        height: 600px;
+      }
+      &.claim {
+        background:  url('/images/banner-claim.jpg')no-repeat bottom left, #fff;
         background-size: cover;
         height: 600px;
       }
