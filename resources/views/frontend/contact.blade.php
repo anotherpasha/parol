@@ -141,7 +141,7 @@
                   <img src="{{url('/images/icon-call-blue.png')}}" alt="">
                 </span>
                 <span class="details">
-                    <a class="color-dark-grey" href="tel:+1500554">1500 - 554</a>
+                    <a class="color-dark-grey" href="tel:1500554">1500 - 554</a>
                 </span>
               </dt>
 

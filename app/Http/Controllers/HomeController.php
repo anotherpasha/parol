@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function index()
     {
         $data['types'] = EqConstructionType::all();
-        $data['zipcodes'] = EqZipcode::take(1000)->get();
+        $data['zipcodes'] = EqZipcode::take(100)->get();
         $data['isCalculator'] = true;
         $data['isContact'] = true;
         // $data['zipcodes'] = EqZipcode::all();
