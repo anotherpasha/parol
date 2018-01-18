@@ -203,9 +203,9 @@
     </div>
 
   </slick>
-  <div class="form-slider-arrow">
+  <!-- <div class="form-slider-arrow">
     <a href="javascript:;" @click="prev"><img src="{{url('/images/icon-prev.png')}}"/></a>
     <a href="javascript:;" @click="next"><img src="{{url('/images/icon-next.png')}}"/></a>
     <h3 class="color-dark-grey calculator-form-list-indicator flush-t">@{{indicators}}/@{{ form_total }} </h3>
-  </div>
+  </div> -->
 </div>

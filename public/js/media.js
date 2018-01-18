@@ -60,11 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-<<<<<<< HEAD
-/******/ 	return __webpack_require__(__webpack_require__.s = 301);
-=======
 /******/ 	return __webpack_require__(__webpack_require__.s = 302);
->>>>>>> 73a70d1e21a76dcafeb1e28d822703ffd410f7c6
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -20743,26 +20739,15 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 301:
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(302);
-=======
 /***/ 302:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(303);
->>>>>>> 73a70d1e21a76dcafeb1e28d822703ffd410f7c6
 
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ 302:
-=======
 /***/ 303:
->>>>>>> 73a70d1e21a76dcafeb1e28d822703ffd410f7c6
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(21);
