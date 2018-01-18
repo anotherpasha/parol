@@ -9314,6 +9314,36 @@ textarea.form-control {
   text-align: left;
 }
 
+.select-custom button {
+  background-color: #dfdfdf !important;
+}
+
+.select-custom button:active,
+.select-custom button:focus {
+  color: #000 !important;
+}
+
+.select-custom button:hover {
+  color: #000 !important;
+}
+
+.select-custom .bs-caret:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\E114";
+  display: inline-block;
+  margin-top: 7px;
+  color: #fff;
+}
+
+.select-custom .bootstrap-select.open .bs-caret:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.select-custom .caret {
+  display: none;
+}
+
 .select-custom .select2-container--default .select2-selection--single {
   background-color: #dfdfdf;
   border-radius: 10px !important;
@@ -9362,6 +9392,24 @@ textarea.form-control {
   border-top-color: #fff;
 }
 
+.v-select .open-indicator:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\E114";
+  margin-top: 7px;
+  color: #fff;
+  font-style: normal;
+  display: inline-block;
+}
+
+.v-select {
+  text-align: left;
+}
+
+.v-select.open .open-indicator:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
 .v-select.searchable .dropdown-toggle {
   background-color: #dfdfdf;
   border-radius: 10px;
@@ -9378,9 +9426,7 @@ textarea.form-control {
 }
 
 .v-select .open-indicator:before {
-  border-color: #fff !important;
-  vertical-align: middle;
-  margin-top: 10px;
+  content: none !important;
 }
 
 .select-lang {
@@ -9390,6 +9436,7 @@ textarea.form-control {
 }
 
 .v-select .open-indicator {
+  text-align: center;
   width: 30px !important;
   height: 100% !important;
   top: 0;
