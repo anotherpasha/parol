@@ -5,8 +5,8 @@
         <div class="col-sm-12 text-center">
             <h1 class="color-primary ">Hubungi Kami</h1>
             <hr class="primary "/>
-            <p class="color-dark-grey">Untuk mendapatkan perlindungan, silahkan tinggalkan informasi diri Anda<br>
-            dan tentukan kapan Anda bersedia dihubungi oleh petugas layanan nasabah kami.</p>
+            <p class="color-dark-grey">Untuk mendapatkan perlindungan, silahkan tinggalkan informasi diri Kamu<br>
+            dan tentukan kapan Kamu bersedia dihubungi oleh petugas layanan nasabah kami.</p>
             <br><br><br>
         </div>
     </div>
@@ -74,7 +74,7 @@
                     <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
                   </select>
                   <br>
-                  * Anda akan dilayani petugas layanan nasabah kami pada hari kerja Senin - Jumat di jam kerja.
+                  * Kamu akan dilayani petugas layanan nasabah kami pada hari kerja Senin - Jumat di jam kerja.
                 </div>
               </div>
             </div>

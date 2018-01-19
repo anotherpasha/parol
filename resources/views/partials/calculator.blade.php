@@ -3,12 +3,12 @@
       <div class="card form">
           <hr class="primary rounded"/>
           <div class="form-group">
-              <label for="">Status kepemilikan</label>
+              <label for="">@lang('form-title.ownerStatus')</label>
               <div class="select-custom">
               <select class="selectpicker" name="building_status" @change="buildingStatusChange">
-                  <option value="0">==Pilih==</option>
-                  <option value="1">Pribadi</option>
-                  <option value="2">Sewa</option>
+                  <option value="0">@lang('form-value.choose')</option>
+                  <option value="1">@lang('form-value.property')</option>
+                  <option value="2">@lang('form-value.rental')</option>
               </select>
             </div>
           </div>
@@ -17,7 +17,7 @@
     <div class="card form zipcode">
         <hr class="primary rounded"/>
         <div class="form-group">
-            <label for="">Kode Pos</label>
+            <label for="">@lang('form-title.zipcode')</label>
             <!-- <div class="select-custom">
             <select class="postal-code" name="kode_pos"  v-model="zipcode">
             </select> -->
@@ -44,12 +44,12 @@
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group">
-          <label for="">Jenis Bangunan</label>
+          <label for="">@lang('form-title.building_type')</label>
           <div class="select-custom">
             <select class="selectpicker" name="building_type" @change="changeType">
               <option value="0">==Pilih==</option>
-                <option value="1">Apartment</option>
-                <option value="2">Rumah Tinggal</option>
+                <option value="1">@lang('form-value.apartment')</option>
+                <option value="2">@lang('form-value.house')</option>
             </select>
           </div>
         </div>
@@ -58,28 +58,28 @@
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group" v-show="type == 2">
-          <label for="">Penggunaan Bangunan</label>
+          <label for="">@lang('form-title.houseType')</label>
           <div class="select-custom">
             <select class="selectpicker" name="house_type" v-model="houseType">
-              <option value="6">2976 - Rumah Tinggal, < 4 Lantai, Bukan Ruko</option>
-              <option value="7">29761 - Kos-Kosan</option>
+              <option value="6">@lang('form-value.house2976')</option>
+              <option value="7">@lang('form-value.house29761')</option>
             </select>
           </div>
         </div>
 
         <div class="form-group" v-show="type == 2">
-          <label for="">Jenis Konstruksi bangunan</label>
+          <label for="">@lang('form-title.woodElement')</label>
           <div class="select-custom">
             <select class="selectpicker" name="wood_element" @change="woodChanged">
               <option value="0">==Pilih==</option>
-              <option value="1">Kayu (> 20% dari total konstruksi)</option>
-              <option value="2">Tembok/Beton</option>
+              <option value="1">@lang('form-value.wood')</option>
+              <option value="2">@lang('form-value.concrete')</option>
             </select>
           </div>
         </div>
 
         <div class="form-group" v-show="type == 1">
-          <label for="">Lantai</label>
+          <label for="">@lang('form-title.floor')</label>
           <input type="text" name="floor" value="" v-model="floor" class="form-control grey"/>
           <br>
           <button class="btn btn-medium" @click="nextFloor">Next</button>
@@ -102,12 +102,12 @@
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group">
-          <label for="">Dalam 5 Tahun terakhir, apakah pernah terjadi kebakaran atau ledakan pada bangunan anda ?</label>
+          <label for="">@lang('form-title.beenFire')</label>
           <div class="select-custom">
             <select class="selectpicker" name="been_fire" @change="beenFiredChanged">
-                <option value="0">==Pilih==</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
+                <option value="0">@lang('form-value.choose')</option>
+                <option value="1">@lang('form-value.yes')</option>
+                <option value="2">@lang('form-value.no')</option>
             </select>
           </div>
         </div>
@@ -116,22 +116,22 @@
     <div class="card form">
         <hr class="primary rounded"/>
         <div class="form-group">
-          <label for="">Pilih perlindungan yang anda inginkan</label>
+          <label for="">@lang('form-title.choosePackage')</label>
           <div class="select-custom">
             <div v-if="1==buildingStatus">
             <select  name="package" class="selectpicker" @change="packageChanged">
-              <option value="0">==Pilih==</option>
-              <option value="both">Bangunan + Isi</option>
-              <option value="building">Bangunan Saja</option>
-              <option value="content">Isi Saja</option>
+              <option value="0">@lang('form-value.choose')</option>
+              <option value="both">@lang('form-value.both')</option>
+              <option value="building">@lang('form-value.onlyBuilding')</option>
+              <option value="content">@lang('form-value.onlyContent')</option>
             </select>
             </div>
           </div>
           <div class="select-custom">
             <div v-if="2==buildingStatus">
               <select  name="package" class="selectpicker" @change="package2Changed">
-                <option value="0">==Pilih==</option>
-                <option value="content">Isi Saja</option>
+                <option value="0">@lang('form-value.choose')</option>
+                <option value="content">@lang('form-value.onlyContent')</option>
               </select>
             </div>
           </div>
@@ -141,12 +141,12 @@
     <div class="card form">
       <hr class="primary rounded"/>
       <div class="form-group">
-        <label for="">Berapa Harga Bangunan Anda ?</label>
+        <label for="">@lang('form-title.buildingValue')</label>
         <input type="text" name="building_value" value="" class="form-control grey" v-model="buildingValue" />
       </div>
       <div v-if="package == 'both' || package == 'content'">
         <div class="form-group">
-          <label for="">Berapa Harga Isi Bangunan Anda (maksimal 10% dari harga bangunan) ?</label>
+          <label for="">@lang('form-title.contentValue')</label>
           <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue" @blur="checkContentValue"/>
         </div>
       </div>
@@ -156,22 +156,22 @@
     <div class="card form text-left product-package">
         <hr class="primary rounded"/>
         <div class="form-group">
-          <label for="">Paket standar hanya melindungi anda dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin anda tambahkan.</label>
+          <label for="">@lang('form-title.extraPackage')</label>
           <br/><br/>
           <label for="rsmdcc" class="book">
-            <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1" v-model="rsmdcc"> Kerusuhan, Pemogokan, Perbuatan jahat dan Huru-hara
+            <input id="rsmdcc" type="checkbox" name="rsmdcc" value="1" v-model="rsmdcc"> @lang('form-value.rsmdcc')
           </label>
           <br/>
           <label for="dlv" class="book">
-            <input id="dlv" type="checkbox" name="dlv" value="1" v-model="dlv"> Pembersihan puing, Longsor, Properti tertabrak kendaraan
+            <input id="dlv" type="checkbox" name="dlv" value="1" v-model="dlv"> @lang('form-value.dlv')
           </label>
           <br/>
           <label for="flood" class="book">
-            <input id="flood" type="checkbox" name="flood" value="1" v-model="flood"> Taifun, Badai, dan Kerusakan akibat air
+            <input id="flood" type="checkbox" name="flood" value="1" v-model="flood"> @lang('form-value.flood')
           </label>
           <br/>
           <label for="earthquake" class="book">
-            <input id="earthquake" type="checkbox" name="earthquake" value="1" v-model="earthquake">  Gempa Bumi
+            <input id="earthquake" type="checkbox" name="earthquake" value="1" v-model="earthquake">  @lang('form-value.earthquake')
           </label>
         </div>
         <button class="btn btn-medium" @click="next">Next</button>
@@ -192,7 +192,7 @@
               </div>
             </div>
           </div>
-          <button type="button" name="button" class="btn btn-parolamas btn-medium" @click="hitungSimulasi">Hitung Simulasi</button>
+          <button type="button" name="button" class="btn btn-parolamas btn-medium" @click="hitungSimulasi">@lang('form-title.simulate')</button>
         </div>
         <div v-if="result != 0">
           <label for="">Estimasi premi Anda adalah </label>
@@ -203,9 +203,9 @@
     </div>
 
   </slick>
-  <!-- <div class="form-slider-arrow">
+  <div class="form-slider-arrow">
     <a href="javascript:;" @click="prev"><img src="{{url('/images/icon-prev.png')}}"/></a>
     <a href="javascript:;" @click="next"><img src="{{url('/images/icon-next.png')}}"/></a>
     <h3 class="color-dark-grey calculator-form-list-indicator flush-t">@{{indicators}}/@{{ form_total }} </h3>
-  </div> -->
+  </div>
 </div>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="color-primary text-center">Produk Kami</h1>
+                <h1 class="color-primary text-center">Pilih Tipe Produk Perlindungan</h1>
                 <hr class="primary"/>
                 <br><br><br>
             </div>
@@ -16,7 +16,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap bangunan dan tempat tinggal Anda
+                      Perlindungan terhadap bangunan atau tempat tinggal Kamu
                     </p>
                   </dt>
                   <dt>
@@ -34,7 +34,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Anda.
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Kamu.
                     </p>
                   </dt>
                   <dt>
@@ -63,8 +63,5 @@
 
         </div>
     </div>
-    <!--scroll icon -->
-    <div class="half-center-scroll-icon bottom">
-      <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-    </div>
+    
   

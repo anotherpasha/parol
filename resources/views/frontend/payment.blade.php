@@ -34,11 +34,10 @@
             </h1>
             <hr class="primary left"/>
             <ol>
-              <li>Pilih produk yang Anda inginkan.</li>
-              <li>Kami akan mengirimkan tautan ke alamat email Anda, klik tautan tersebut dan pilih cara pembayaran.</li>
-              <li>Pilih rencana pembayaran premi.</li>
-              <li>Lakukan pembayaran premi sesuai dengan cara yang telah Anda pilih sebelumnya dan...
-                  Selamat! Anda sudah resmi terlindungi oleh Asuransi Harta Benda Parolamas.         </li>
+              <li>Kartu kredit bisa bayar perbulan ataupun pertahun<br>(Hanya opsi kartu kredit yang bisa bayar perbulan, bayar pertahun dengan transfer, ATM, mobile, e-banking, internet, transfer, alfamart/indomaret)</li>
+              <li>Ada waktu 30 hari setelah bayar polis</li>
+              <li>Metode pembayaran<br>Kartu kredit: Visa, Mastercard, Amex, etc<br>Metode lain: transfer, ATM, mobile, e-banking, internet, transfer, alfamart/indomaret</li>
+              <li>Instruksi akan diberikan di e-mail setelah pembelian terjadi.</li>
             </ol>
             </br></br>
             <a href="http://pembayaran.parolamas.co.id/" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>

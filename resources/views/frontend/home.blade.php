@@ -25,10 +25,10 @@
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang Anda pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
+                  Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang Kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
 
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
 
           </div>
@@ -46,9 +46,9 @@
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim Anda dalam 7 hari kerja sehingga Anda tidak lagi harus cemas menunggu lama.
+                  Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim Kamu dalam 7 hari kerja sehingga Kamu tidak lagi harus cemas menunggu lama.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
 
           </div>
@@ -67,7 +67,7 @@
                 <p class="paragraph">
                   Asuransi Parolamas menawarkan fleksibilitas premi dengan harga terjangkau, serta proses pendaftaran yang ringkas.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
 
           </div>
@@ -87,7 +87,7 @@
                   Kini daftar asuransi tidak perlu rumit.
                   Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit-belit untuk nilai pertanggungan hingga Rp 1 Miliar.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
 
           </div>
@@ -102,6 +102,10 @@
 
   <section class="half-center-transparent--top extra-padding with-scroll-bottom info-product ">
   @include('partials.our-product')
+  <!--scroll icon -->
+  <div class="half-center-scroll-icon bottom">
+    <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
+  </div>
   </section>
   
 
@@ -110,10 +114,10 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-5">
-          <h1 class="color-primary ">Asuransi Rumah & Harta Benda</h1>
+          <h1 class="color-primary ">Simulasi Premi</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
-            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
+            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
         </div>
         <div class="col-xs-12 col-md-7">
           @include('partials.calculator')
