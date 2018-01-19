@@ -30,6 +30,35 @@ input, textarea{
     width: 100% !important;
     text-align: left;
   }
+  button {
+    background-color: #dfdfdf !important;
+   &:active, &:focus {
+      color: #000 !important;
+    }
+    &:hover {
+      color: #000 !important;
+
+    }
+  }
+  .bs-caret {
+    &:before {
+      font-family: 'Glyphicons Halflings';
+      content: "\e114";
+      display: inline-block;
+      margin-top: 7px;
+      color: #fff;
+    }
+  }
+  .bootstrap-select.open {
+    .bs-caret {
+      &:before {
+        @include vendor((transform: rotate(180deg)),webkit moz ms o);
+      }
+    }
+  }
+  .caret {
+    display: none;
+  }
   .select2-container--default .select2-selection--single {
     background-color: #dfdfdf;
     @include vendor((border-radius: 10px !important), webkit moz ms o);
@@ -72,10 +101,68 @@ input, textarea{
 
 }
 
+.v-select .open-indicator:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\e114";
+  margin-top: 7px;
+  color: #fff;
+  font-style: normal;
+  display: inline-block;
+}
+.v-select {
+  text-align: left;
+  &.open {
+    .open-indicator:after {
+      @include vendor((transform: rotate(180deg)),webkit moz ms o);
+
+    }
+
+  }
+}
+.v-select.searchable .dropdown-toggle {
+  background-color: #dfdfdf;
+  @include vendor((border-radius: 10px), webkit moz ms o);
+  border: none;
+  &.v-select input[type=search], .v-select input[type=search]:focus {
+    height: 28px;
+  }
+
+}
+.v-select .dropdown-toggle .clear {
+  color: #dfdfdf !important;
+}
+
+.v-select .open-indicator:before  {
+  content: none !important;
+}
 .select-lang {
   background-color: transparent;
   border: none;
   color: #fff;
+}
+.v-select .open-indicator  {
+  text-align: center;
+  width: 30px !important;
+  height: 100% !important;
+  top: 0;
+  right: 0 !important;
+  background: #d2d2d2;
+  @include vendor((border-top-right-radius: 10px), webkit moz ms o);
+  @include vendor((border-bottom-right-radius: 10px), webkit moz ms o);
+
+}
+#hour-input {
+  .bootstrap-datetimepicker-widget {
+    width: 140px !important;
+    // height: 140px;
+  }
+  .bootstrap-datetimepicker-widget table td span {
+      display: inline-block;
+      width: 34px;
+      height: 34px;
+  }
+
+
 }
 .form-group {
   margin-bottom: 30px;

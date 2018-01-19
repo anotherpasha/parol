@@ -9211,6 +9211,14 @@ blockquote {
   min-width: 150px;
 }
 
+.btn-parolamas:active,
+.btn-parolamas-secondary:active,
+.btn-parolamas:focus,
+.btn-parolamas-secondary:focus {
+  color: #fff;
+  outline: none;
+}
+
 .btn-parolamas-secondary {
   background: #3a3a3a;
 }
@@ -9306,6 +9314,36 @@ textarea.form-control {
   text-align: left;
 }
 
+.select-custom button {
+  background-color: #dfdfdf !important;
+}
+
+.select-custom button:active,
+.select-custom button:focus {
+  color: #000 !important;
+}
+
+.select-custom button:hover {
+  color: #000 !important;
+}
+
+.select-custom .bs-caret:before {
+  font-family: 'Glyphicons Halflings';
+  content: "\E114";
+  display: inline-block;
+  margin-top: 7px;
+  color: #fff;
+}
+
+.select-custom .bootstrap-select.open .bs-caret:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.select-custom .caret {
+  display: none;
+}
+
 .select-custom .select2-container--default .select2-selection--single {
   background-color: #dfdfdf;
   border-radius: 10px !important;
@@ -9354,10 +9392,70 @@ textarea.form-control {
   border-top-color: #fff;
 }
 
+.v-select .open-indicator:after {
+  font-family: 'Glyphicons Halflings';
+  content: "\E114";
+  margin-top: 7px;
+  color: #fff;
+  font-style: normal;
+  display: inline-block;
+}
+
+.v-select {
+  text-align: left;
+}
+
+.v-select.open .open-indicator:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.v-select.searchable .dropdown-toggle {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+  border: none;
+}
+
+.v-select.searchable .dropdown-toggle.v-select input[type=search],
+.v-select.searchable .dropdown-toggle .v-select input[type=search]:focus {
+  height: 28px;
+}
+
+.v-select .dropdown-toggle .clear {
+  color: #dfdfdf !important;
+}
+
+.v-select .open-indicator:before {
+  content: none !important;
+}
+
 .select-lang {
   background-color: transparent;
   border: none;
   color: #fff;
+}
+
+.v-select .open-indicator {
+  text-align: center;
+  width: 30px !important;
+  height: 100% !important;
+  top: 0;
+  right: 0 !important;
+  background: #d2d2d2;
+  -moz-border-top-right-radius: 10px;
+  border-top-right-radius: 10px;
+  -moz-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#hour-input .bootstrap-datetimepicker-widget {
+  width: 140px !important;
+}
+
+#hour-input .bootstrap-datetimepicker-widget table td span {
+  display: inline-block;
+  width: 34px;
+  height: 34px;
 }
 
 .form-group {

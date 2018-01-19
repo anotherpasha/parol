@@ -54,7 +54,7 @@
             <div class="col-md-6 col-xs-12">
               <div class="form-group">
                 <label >&nbsp;</label>
-                <div class='input-group date'>
+                <div class='input-group date' id="hour-input">
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-time"></span>
                     </span>

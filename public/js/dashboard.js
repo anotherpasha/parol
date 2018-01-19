@@ -60,7 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 294);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 295);
+>>>>>>> c850577937f198582732c90cb6634afe3903fdb0
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -20682,15 +20686,26 @@ module.exports = function settle(resolve, reject, response) {
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 294:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(295);
+=======
+/***/ 295:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(296);
+>>>>>>> c850577937f198582732c90cb6634afe3903fdb0
 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ 295:
+=======
+/***/ 296:
+>>>>>>> c850577937f198582732c90cb6634afe3903fdb0
 /***/ (function(module, exports, __webpack_require__) {
 
 

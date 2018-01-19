@@ -22,7 +22,7 @@
             <select class="postal-code" name="kode_pos"  v-model="zipcode">
             </select> -->
             <div class="select-custom">
-            <vselect label="label" :filterable="false" :options="options" @search="onSearch" v-model="fakeZipcode"></vselect>
+            <vselect label="label" :filterable="false" :options="options" @search="onSearch"  v-model="fakeZipcode"></vselect>
           </div>
         </div>
     </div>
