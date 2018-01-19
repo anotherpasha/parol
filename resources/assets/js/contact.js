@@ -65,7 +65,7 @@ const contact = new Vue({
             vm.loader = false;
             vm.resetForm();
             vm.errors = {};
-          }, 6000);
+          }, 3000);
         })
         .catch(error => {
             const err = error.response.data;
