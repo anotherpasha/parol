@@ -500,7 +500,13 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         swipeToSlide: false,
         touchMove: false,
         draggable: false,
-        accessibility: false
+        accessibility: false,
+        responsive: [{
+          breakpoint: 480,
+          settings: {
+            centerMode: false
+          }
+        }]
       },
       result: 0,
 
