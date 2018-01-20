@@ -9,12 +9,13 @@
               <img src="{{url('/images/logo-parolamas.png')}}" alt="">
             </a>
         </div>
-        <div class="right-content"   id="menu-mobile">
+        <div class="right-content"  id="menu-mobile">
             <a href="javasript:;" class="close-toggle">x</a>
             <div class="wrapper">
                 <ul class="undotted-list inline  header-info ">
                     <li>
-                      <form class=""  method="post">
+                      <form method="post" class="search-box">
+                          <span class="glyphicon glyphicon-search"></span>
                           <input class="rounded" type="text" name="" value="">
                       </form>
                     </li>

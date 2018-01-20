@@ -30,31 +30,14 @@
   }
 }
 .calculator-container {
-  width: 300px;
   display: inline-block;
-  height: 245px;
-  @include vendor((border-top-left-radius: 10px),webkit moz ms o);
-  @include vendor((border-bottom-left-radius: 10px),webkit moz ms o);
-  background-color: $brand-primary;
+  padding: 40px;
+  border: solid 2px $brand-primary;
   position: fixed;
   top: 25%;
   right: -20%;
   z-index: 1000;
-    .title {
-      @include vendor((transform-origin:37% 376%),webkit moz ms o);
-      @include vendor((transform: rotate(-90deg)),webkit moz ms o);
-      cursor: pointer;
-    }
-    .content {
-      width: 86%;
-      margin-left: 43px;
-      background: #fff;
-      height: 100%;
-      position: absolute;
-      padding: 20px;
-      top: 0;
-      border-bottom: solid 10px $brand-primary;
-    }
+
 }
 
 .form-slider-arrow {
@@ -62,7 +45,7 @@
   margin-top: 25px;
   display: flex;
   a {
-    cursor: pointer;  
+    cursor: pointer;
   }
 }
 .calculator-form-list-indicator {

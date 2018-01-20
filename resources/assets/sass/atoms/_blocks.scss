@@ -5,7 +5,13 @@
   @include mappy-bp(max-width xs) {
     width: 95%;
   }
-
+}
+.results-wrapper {
+  margin-top: 620px;
+  text-align: center;
+  @include mappy-bp(max-width small) {
+    margin-bottom: 30px;
+  }
 }
 .half-center-transparent--top {
   position:relative;

@@ -1,6 +1,4 @@
 import Vue from 'vue';
-// import Slick from 'vue-slick';
-// import 'slick-carousel/slick/slick.css';
 import VueSelect from 'vue-select';
 import Validator from 'validator';
 import isEmpty from 'lodash/isEmpty';

@@ -21,3 +21,12 @@ ul.dotted-list{
     display: inline;
   }
 }
+.ups-list {
+  padding: 0;
+  margin: 10px 0 0 0;
+    li {
+      color: #fff;
+      font-family: $brand-font-bold;
+      font-size: 15px;
+    }
+}

@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
+
   <section class="slider">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -28,7 +29,11 @@
                 <p class="paragraph">
                   Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
-
+                <ul class="undotted-list ups-list">
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persetujuan Klaim Dalam 7 Hari</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Praktis & Ekonomis</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persyaratan Mudah</li>
+                </ul>
                 <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
 
@@ -106,7 +111,7 @@
                 <p class="paragraph">
                   Kami memahami pentingnya rasa aman dan nyaman dalam menjalani hidup. Selain nyaman atas perlindungan yang kami berikan, kami juga menawarkan kenyamanan dengan proses klaim yang simpel, harga terjangkau serta fleksibilitas pembayaran premi sesuai dengan kenyamananmu.
                 </p>
-                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Video</a>
+                <a data-toggle="modal" data-target="#video" class="btn btn-parolamas btn-md m-t-20">Lihat Video</a>
               </div>
 
           </div>
@@ -147,6 +152,7 @@
 
   </section>
 
+  @include('partials.video')
   <!-- include('partials.quiz') -->
 
 @endsection

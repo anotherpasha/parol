@@ -120,7 +120,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-              <label for="">@lang('form-title.buildingValue')<br>&nbsp;</label>
+              <label for="">@lang('form-title.buildingValue')</label>
               <input type="text" name="building_value" value="" class="form-control grey decimal-masked" v-model="buildingValue" />
               <div v-if="errors.errBuildingValue" class="alert alert-danger" role="alert">@{{errors.errBuildingValue}}</div>
             </div>
@@ -237,11 +237,16 @@
     </div>
 
     <div class="row" v-if="result != 0">
-      <label for="">Simulasi premi kamu </label>
-      <h2 class="color-primary">Rp. @{{ result }}</h2>
-      <h3 class="color-primary">/tahun</h3>
-      <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>
-      &nbsp;
+      <div class="col-xs-12">
+        <div class="results-wrapper">
+          <h4 class="color-dark-grey">Simulasi premi kamu </h3>
+          <h1 class="color-primary">Rp. @{{ result }}</h1>
+          <h3 class="color-primary">/tahun</h3>
+          <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>
+          &nbsp;
+
+        </div>
+      </div>
       <!-- <button type="button" class="btn btn-parolamas" @click="sendEmail">KIRIM KE EMAIL KAMU</button> -->
     </div>
 

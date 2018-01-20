@@ -134,6 +134,6 @@
 <!-- section contact -->
 <!-- include('partials.contact-form') -->
 
-<!-- include('partials.toggled-calculator') -->
+@include('partials.toggled-calculator')
 
 @endsection

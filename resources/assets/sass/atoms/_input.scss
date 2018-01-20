@@ -15,6 +15,18 @@ input, textarea{
     border-radius: 10px;
   }
 }
+.search-box {
+  position: relative;
+  .glyphicon {
+    position: absolute;
+    top: 4px;
+    color: #d2d2d2;
+    left: 5px;
+  }
+  input {
+    padding-left: 25px;
+  }
+}
 .input-group-addon {
   background: #d2d2d2;
   border: none;
