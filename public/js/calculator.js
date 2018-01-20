@@ -17686,7 +17686,7 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   mounted: function mounted() {
     var decimalMasked = document.getElementsByClassName("decimal-masked");
     console.log(decimalMasked);
-    __WEBPACK_IMPORTED_MODULE_4_inputmask___default()("numeric", { rightAlign: false, autoGroup: true, groupSeparator: ',' }).mask(decimalMasked);
+    __WEBPACK_IMPORTED_MODULE_4_inputmask___default()("numeric", { rightAlign: false, autoGroup: true, groupSeparator: '.' }).mask(decimalMasked);
   },
   updated: function updated() {
     $('.selectpicker').selectpicker('refresh');
@@ -17702,8 +17702,8 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       floor: '',
       beenFire: 0,
       package: 'both',
-      buildingValue: '',
-      contentValue: '',
+      buildingValue: 0,
+      contentValue: 0,
       rsmdcc: 0,
       dlv: 0,
       flood: 0,

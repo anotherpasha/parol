@@ -20,7 +20,7 @@ const calculator = new Vue({
     mounted() {
       let decimalMasked = document.getElementsByClassName("decimal-masked");
       console.log(decimalMasked);
-      Inputmask("numeric", { rightAlign: false, autoGroup: true, groupSeparator: ',' }).mask(decimalMasked);
+      Inputmask("numeric", { rightAlign: false, autoGroup: true, groupSeparator: '.' }).mask(decimalMasked);
     },
 
     updated() {
@@ -38,8 +38,8 @@ const calculator = new Vue({
           floor: '',
           beenFire: 0,
           package: 'both',
-          buildingValue: '',
-          contentValue: '',
+          buildingValue: 0,
+          contentValue: 0,
           rsmdcc: 0,
           dlv: 0,
           flood: 0,
