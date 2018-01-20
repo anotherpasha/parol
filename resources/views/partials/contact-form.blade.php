@@ -32,6 +32,7 @@
                 <div class="select-custom">
                   <vselect label="label" :filterable="false" :options="options" @search="onSearch"  v-model="zipcode"></vselect>
                 </div>
+                <div v-if="errors.errZipcode" class="alert alert-danger" role="alert">@{{errors.errZipcode}}</div>
               </div>
             </div>
 
@@ -76,7 +77,8 @@
             <div class="col-md-12" v-show="type == 1">
               <div class="form-group" >
                 <label for="">@lang('form-title.floor')</label>
-                <input type="text" name="floor" value="" v-model="floor" class="form-control grey"/>
+                <input type="number" name="floor" value="" v-model="floor" class="form-control grey"/>
+                <div v-if="errors.errFloor" class="alert alert-danger" role="alert">@{{errors.errFloor}}</div>
               </div>
             </div>
 
@@ -116,14 +118,15 @@
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">@lang('form-title.buildingValue')<br>&nbsp;</label>
-                <input type="text" name="building_value" value="" class="form-control grey" v-model="buildingValue" />
+                <input type="text" name="building_value" value="" class="form-control grey decimal-masked" v-model="buildingValue" />
+                <div v-if="errors.errBuildingValue" class="alert alert-danger" role="alert">@{{errors.errBuildingValue}}</div>
               </div>
             </div>
 
             <div class="col-md-6">
               <div class="form-group">
                 <label for="">@lang('form-title.contentValue')</label>
-                <input type="text" name="content_value" value="" class="form-control grey" v-model="contentValue" @blur="checkContentValue"/>
+                <input type="text" name="content_value" value="" class="form-control grey decimal-masked" v-model="contentValue" />
               </div>
             </div>
 
@@ -203,11 +206,13 @@
             </div>
 
             <div class="col-md-12" v-if="result != 0">
-              <label for="">Estimasi premi Kamu adalah </label>
+              <label for="">Simulasi premi kamu </label>
               <h2 class="color-primary">Rp. @{{ result }}</h2>
+              <h3 class="color-primary">/tahun</h3>
+              <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>&nbsp;<button type="button" class="btn btn-parolamas" @click="sendEmail">KIRIM KE EMAIL KAMU</button>
             </div>
 
-            <div class="col-xs-12 text-center">
+            <div class="col-xs-12 text-center" v-if="result == 0">
                 <div v-if="loader" class="loader-container">
                     <img src="{{url('/images/ajax-loader.gif')}}" alt="">
                 </div>

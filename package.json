@@ -23,6 +23,8 @@
     "bootstrap-select-ajax": "^1.12.27",
     "eonasdan-bootstrap-datetimepicker": "^4.17.47",
     "i": "^0.3.6",
+    "inputmask": "^3.3.11",
+    "jquery-mask-plugin": "^1.14.13",
     "lodash": "^4.17.4",
     "mappy-breakpoints": "^0.2.3",
     "query-string": "^5.0.1",

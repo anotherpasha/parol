@@ -10,8 +10,9 @@ import Vue from 'vue';
 import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
 import query from 'query-string';
-import select2 from 'select2';
-import 'select2/dist/css/select2.min.css';
+// import jqueryMas from 'jquery-mask-plugin';
+// import select2 from 'select2';
+// import 'select2/dist/css/select2.min.css';
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -32,33 +33,33 @@ $(document).ready(()=> {
     style: 'btn-info',
     size: 4
   });
-  $('.postal-code').select2({
-    ajax: {
-      url: `${window.location.href}/get-zipcode`,
-      dataType: 'json',
-      data: function (params) {
-        return {
-          q: params.term,
-        };
-      },
-      delay: 250,
-      processResults: function (data) {
+  // $('.postal-code').select2({
+  //   ajax: {
+  //     url: `${window.location.href}/get-zipcode`,
+  //     dataType: 'json',
+  //     data: function (params) {
+  //       return {
+  //         q: params.term,
+  //       };
+  //     },
+  //     delay: 250,
+  //     processResults: function (data) {
 
 
-        return {
-          results: $.map(data, function (item) {
-              return {
-                  text: item.zipcode,
-                  id: item.zipcode
-              }
-          })
-        };
-      },
-      cache: true,
-      placeholder: 'Cari kodepos...',
-      minimumInputLength: 3
-    }
-  });
+  //       return {
+  //         results: $.map(data, function (item) {
+  //             return {
+  //                 text: item.zipcode,
+  //                 id: item.zipcode
+  //             }
+  //         })
+  //       };
+  //     },
+  //     cache: true,
+  //     placeholder: 'Cari kodepos...',
+  //     minimumInputLength: 3
+  //   }
+  // });
   function formatRepo (repo) {
     console.log(repo);
   }

@@ -1,18 +1,26 @@
 import Vue from 'vue';
-import Slick from 'vue-slick';
-import 'slick-carousel/slick/slick.css';
+// import Slick from 'vue-slick';
+// import 'slick-carousel/slick/slick.css';
 import VueSelect from 'vue-select';
-// Vue.component('v-select', vSelect.VueSelect);
+import Validator from 'validator';
+import isEmpty from 'lodash/isEmpty';
+import Inputmask from "inputmask";
 
 Vue.component("vselect", VueSelect);
 
 const calculator = new Vue({
     el: '#calculator',
 
-    components: { Slick },
+    components: {  },
 
     beforeCreate() {
       console.log(this.$refs)
+    },
+
+    mounted() {
+      let decimalMasked = document.getElementsByClassName("decimal-masked");
+      console.log(decimalMasked);
+      Inputmask("numeric", { rightAlign: false, autoGroup: true, groupSeparator: ',' }).mask(decimalMasked);
     },
 
     updated() {
@@ -30,36 +38,13 @@ const calculator = new Vue({
           floor: '',
           beenFire: 0,
           package: 'both',
-          buildingValue: 0,
-          contentValue: 0,
+          buildingValue: '',
+          contentValue: '',
           rsmdcc: 0,
           dlv: 0,
           flood: 0,
           earthquake: 0,
           eqType:1,
-
-          form_total: 9,
-          indicators: 1,
-          slickOptions: {
-            arrows: false,
-            slidesToShow: 1,
-            centerMode: true,
-            infinite: false,
-            adaptiveHeight: true,
-            swipe: false,
-            swipeToSlide: false,
-            touchMove: false,
-            draggable: false,
-            accessibility: false,
-            responsive: [
-              {
-                breakpoint: 480,
-                settings: {
-                  centerMode: false,
-                }
-              }
-            ]
-          },
           result: 0,
 
           options:[],
@@ -71,8 +56,7 @@ const calculator = new Vue({
             email: '',
             phone: '',
             date: '',
-            time: '',
-            type: 'Asuransi Rumah'
+            time: ''
           },
           errors: {
             errEmail:'',
@@ -80,55 +64,20 @@ const calculator = new Vue({
             errPhone:'',
             errDate:'',
             errTime: '',
+            errFloor: '',
+            errZipcode: '',
+            errBuildingValue: ''
           },
           isValid: false,
         };
     },
 
-    watch: {
-      fakeZipcode: function() {
-        this.next();
-        this.zipcode = this.fakeZipcode.value;
-        console.log('zipcode watched');
-      }
-    },
-
-    // All slick methods can be used too, example here
     methods: {
-        next() {
-            // this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
-            // this.$refs.slick.next();
-            // this.reInit;
-        },
-
-        prev() {
-            // this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
-            // this.$refs.slick.prev();
-            // this.reInit;
-        },
-
-        slickSwipe(evt, slick, direction) {
-          if (direction == 'left') {
-            this.next();
-          } else {
-            this.prev();
-          }
-          // console.log(evt);
-          // console.log(slick);
-          // console.log(direction);
-        },
-
-        reInit() {
-            // Helpful if you have to deal with v-for to update dynamic lists
-            this.$nextTick(() => {
-                this.$refs.slick.reSlick();
-            });
-        },
-
         onSearch(search, loading) {
           loading(true);
           this.search(loading, search, this);
         },
+
         search: _.debounce((loading, search, vm) => {
           console.log(search);
           axios.get(`/get-zipcode?search=${search}`)
@@ -138,75 +87,24 @@ const calculator = new Vue({
           })
         }, 350),
 
-        buildingStatusChange(evt) {
-          let buildingStatus = evt.target.value;
-          if (buildingStatus != 0) {
-            this.buildingStatus = buildingStatus;
-            this.next();
-          }
+        tryAgain() {
+          this.clearCalculator();
         },
 
-        changeType(evt){
-          let tp = evt.target.value;
-          if (tp != 0) {
-            this.type = tp;
-            this.next();
-          }
-        },
-        woodChanged(evt){
-          let woodElement = evt.target.value;
-          if (woodElement != 0) {
-            this.woodElement = woodElement;
-            this.next();
-          }
-        },
-        beenFiredChanged(evt){
-          let beenFire = evt.target.value;
-          if (beenFire != 0) {
-            this.beenFire = beenFire;
-            this.next();
-          }
-        },
-        packageChanged(evt){
-          let pckg = evt.target.value;
-          if (pckg != 0) {
-            this.package = pckg;
-            this.next();
-          }
-        },
-        package2Changed(evt){
-          let pckg = evt.target.value;
-          if (pckg != 0) {
-            this.package = pckg;
-            this.next();
-          }
-        },
-        nextFloor() {
-          if (this.floor == '') {
-            alert(`Lantai harus diisi.`);
-          } else {
-            this.next();
-          }
-        },
-        nextValue() {
-          if (this.buildingValue + this.contentValue == 0) {
-            alert(`Nilai harus diisi.`);
-          } else {
-            this.next();
-          }
-        },
-        checkContentValue(evt) {
-          let maxContent = this.buildingValue / 10;
-          if (this.contentValue > maxContent) {
-            alert(`Harga isi bangunan Anda maksimal ${maxContent}`);
-            this.contentValue = maxContent;
-            evt.target.focus();
-          }
-        },
+        sendEmail() {
+          console.log('send email');
+        },        
 
         hitungSimulasi() {
-          console.log('simulasi');
           let vm = this;
+          const {name, email, phone, date, time} = this.contactForm;
+          // console.log('simulasi');
+          if(!vm.validate().isValid) {
+            // console.log('invalid');
+            vm.errors = vm.validate().errors;
+            return;
+          }
+          vm.loader = true;
           let formData = new FormData();
           formData.append('building_type', this.type);
           formData.append('zipcode', this.zipcode.value);
@@ -223,24 +121,99 @@ const calculator = new Vue({
           if (this.earthquake != 0) formData.append('earthquake', this.earthquake);
           if (this.earthquake != 0) formData.append('eq_type', this.eqType);
 
+          formData.append('name', name);
+          formData.append('email', email);
+          formData.append('phone', phone);
+          formData.append('date', date);
+          formData.append('time', time);
+
           axios.post('/calculator', formData)
           .then(({data}) => {
               console.log(data);
               vm.result = data.result;
+              vm.loader = false;
           })
           .catch((err) => {
             console.log(err);
+            vm.loader = false;
           });
         },
 
         changeTime(evt) {
           this.contactForm.time = evt.target.value;
         },
+
         changeDate(evt) {
           this.contactForm.date = evt.target.value;
         },
-        submitContact() {
-        }
+
+        clearCalculator() {
+          this.buildingStatus= 1;
+          this.fakeZipcode= '';
+          this.zipcode= '';
+          this.type= 1;
+          this.houseType= 6;
+          this.woodElement= 1;
+          this.floor= '';
+          this.beenFire= 0;
+          this.package= 'both';
+          this.buildingValue= 0;
+          this.contentValue= 0;
+          this.rsmdcc= 0;
+          this.dlv= 0;
+          this.flood= 0;
+          this.earthquake= 0;
+          this.eqType=1;
+          this.result=0;
+        },
+
+        validate() {
+          const {contactForm, zipcode, type, floor, buildingValue}  = this;
+          let errors = {};
+          // console.log(`zipcode ${zipcode}`);
+          // console.log(`floor ${floor}`);
+          // console.log(`building value ${buildingValue}`);
+          // console.log(`email ${contactForm.email}`);
+
+          if (!Validator.isEmail(contactForm.email)) {
+              errors.errEmail = 'This field must be a valid email address.';
+          }
+          if (Validator.isEmpty(contactForm.email)) {
+              errors.errEmail = 'This field is required.';
+          }
+          if (Validator.isEmpty(contactForm.name)) {
+              errors.errName = 'This field is required.';
+          }
+          if (Validator.isEmpty(contactForm.phone)) {
+              errors.errPhone = 'This field is required.';
+          }
+          if (!Validator.isNumeric(contactForm.phone)) {
+              errors.errPhone = 'This field must be a number.';
+          }
+          if (Validator.isEmpty(contactForm.date)) {
+              errors.errDate = 'This field is required.';
+          }
+          if (Validator.isEmpty(contactForm.time)) {
+            errors.errTime = 'This field is required.';
+          }
+          if (zipcode == '') {
+            errors.errZipcode = 'This field is required.';
+          }
+          if (!Validator.isNumeric(floor)) {
+              errors.errFloor = 'This field must be a number.';
+          }
+          if (type == 1 && Validator.isEmpty(floor)) {
+            errors.errFloor = 'This field is required.';
+          }
+          if (buildingValue == 0) {
+            errors.errBuildingValue = 'This field is required.';
+          }
+          //console.log(errors);
+          return {
+            errors,
+            isValid: isEmpty(errors)
+          };
+        },
 
     },
 });
