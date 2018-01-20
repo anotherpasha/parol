@@ -33,11 +33,18 @@
                 Membayar Premi?
             </h1>
             <hr class="primary left"/>
-            <ol>
+            <p class="color-dark-grey">Berbagai kemudahan dalam melakukan pembayaran premi yang bisa kamu dapatkan bersama kami antara lain:</p>
+            <!-- <ol>
               <li>Kartu kredit bisa bayar perbulan ataupun pertahun<br>(Hanya opsi kartu kredit yang bisa bayar perbulan, bayar pertahun dengan transfer, ATM, mobile, e-banking, internet, transfer, alfamart/indomaret)</li>
               <li>Ada waktu 30 hari setelah bayar polis</li>
               <li>Metode pembayaran<br>Kartu kredit: Visa, Mastercard, Amex, etc<br>Metode lain: transfer, ATM, mobile, e-banking, internet, transfer, alfamart/indomaret</li>
               <li>Instruksi akan diberikan di e-mail setelah pembelian terjadi.</li>
+            </ol> -->
+            <ol>
+              <li>Kamu dapat memilih untuk melakukan pembayaran premi per bulan dengan menggunakan kartu kredit.<br>Kartu kredit yang diterima adalah Visa, Mastercard, Amex,  dll.</li>
+              <li>Kamu dapat melakukan pembayaran premi per tahun melalui bank transfer, ATM, mobile banking, e-banking, atau melalui transaksi di Alfamart dan Indomaret.</li>
+              <li>Kamu memiliki kebebasan untuk membayar premi pertamamu dalam jangka waktu 30 hari setelah kamu mendaftar.</li>
+              <li>Rincian instruksi pembayaran premi akan kamu dapatkan setelah kamu resmi mendapatkan perlindungan dari Asuransi Parolamas.</li>
             </ol>
             </br></br>
             <a href="http://pembayaran.parolamas.co.id/" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>

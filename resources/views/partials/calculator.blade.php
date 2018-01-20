@@ -195,7 +195,7 @@
           <button type="button" name="button" class="btn btn-parolamas btn-medium" @click="hitungSimulasi">@lang('form-title.simulate')</button>
         </div>
         <div v-if="result != 0">
-          <label for="">Estimasi premi Anda adalah </label>
+          <label for="">Estimasi premi Kamu adalah </label>
           <h2 class="color-primary">Rp. @{{ result }}</h2>
           </br>
           </br>

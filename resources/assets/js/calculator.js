@@ -62,7 +62,26 @@ const calculator = new Vue({
           },
           result: 0,
 
-          options:[]
+          options:[],
+
+          loader: false,
+          notif: false,
+          contactForm: {
+            name: '',
+            email: '',
+            phone: '',
+            date: '',
+            time: '',
+            type: 'Asuransi Rumah'
+          },
+          errors: {
+            errEmail:'',
+            errName:'',
+            errPhone:'',
+            errDate:'',
+            errTime: '',
+          },
+          isValid: false,
         };
     },
 
@@ -77,15 +96,15 @@ const calculator = new Vue({
     // All slick methods can be used too, example here
     methods: {
         next() {
-            this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
-            this.$refs.slick.next();
-            this.reInit;
+            // this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
+            // this.$refs.slick.next();
+            // this.reInit;
         },
 
         prev() {
-            this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
-            this.$refs.slick.prev();
-            this.reInit;
+            // this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
+            // this.$refs.slick.prev();
+            // this.reInit;
         },
 
         slickSwipe(evt, slick, direction) {
@@ -190,7 +209,7 @@ const calculator = new Vue({
           let vm = this;
           let formData = new FormData();
           formData.append('building_type', this.type);
-          formData.append('zipcode', this.zipcode);
+          formData.append('zipcode', this.zipcode.value);
           formData.append('house_type', this.houseType);
           formData.append('floor', this.floor);
           formData.append('been_fire', this.beenFire);
@@ -212,6 +231,15 @@ const calculator = new Vue({
           .catch((err) => {
             console.log(err);
           });
+        },
+
+        changeTime(evt) {
+          this.contactForm.time = evt.target.value;
+        },
+        changeDate(evt) {
+          this.contactForm.date = evt.target.value;
+        },
+        submitContact() {
         }
 
     },

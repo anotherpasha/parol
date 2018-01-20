@@ -120,7 +120,7 @@
             Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
         </div>
         <div class="col-xs-12 col-md-7">
-          @include('partials.calculator')
+          <!-- include('partials.calculator') -->
         </div>
       </div>
     </div>
@@ -131,6 +131,6 @@
   </section>
 
   @include('partials.contact-form')
-  <!-- @include('partials.quiz') -->
+  <!-- include('partials.quiz') -->
 
 @endsection
