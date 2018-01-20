@@ -9,6 +9,7 @@
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="4"></li>
       </ol>
 
       <!-- Wrapper for slides -->
@@ -88,6 +89,26 @@
                   Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit-belit untuk nilai pertanggungan hingga Rp 1 Miliar.
                 </p>
                 <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
+              </div>
+
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-05.jpg')}})"></div>
+          <!-- <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table"> -->
+          <div class="custom-carousel-caption">
+              <div class="container">
+                <h1>
+                  Kenyamanan</br>
+                  Dalam Memberi</br>
+                  Perlindungan
+                </h1>
+                <hr class="primary left" />
+                <p class="paragraph">
+                  Kami memahami pentingnya rasa aman dan nyaman dalam hidup. Selain nyaman atas perlindungan yang kami berikan, kami juga menawarkan kenyamanan dengan proses klaim yang simpel, harga terjangkau serta fleksibilitas pembayaran premi.
+                </p>
+                <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Video</a>
               </div>
 
           </div>

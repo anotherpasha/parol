@@ -26,7 +26,11 @@
   bottom: 90px;
   li {
     border: none;
-    background-color: #a5a5a7;
+    background-color: #fff;
+    &.active {
+      background-color: #a5a5a7;
+      
+    }
   }
 }
 

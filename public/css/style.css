@@ -10305,6 +10305,10 @@ header .close-toggle {
 
 .carousel-indicators li {
   border: none;
+  background-color: #fff;
+}
+
+.carousel-indicators li.active {
   background-color: #a5a5a7;
 }
 
