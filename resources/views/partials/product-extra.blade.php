@@ -8,7 +8,7 @@
                     </div>
                     <div class="col-xs-12 col-md-8">
                       <p class="color-dark-grey book">
-                          Dengan tambahan premi, maka tambahan Perlindungan Rumah & Harta Benda dapat diperluas dengan jaminan tambahan yang diinginkan terhadap kerusakan akibat:
+                          Dengan tambahan premi, Perlindungan Rumah & Harta Benda dapat diperluas dengan jaminan tambahan yang diinginkan terhadap kerusakan akibat:
                       </p>
                       <ul class="dotted-list ">
                         <li>Kerusuhan, Pemogokan, Perbuatan Jahat, Huru-hara;</li>
@@ -23,8 +23,8 @@
                     </div>
                 </div>
             </div>
-            <div class="half-center-scroll-icon bottom">
+            <!-- <div class="half-center-scroll-icon bottom">
               <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-            </div>
+            </div> -->
 
       </section>

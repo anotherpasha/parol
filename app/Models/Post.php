@@ -2,9 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\Media;
-use App\Models\PostMeta;
-use App\Models\PostProductSection;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model

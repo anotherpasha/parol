@@ -6,6 +6,7 @@ use App\Http\Requests\StorePost;
 use App\Models\Post as PostModel;
 use App\Services\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class FaqController extends Controller
 {
@@ -64,5 +65,15 @@ class FaqController extends Controller
     {
         $post->delete();
         return backendRedirect('faq')->with(['message' => 'Data has been deleted.']);
+    }
+
+    // frontend
+    public function faq() {
+        $locale = App::getLocale();
+        $faqs = PostModel::with(['translations' => function ($query) {
+                    $query->where('locale', '=', 'id');
+                }])->get();
+        $data['faqs'] = $faqs;
+        return view('frontend/faq', $data);
     }
 }

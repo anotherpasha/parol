@@ -10,9 +10,9 @@
             <h1>Informasi Produk</h1>
             <hr class="primary left" />
             <p class="color-white">
-                Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah Anda dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
+                Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah kamu dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
             </p>
-            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a>
+            <!-- <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a> -->
           </div>
 
         </div>
@@ -40,7 +40,7 @@
                   <div class="col-xs-12 col-md-7 end">
                     <h3 class="color-primary flush-t">Asuransi Rumah</h3>
                     <p class="color-dark-grey book">
-                        Rumah adalah asset berharga yang melindungi Anda dan keluarga dari panas dan hujan. Kami adalah rekan yang tepat untuk melindungi aset berharga Anda. Asuransi Kebakaran Rumah dari kami memberikan perlindungan risiko dasar untuk melindungi rumah Anda dari kerugian atau kerusakan akibat kebakaran atau risiko perluasannya.
+                        Rumah adalah aset berharga yang melindungi kamu dan keluarga dari panas dan hujan. Kami adalah rekan yang tepat untuk melindungi aset berharga kamu. Asuransi Kebakaran Rumah dari kami memberikan perlindungan risiko dasar untuk melindungi rumah kamu dari kerugian atau kerusakan akibat kebakaran atau risiko perluasannya.
                     </p>
                     <div class="row">
                       <div class="col-xs-12 col-md-10">
@@ -71,13 +71,13 @@
                   <div class="col-xs-12 col-md-7 end">
                     <h3 class="color-primary flush-t">Asuransi Harta Benda</h3>
                     <p class="color-dark-grey book">
-                        Salah satu aset berharga dari seseorang adalah harta benda. Izinkan kami melindungi aset berharga Anda. Lindungi harta benda Anda dengan Asuransi Harta Benda Parolamas. Ketenangan hidup yang tidak dapat tergantikan.
+                        Salah satu aset berharga dari seseorang adalah harta benda. Izinkan kami melindungi aset berharga kamu. Lindungi harta benda kamu dengan Asuransi Harta Benda Parolamas. Ketenangan hidup yang tidak dapat tergantikan.
                     </p>
                     <div class="row">
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="javascript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact" >Daftar</a>
                         </div>
                       </div>
                     </div>
@@ -103,13 +103,13 @@
                   <div class="col-xs-12 col-md-7 end">
                     <h3 class="color-primary flush-t">Asuransi Rumah & Harta Benda</h3>
                     <p class="color-dark-grey book">
-                        Kami memahami bahwa membeli sebuah hunian/tempat tinggal dan harta benda adalah pembelian yang bernilai bagi Anda, kami menyediakan perlindungan risiko dasar untuk melindungi bangunan tempat tinggal dan juga harta benda di dalam rumah Anda dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
+                        Kami memahami bahwa membeli sebuah hunian/tempat tinggal dan harta benda adalah pembelian yang bernilai bagi kamu, kami menyediakan perlindungan risiko dasar untuk melindungi bangunan tempat tinggal dan juga harta benda di dalam rumah kamu dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
                     </p>
                     <div class="row">
                       <div class="col-xs-12 col-md-10">
                         <div class="button-group-parolamas">
                           <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="{{ url('contact-us') }}" class="btn btn-md btn-parolamas" >Daftar</a>
+                          <a href="javascript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact" >Daftar</a>
                         </div>
                       </div>
                     </div>
@@ -128,12 +128,12 @@
 
     @include('partials.product-extra')
 
-    @include('partials.product-excluded')
+    <!-- include('partials.product-excluded') -->
 </main>
 
 <!-- section contact -->
-@include('partials.contact-form')
+<!-- include('partials.contact-form') -->
 
-<!-- @include('partials.toggled-calculator') -->
+<!-- include('partials.toggled-calculator') -->
 
 @endsection

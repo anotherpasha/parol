@@ -1,7 +1,6 @@
 <div class="" id="calculator">
 
     <div class="row" v-if="result <= 0">
-
       <div class="col-xs-12">
         <div class="row">
           <div class="col-xs-12">
@@ -16,12 +15,10 @@
               </div>
             </div>
           </div>
-
         </div>
 
 
         <div class="row">
-
           <div class="col-xs-12 col-sm-6">
             <div class="form-group">
                 <label for="">Kode Pos</label>
@@ -103,14 +100,7 @@
                 </select>
                 </div>
               </div>
-              <div class="select-custom">
-                <div v-if="2==buildingStatus">
-                  <select  name="package" class="selectpicker" @change="package2Changed">
-                    <option value="0">==Pilih==</option>
-                    <option value="content">Isi Saja</option>
-                  </select>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -244,32 +234,10 @@
 
     </div>
 
-    <div class="row" v-if="result > 0">
-      <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12 text-center" >
-              <h4 class="color-dark-grey">Estimasi premi Anda adalah </h4>
-              <h1 class="color-primary big">Rp. @{{ result }}</h1>
-              <h4 class="color-primary">/tahun</h4>
-              </br>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 text-center">
 
-              <button type="button" class="btn btn-parolamas btn-medium m-t-20" name="button" v-on:click="resetResult">Coba Simulasi Lagi</button>
-              &nbsp;
-              <button type="button" class="btn btn-parolamas btn-medium m-t-20" name="button">Kirim Ke Email Kamu</button>
-            </div>
-
-          </div>
-      </div>
-
-
-    </div>
+</div>
   <!-- <div class="form-slider-arrow">
     <a href="javascript:;" @click="prev"><img src="{{url('/images/icon-prev.png')}}"/></a>
     <a href="javascript:;" @click="next"><img src="{{url('/images/icon-next.png')}}"/></a>
     <h3 class="color-dark-grey calculator-form-list-indicator flush-t">@{{indicators}}/@{{ form_total }} </h3>
   </div> -->
-</div>

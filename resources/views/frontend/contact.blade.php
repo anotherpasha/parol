@@ -44,7 +44,7 @@
                 {{ csrf_field() }}
                 <div class="row">
 
-                  <div class="col-sm-6 col-xs-12">
+                  <div class="col-sm-12 col-xs-12">
                     <div class="form-group">
                       <label for="">Nama Lengkap</label>
                       <input class="form-control grey" type="text" name="name" value="{{ old('name') }}">
@@ -68,33 +68,31 @@
                     </div>
                   </div>
 
-                  <div class="col-sm-6 col-xs-12">
+                  <div class="col-md-6 col-xs-12">
                     <div class="form-group">
-                      <label for="">Keperluan Anda</label>
-                      <div class="select-custom ">
-                        <select class="selectpicker" name="occupation" v-model="occupation">
-                          <option value="Daftar">Daftar</option>
-                          <option value="Bertanya">Bertanya</option>
-                          <option value="Informasi Produk">Informasi Produk</option>
-                        </select>
-                      </div>
+                      <label for="">Waktu dapat dihubungi</label>
+                      <div class='input-group date'>
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-calendar"></span>
+                          </span>
+                           <input type='text' class="form-control grey" id="datepicker" />
+                       </div>
                     </div>
                   </div>
 
-                  <div class=" col-xs-12" v-if="occupation == 'Daftar'">
+                  <div class="col-md-6 col-xs-12">
                     <div class="form-group">
-                      <label >Jenis Asuransi</label>
-                      <div class="select-custom ">
-                        <select class="selectpicker" name="package">
-                          <option value="Asuransi Rumah">Asuransi Rumah</option>
-                          <option value="Asuransi Harta & Benda">Asuransi Harta & Benda</option>
-                          <option value="Asuransi Rumah & Harta Benda">Asuransi Rumah & Harta Benda</option>
-                        </select>
-                      </div>
+                      <label >&nbsp;</label>
+                      <div class='input-group date' id="hour-input">
+                          <span class="input-group-addon">
+                              <span class="glyphicon glyphicon-time"></span>
+                          </span>
+                           <input type='text' class="form-control grey" id='hourpicker' value="" />
+                       </div>
                     </div>
                   </div>
 
-                  <div class="col-xs-12" v-if="occupation != 'Daftar'">
+                  <div class="col-xs-12">
                     <div class="form-group">
                       <label for="">Pertanyaan Anda</label>
                       <textarea class="form-control grey" name="message">{{ old('message') }}</textarea>
@@ -133,7 +131,7 @@
                   <img src="{{url('/images/icon-message.png')}}" alt="">
                 </span>
                 <span class="details">
-                    <a class="color-dark-grey" href="mailto:info@parolamas.com">info@parolamas.com</a>
+                    <a class="color-dark-grey" href="mailto:info@parolamas.com">nasabah@parolamas.com</a>
                 </span>
               </dt>
               <dt>

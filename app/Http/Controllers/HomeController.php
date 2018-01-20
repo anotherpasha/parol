@@ -34,7 +34,7 @@ class HomeController extends Controller
         $data['types'] = EqConstructionType::all();
         $data['zipcodes'] = EqZipcode::take(100)->get();
         $data['isCalculator'] = true;
-        $data['isContact'] = true;
+        // $data['isContact'] = true;
         // $data['zipcodes'] = EqZipcode::all();
         return view('frontend.home', $data);
     }

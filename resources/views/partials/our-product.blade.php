@@ -17,7 +17,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap bangunan dan tempat tinggal Anda
+                      Perlindungan terhadap bangunan atau tempat tinggal kamu
                     </p>
                   </dt>
                 </dl>
@@ -32,7 +32,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Anda.
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu.
                     </p>
                   </dt>
                 </dl>
