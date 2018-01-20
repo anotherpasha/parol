@@ -48013,6 +48013,8 @@ __webpack_require__(42);
  */
 
 $(document).ready(function () {
+  var $viewport = $(window).width();
+
   $('.carousel').carousel();
   $('#datepicker').datetimepicker({
     format: "dddd, Do MMMM YYYY",
@@ -48026,43 +48028,10 @@ $(document).ready(function () {
     style: 'btn-info',
     size: 4
   });
-  // $('.postal-code').select2({
-  //   ajax: {
-  //     url: `${window.location.href}/get-zipcode`,
-  //     dataType: 'json',
-  //     data: function (params) {
-  //       return {
-  //         q: params.term,
-  //       };
-  //     },
-  //     delay: 250,
-  //     processResults: function (data) {
 
-
-  //       return {
-  //         results: $.map(data, function (item) {
-  //             return {
-  //                 text: item.zipcode,
-  //                 id: item.zipcode
-  //             }
-  //         })
-  //       };
-  //     },
-  //     cache: true,
-  //     placeholder: 'Cari kodepos...',
-  //     minimumInputLength: 3
-  //   }
-  // });
-  function formatRepo(repo) {
-    console.log(repo);
-  }
-
-  // $('.selectPostal').selectpicker({
-  //   style: 'btn-info',
-  //   size: 3,
-  //   liveSearch: true,
-  //   liveSearchPlaceholder: 'Search kodepos'
-  // });
+  $('.image-slider').each(function (i, e) {
+    $(e).css('background-image', 'url(' + ($viewport > 740 ? $(e).attr('data-image-desktop') : $(e).attr('data-image-mobile')) + ')');
+  });
 
   if (!localStorage.quiz) {}
   // $('#modal-quiz').modal('show');

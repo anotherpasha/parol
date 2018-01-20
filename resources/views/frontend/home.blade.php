@@ -17,7 +17,7 @@
       <div class="carousel-inner" role="listbox">
 
         <div class="item active">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-01.jpg')}})"></div>
+          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-01.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-family-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-01.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-01.jpg')}}" alt="image contains people and home"> -->
           <div class="custom-carousel-caption">
               <div class="container">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-02.jpg')}})"></div>
+          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-02.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-claim-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-02.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-02.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
@@ -61,7 +61,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-04.jpg')}})"></div>
+          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-04.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-praktis-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-04.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-04.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
@@ -80,7 +80,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-03.jpg')}})"></div>
+          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-03.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-syarat-mudah-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-03.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
@@ -100,7 +100,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider" style="background-image: url({{url('/uploads/dummies/img-slider-05.jpg')}})"></div>
+          <div class="image-slider"  data-image-desktop="{{url('/uploads/dummies/img-slider-04.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-men-mobile.jpg')}}"  style="background-image: url({{url('/uploads/dummies/img-slider-05.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
