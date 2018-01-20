@@ -13,14 +13,12 @@
             <a href="javasript:;" class="close-toggle">x</a>
             <div class="wrapper">
                 <ul class="undotted-list inline  header-info ">
-                    <li class="color-white"><span class="icon-call-small"></span><a href="tel:1500554" class="color-white">&nbsp;&nbsp;1500 - 554</a></li>
                     <li>
-                        <span class="icon-globe"></span>
-                        <select class="select-lang" name="">
-                          <option value="idn">IDN</option>
-                          <option value="eng">ENG</option>
-                        </select>
+                      <form class=""  method="post">
+                          <input class="rounded" type="text" name="" value="">
+                      </form>
                     </li>
+                    <li class="color-white"><span class="icon-call-small"></span><a href="tel:1500554" class="color-white">&nbsp;&nbsp;1500 - 554</a></li>
                 </ul>
 
             </div>
@@ -33,11 +31,6 @@
                     <li><a href="{{url('/pembayaran')}}">Pembayaran</a></li>
                     <li><a href="{{url('/faq')}}">FAQ</a></li>
                     <li><a href="{{url('/contact-us')}}">Hubungi Kami</a></li>
-                    <li>
-                      <form class=""  method="post">
-                          <input class="rounded" type="text" name="" value="">
-                      </form>
-                    </li>
                 </ul>
             </div>
         </div>
