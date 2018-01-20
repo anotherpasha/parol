@@ -71,6 +71,9 @@ hr{
           width: 42px;
           margin-bottom: 35px;
         }
+        &.product{
+          height: 2px;
+        }
     }
 
     &.left {
@@ -90,6 +93,11 @@ h1 {
       font-size: 36px;
     }
 
+}
+p {
+  &.f-s-16 {
+    font-size: 16px;
+  }
 }
 blockquote {
   border-left: none;
