@@ -164,6 +164,14 @@ const calculator = new Vue({
           this.earthquake= 0;
           this.eqType=1;
           this.result=0;
+          this.errEmail='';
+          this.errName='';
+          this.errPhone='';
+          this.errDate='';
+          this.errTime='';
+          this.errFloor='';
+          this.errZipcode='';
+          this.errBuildingValue='';
         },
 
         validate() {

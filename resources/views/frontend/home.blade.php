@@ -113,24 +113,25 @@
   <section class="extra-padding grey with-scroll-bottom calculator">
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-md-5">
+        <div class="col-xs-12 col-md-4">
           <h1 class="color-primary ">Simulasi Premi</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
             Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
         </div>
-        <div class="col-xs-12 col-md-7">
+        <div class="col-xs-12 col-md-8">
+          @include('partials.contact-form')
           <!-- include('partials.calculator') -->
         </div>
       </div>
     </div>
-    <div class="half-center-scroll-icon bottom">
+    <!-- <div class="half-center-scroll-icon bottom">
       <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-    </div>
+    </div> -->
 
   </section>
 
-  @include('partials.contact-form')
+  <!-- include('partials.contact-form') -->
   <!-- include('partials.quiz') -->
 
 @endsection

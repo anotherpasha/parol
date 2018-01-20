@@ -1,7 +1,7 @@
-<section class="extra-padding home-contact extra-padding" id="calculator">
-  <div id="">
+
+<div id="calculator">
   <div class="container-fluid">
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-sm-12 text-center">
             <h1 class="color-primary ">Hubungi Kami</h1>
             <hr class="primary "/>
@@ -9,7 +9,7 @@
             dan tentukan kapan Kamu bersedia dihubungi oleh petugas layanan nasabah kami.</p>
             <br><br><br>
         </div>
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-xs-12 col-md-8 col-md-offset-2">
           <form class="" action="index.html" method="post">
@@ -229,4 +229,3 @@
     Your message has sent. </br>Thank you!
   </div>
 </div>
-</section>

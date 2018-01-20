@@ -6,7 +6,6 @@
  */
 
 require('./bootstrap');
-import Vue from 'vue';
 import 'eonasdan-bootstrap-datetimepicker';
 import 'bootstrap-select';
 import query from 'query-string';

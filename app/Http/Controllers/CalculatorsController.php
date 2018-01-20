@@ -35,6 +35,7 @@ class CalculatorsController extends Controller
         if ($request->building_type == 1) {
             $constClass = 1;
             $floor = $request->floor;
+            $type = 1;
             if ($floor < 6) {
                 $constType = 1;
             } else if ($floor >= 6 && $floor < 18) {
@@ -46,6 +47,7 @@ class CalculatorsController extends Controller
             }
         } else {
             $constClass = 1;
+            $type = 4;
             $constType = $request->house_type;
             Log::warning('housttype' . $request->house_type);
             $wood = $request->wood_element;
@@ -76,7 +78,7 @@ class CalculatorsController extends Controller
         }
 
         if ($request->has('earthquake')) {
-            $type = $request->eq_type;
+            // $type = $request->eq_type;
             $eq = $this->calculateEarthquake($tsi, $type, $zipcode);
         }
 

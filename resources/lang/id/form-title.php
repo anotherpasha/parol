@@ -11,7 +11,7 @@ return [
     'choosePackage' => 'Pilih perlindungan yang kamu inginkan',
     'buildingValue' => 'Berapa harga bangunan Kamu ?',
     'contentValue' => 'Berapa Harga Isi Bangunan Kamu (maksimal total harga bangunan Rp 50 juta) ?',
-    'extraPackage' => 'Paket stKamur hanya melindungi Kamu dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin Kamu tambahkan.',
+    'extraPackage' => 'Paket standar hanya melindungi Kamu dari kerusakan karena kebakaran, Petir, Ledakan, Akibat dari Pesawat jatuh, dan asap. Pilih paket perluasan yang ingin Kamu tambahkan.',
     'simulate' => 'Hitung Simulasi'
 
 ];
