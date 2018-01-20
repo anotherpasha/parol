@@ -4,7 +4,8 @@
     <div class="modal-content">
       <div class="modal-body">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe  src="https://www.youtube.com/embed/Ek5T5huHzms" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			<!-- https://youtu.be/z0g6QGO4tl0 -->
+          <iframe src="https://www.youtube.com/embed/Ek5T5huHzms" frameborder="0" allowfullscreen></iframe>
         </div>
 
       </div>

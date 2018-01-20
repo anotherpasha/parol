@@ -11,9 +11,9 @@ const calculator = new Vue({
 
     components: {  },
 
-    beforeCreate() {
-      console.log(this.$refs)
-    },
+    // beforeCreate() {
+    //   console.log(this.$refs)
+    // },
 
     mounted() {
       let decimalMasked = document.getElementsByClassName("decimal-masked");
@@ -169,14 +169,14 @@ const calculator = new Vue({
           this.earthquake= 0;
           this.eqType=1;
           this.result=0;
-          this.errEmail='';
-          this.errName='';
-          this.errPhone='';
-          this.errDate='';
-          this.errTime='';
-          this.errFloor='';
-          this.errZipcode='';
-          this.errBuildingValue='';
+          this.errors.errEmail='';
+          this.errors.errName='';
+          this.errors.errPhone='';
+          this.errors.errDate='';
+          this.errors.errTime='';
+          this.errors.errFloor='';
+          this.errors.errZipcode='';
+          this.errors.errBuildingValue='';
         },
 
         validate() {
@@ -186,7 +186,7 @@ const calculator = new Vue({
           // console.log(`floor ${floor}`);
           // console.log(`building value ${buildingValue}`);
           // console.log(`email ${contactForm.email}`);
-          console.log(contactForm);
+          // console.log(contactForm);
 
           if (!Validator.isEmail(contactForm.email)) {
               errors.errEmail = 'This field must be a valid email address.';
@@ -221,7 +221,7 @@ const calculator = new Vue({
           if (buildingValue == 0) {
             errors.errBuildingValue = 'This field is required.';
           }
-          console.log(errors);
+          // console.log(errors);
           return {
             errors,
             isValid: isEmpty(errors)

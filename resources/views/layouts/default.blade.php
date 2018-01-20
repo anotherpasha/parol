@@ -24,11 +24,13 @@
     </div>
 
     <!-- Scripts -->
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
     @if(isset($isContact))
     <script src="{{ asset('js/contact.js') }}"></script>
     @endif
-     @if(isset($isContactUs))
+    @if(isset($isContactUs))
     <script src="{{ asset('js/contact-us.js') }}"></script>
     @endif
     @if(isset($isCalculator))

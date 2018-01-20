@@ -26,14 +26,39 @@
 
 <section class="with-scroll-bottom  product-summary half-center-transparent--top extra-padding with-scroll-bottom   ">
   <div class="container">
-    <div class="row">
+    
+    @foreach($products as $product)
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <dl class="text-center">
+            <dt>
+              <span class="product-icon {{ $icons[$loop->index] }}"></span>
+            </dt>
+            <dt>
+              <h3 class="color-primary">{{ $product->translations->first()->title }}</h3>
+            </dt>
+            <dt>
+              <p class="color-dark-grey book f-s-16">{!! $product->translations->first()->content !!}</p>
+            </dt>
+          </dl>
+        </div>
+      </div>
+      @if (!$loop->last)
+        <br/>
+        <hr class="primary small">
+        <br/>
+      @endif    
+    @endforeach
+
+
+    <!-- <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         <dl class="text-center">
           <dt>
             <span class="product-icon home"></span>
           </dt>
           <dt>
-            <h3 class="color-primary   ">Asuransi Rumah</h3>
+            <h3 class="color-primary">Asuransi Rumah</h3>
           </dt>
           <dt>
             <p class="color-dark-grey book f-s-16">Rumah adalah aset berharga yang melindungi kamu dan keluargamu dari panas dan hujan, juga tempatmu membangun memori-memori bersama orang-orang terdekatmu. Asuransi Rumah dari kami menjamin perlindungan dari kerugian atau kerusakan akibat kebakaran atau risiko lainnya.</p>
@@ -63,6 +88,7 @@
     <br/>
     <hr class="primary small">
     <br/>
+
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         <dl class="text-center">
@@ -78,7 +104,7 @@
           </dt>
         </dl>
       </div>
-    </div>
+    </div> -->
 
   </div>
   <div class="half-center-scroll-icon bottom">

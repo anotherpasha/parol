@@ -155,8 +155,9 @@ class ProductsController extends Controller
         $products = PostModel::with(['translations' => function ($query) use ($locale) {
                     $query->where('locale', '=', $locale);
                 }])->where('post_type_id', 4)->get();
-        $data['isContact'] = true;
+        // $data['isContact'] = true;
         $data['products'] = $products;
+        $data['icons'] = ['home', 'goods', 'goods-home'];
         return view('frontend/product', $data);
     }
 }

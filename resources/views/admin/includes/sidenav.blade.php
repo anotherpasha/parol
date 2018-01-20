@@ -64,8 +64,8 @@
         </li>
 
         <li>
-            <a href="{!! backendUrl('registrants') !!}">
-                <span class="uk-margin-small-right" uk-icon="icon: users"></span> Leads
+            <a href="{!! backendUrl('calculators') !!}">
+                <span class="uk-margin-small-right" uk-icon="icon: users"></span> Calculators
             </a>
         </li>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Calculator;
 use App\Models\EqConstructionType;
 use App\Models\EqRate;
 use App\Models\EqZipcode;
@@ -11,28 +12,38 @@ use App\Models\FlRate;
 use App\Models\FloZipcode;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Services\Calculator as CalcService;
 
 class CalculatorsController extends Controller
 {
-    public function index()
+    private $calculator;
+
+    public function __construct(CalcService $calculator)
     {
-        return view('frontend.calculators.index');
+        $this->calculator = $calculator;
     }
 
-    public function calculator()
+    public function index()
     {
-        $data['types'] = EqConstructionType::all();
-        $data['zipcodes'] = EqZipcode::take(100)->get();
-        return view('frontend.calculators.calculator-id', $data);
+        $data['pageTitle'] = 'Calculator';
+        return view('admin.calculators.index', $data);
     }
+
+    public function datatableList()
+    {
+        return $this->calculator->datatable();
+    }
+
 
     public function calculatorResult(Request $request)
     {
         Log::warning(json_encode($request->all()));
         $constType = '';
         $constClass = '';
+        $buildingType = $request->building_type;
+        $floor = '';
         // apartment
-        if ($request->building_type == 1) {
+        if ($buildingType == 1) {
             $constClass = 1;
             $floor = $request->floor;
             $type = 1;
@@ -56,8 +67,8 @@ class CalculatorsController extends Controller
             }
         }
 
-        Log::warning('constclass ' . $constClass);
-        Log::warning('constType' . $constType);
+        // Log::warning('constclass ' . $constClass);
+        // Log::warning('constType' . $constType);
 
         $rsmdcc = $request->has('rsmdcc') ? 0.025 : 0;
         $dlv = $request->has('dlv') ? 0.01 : 0;
@@ -72,6 +83,7 @@ class CalculatorsController extends Controller
         $flood = 0;
         $eq = 0;
         $zipcode = $request->zipcode;
+        $buildingStatus = ($request->building_status == 1 ? 'Apartemen' : 'Rumah Tinggal');
 
         if ($request->has('flood')) {
             $flood = $this->calculateFlood($tsi, $zipcode);
@@ -81,8 +93,40 @@ class CalculatorsController extends Controller
             // $type = $request->eq_type;
             $eq = $this->calculateEarthquake($tsi, $type, $zipcode);
         }
+        
+        $qFlConstType = FlConstructionType::find($constType);
+
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        $date = $request->date;
+        $time = $request->time;
+
+
+        $calc = Calculator::create([
+            'building_status' => $buildingStatus,
+            'zipcode' => $zipcode,
+            'building_type' => $buildingType,
+            'floor' => $floor,
+            'construction_type' => $qFlConstType->code,
+            'construction_class' => $constClass,
+            'package' => $request->package,
+            'building_value' => $building,
+            'content_value' => $content,
+            'flexa' => $flexa,
+            'rsmdcc' => $rsmdcc,
+            'dlv' => $dlv,
+            'flood' => $flood,
+            'earthquake' => $eq,
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'date' => $date,
+            'time' => $time
+        ]);
 
         // $data['name'] = $request->name;
+        $data['calcId'] = $calc->id;
         $data['flexa'] = $flexa;
         $data['flood'] = $flood;
         $data['eq'] = $eq;
@@ -94,52 +138,6 @@ class CalculatorsController extends Controller
         }
 
         return view('frontend.calculators.calculator-result', $data);
-    }
-
-    public function flexa()
-    {
-        $data['types'] = FlConstructionType::all();
-        $data['classes'] = FlConstructionClass::all();
-        return view('frontend.calculators.flexa', $data);
-    }
-
-    public function flexaResult(Request $request)
-    {
-        $type = $request->construction_type;
-        $class = $request->construction_class;
-        $tsi = $request->tsi;
-        $rsdmcc = $request->has('rsmdcc') ? 0.025 : 0;
-        $dlv = $request->has('dlv') ? 0.01 : 0;
-        $data['result'] = $this->calculateFlexa($tsi, $type, $class, $rsdmcc, $dlv);
-        return view('frontend.calculators.flexa-result', $data);
-    }
-
-    public function flood()
-    {
-        $data['zipcodes'] = FloZipcode::take(100)->get();
-        return view('frontend.calculators.flood', $data);
-    }
-
-    public function floodResult(Request $request)
-    {
-        $tsi = $request->tsi;
-        $zipcode = $request->zipcode;
-        $data['result'] = $this->calculateFlood($tsi, $zipcode);
-        return view('frontend.calculators.flood-result', $data);
-    }
-
-    public function earthquake() {
-        $data['types'] = EqConstructionType::all();
-        $data['zipcodes'] = EqZipcode::take(100)->get();
-        return view('frontend.calculators.earthquake', $data);
-    }
-
-    public function earthquakeResult(Request $request) {
-        $tsi = $request->tsi;
-        $type = $request->construction_type;
-        $zipcode = $request->zipcode;
-        $data['result'] = $this->calculateEarthquake($tsi, $type, $zipcode);
-        return view('frontend.calculators.earthquake-result', $data);
     }
 
     protected function calculateFlexa($tsi, $type, $class, $rsdmcc, $dlv)
@@ -198,5 +196,58 @@ class CalculatorsController extends Controller
             $rets[] = ['label' => $zip->zipcode, 'value'=> $zip->zipcode];
         }
         return response()->json($rets);
+    }
+
+    public function calculator()
+    {
+        $data['types'] = EqConstructionType::all();
+        $data['zipcodes'] = EqZipcode::take(100)->get();
+        return view('frontend.calculators.calculator-id', $data);
+    }
+
+    public function flexa()
+    {
+        $data['types'] = FlConstructionType::all();
+        $data['classes'] = FlConstructionClass::all();
+        return view('frontend.calculators.flexa', $data);
+    }
+
+    public function flexaResult(Request $request)
+    {
+        $type = $request->construction_type;
+        $class = $request->construction_class;
+        $tsi = $request->tsi;
+        $rsdmcc = $request->has('rsmdcc') ? 0.025 : 0;
+        $dlv = $request->has('dlv') ? 0.01 : 0;
+        $data['result'] = $this->calculateFlexa($tsi, $type, $class, $rsdmcc, $dlv);
+        return view('frontend.calculators.flexa-result', $data);
+    }
+
+    public function flood()
+    {
+        $data['zipcodes'] = FloZipcode::take(100)->get();
+        return view('frontend.calculators.flood', $data);
+    }
+
+    public function floodResult(Request $request)
+    {
+        $tsi = $request->tsi;
+        $zipcode = $request->zipcode;
+        $data['result'] = $this->calculateFlood($tsi, $zipcode);
+        return view('frontend.calculators.flood-result', $data);
+    }
+
+    public function earthquake() {
+        $data['types'] = EqConstructionType::all();
+        $data['zipcodes'] = EqZipcode::take(100)->get();
+        return view('frontend.calculators.earthquake', $data);
+    }
+
+    public function earthquakeResult(Request $request) {
+        $tsi = $request->tsi;
+        $type = $request->construction_type;
+        $zipcode = $request->zipcode;
+        $data['result'] = $this->calculateEarthquake($tsi, $type, $zipcode);
+        return view('frontend.calculators.earthquake-result', $data);
     }
 }

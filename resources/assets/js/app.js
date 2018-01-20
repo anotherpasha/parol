@@ -105,4 +105,16 @@ $(document).ready(()=> {
       $(`.nav-tabs a[href="#${params.page}"]`).parents().addClass('active');
   }
 
+  const videoSrc = $("#video iframe").attr("src");
+
+  $('#video').on('show.bs.modal', function () { // on opening the modal
+    // set the video to autostart
+    $("#video iframe").attr("src", videoSrc+"?autoplay=1");
+  });
+
+  $("#video").on('hidden.bs.modal', function (e) { // on closing the modal
+    // stop the video
+    $("#video iframe").attr("src", null);
+  });
+
 });
