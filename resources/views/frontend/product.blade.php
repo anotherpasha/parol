@@ -10,129 +10,85 @@
             <h1>Informasi Produk</h1>
             <hr class="primary left" />
             <p class="color-white">
-                Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah kamu dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
+                Asuransi Rumah & Harta Benda Parolamas menyediakan perlindungan risiko dasar untuk bangunan tempat tinggal dan juga perlindungan terhadap harta benda di dalam rumah Anda dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
             </p>
-            <!-- <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a> -->
+            <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a>
           </div>
 
         </div>
     </div>
   </div>
-</section>
-<section class="tabs-navigation">
-  <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Rumah</a></li>
-    <li role="presentation"><a href="#goods" aria-controls="profile" role="tab" data-toggle="tab">Harta Benda</a></li>
-    <li role="presentation"><a href="#home_goods" aria-controls="messages" role="tab" data-toggle="tab">Rumah & Harta Benda</a></li>
-  </ul>
+  <div class="icon-scroll">
+    <a href="#"><img src="{{url('/images/icon-scroll.png')}}"></a>
+  </div>
+
 </section>
 
+<section class="with-scroll-bottom  product-summary half-center-transparent--top extra-padding with-scroll-bottom   ">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <dl class="text-center">
+          <dt>
+            <span class="product-icon home"></span>
+          </dt>
+          <dt>
+            <h3 class="color-primary   ">Asuransi Rumah</h3>
+          </dt>
+          <dt>
+            <p class="color-dark-grey book f-s-16">Rumah adalah aset berharga yang melindungi kamu dan keluargamu dari panas dan hujan, juga tempatmu membangun memori-memori bersama orang-orang terdekatmu. Asuransi Rumah dari kami menjamin perlindungan dari kerugian atau kerusakan akibat kebakaran atau risiko lainnya.</p>
+          </dt>
+        </dl>
+      </div>
+    </div>
+    <br/>
+    <hr class="primary small">
+    <br/>
 
-<main class="tab-content" id="main">
-  <div role="tabpanel" class="tab-pane active" id="home">
-    <section class="with-scroll-bottom  product-summary  ">
-          <!-- Tabs pane -->
-          <div class="container">
-              <div class="row">
-                  <div class="col-xs-12 col-md-1">
-                    <span class="product-icon home"></span>
-                  </div>
-                  <div class="col-xs-12 col-md-7 end">
-                    <h3 class="color-primary flush-t">Asuransi Rumah</h3>
-                    <p class="color-dark-grey book">
-                        Rumah adalah aset berharga yang melindungi kamu dan keluarga dari panas dan hujan. Kami adalah rekan yang tepat untuk melindungi aset berharga kamu. Asuransi Kebakaran Rumah dari kami memberikan perlindungan risiko dasar untuk melindungi rumah kamu dari kerugian atau kerusakan akibat kebakaran atau risiko perluasannya.
-                    </p>
-                    <div class="row">
-                      <div class="col-xs-12 col-md-10">
-                        <div class="button-group-parolamas">
-                          <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javacript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact">Daftar</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="half-center-scroll-icon bottom">
-            <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-          </div>
-
-    </section>
-
-  </div>
-  <div role="tabpanel" class="tab-pane" id="goods">
-    <section class="with-scroll-bottom  product-summary  ">
-          <!-- Tabs pane -->
-          <div class="container">
-              <div class="row">
-                  <div class="col-xs-12 col-md-1">
-                    <span class="product-icon goods"></span>
-                  </div>
-                  <div class="col-xs-12 col-md-7 end">
-                    <h3 class="color-primary flush-t">Asuransi Harta Benda</h3>
-                    <p class="color-dark-grey book">
-                        Salah satu aset berharga dari seseorang adalah harta benda. Izinkan kami melindungi aset berharga kamu. Lindungi harta benda kamu dengan Asuransi Harta Benda Parolamas. Ketenangan hidup yang tidak dapat tergantikan.
-                    </p>
-                    <div class="row">
-                      <div class="col-xs-12 col-md-10">
-                        <div class="button-group-parolamas">
-                          <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javascript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact" >Daftar</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="half-center-scroll-icon bottom">
-            <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-          </div>
-
-    </section>
-
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <dl class="text-center">
+          <dt>
+            <span class="product-icon goods"></span>
+          </dt>
+          <dt>
+            <h3 class="color-primary">Asuransi Harta Benda</h3>
+          </dt>
+          <dt>
+            <p class="color-dark-grey book f-s-16">Izinkan kami melindungi aset berharga milikmu. Berikan perlindungan untuk harta benda yang berada di dalam rumahmu dengan Asuransi Harta Benda dari kami. Ketenangan hidup yang tidak dapat tergantikan.</p>
+          </dt>
+        </dl>
+      </div>
+    </div>
+    <br/>
+    <hr class="primary small">
+    <br/>
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <dl class="text-center">
+          <dt>
+            <span class="product-icon home-goods"></span>
+          </dt>
+          <dt>
+            <h3 class="color-primary ">Asuransi Rumah & Harta Benda</h3>
+          </dt>
+          <dt>
+            <p class="color-dark-grey book f-s-16">Kami memahami bahwa membeli sebuah hunian/tempat tinggal
+  dan harta benda adalah pembelian yang bernilai bagimu. Kami menyediakan perlindungan risiko dasar untuk melindungi bangunan tempat tinggal dan juga segala harta benda di dalam rumahmu dari kerugian atau kerusakan akibat kebakaran atau risiko lainnya yang dijamin.</p>
+          </dt>
+        </dl>
+      </div>
+    </div>
 
   </div>
-  <div role="tabpanel" class="tab-pane" id="home_goods">
-    <section class="with-scroll-bottom  product-summary  ">
-          <!-- Tabs pane -->
-          <div class="container">
-              <div class="row">
-                  <div class="col-xs-12 col-md-1">
-                    <span class="product-icon goods-home"></span>
-                  </div>
-                  <div class="col-xs-12 col-md-7 end">
-                    <h3 class="color-primary flush-t">Asuransi Rumah & Harta Benda</h3>
-                    <p class="color-dark-grey book">
-                        Kami memahami bahwa membeli sebuah hunian/tempat tinggal dan harta benda adalah pembelian yang bernilai bagi kamu, kami menyediakan perlindungan risiko dasar untuk melindungi bangunan tempat tinggal dan juga harta benda di dalam rumah kamu dari kerugian atau kerusakan akibat terjadi kebakaran atau risiko lainnya yang dijamin.
-                    </p>
-                    <div class="row">
-                      <div class="col-xs-12 col-md-10">
-                        <div class="button-group-parolamas">
-                          <a href="{{ url('uploads/brochures/Brosur_Fire_Insurance_OJK_submission_V.1.4c.pdf') }}" target="_blank" class="btn btn-md btn-parolamas-secondary" >Unduh Brosur</a>
-                          <a href="javascript:;" class="btn btn-md btn-parolamas to-section" data-target-to="contact" >Daftar</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="half-center-scroll-icon bottom">
-            <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-          </div>
-
-    </section>
-
+  <div class="half-center-scroll-icon bottom">
+    <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
   </div>
 
-    @include('partials.product-summary')
+</section>
+@include('partials.product-summary')
 
-    @include('partials.product-extra')
-
-    <!-- include('partials.product-excluded') -->
-</main>
-
-<!-- section contact -->
-<!-- include('partials.contact-form') -->
+@include('partials.product-extra')
 
 @include('partials.toggled-calculator')
 

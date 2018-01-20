@@ -31,13 +31,18 @@
 }
 .calculator-container {
   display: inline-block;
-  padding: 40px;
-  border: solid 2px $brand-primary;
   position: fixed;
-  top: 25%;
-  right: -20%;
-  z-index: 1000;
+  top: 55%;
+  right: 0;
+  z-index: 10;
+  cursor: pointer;
+  img {
+    @include vendor((transition: all 500ms), webkit moz ms o);
+    &:hover {
+      @include vendor((transform: scale(1.15)), webkit moz ms o);
+    }
 
+  }
 }
 
 .form-slider-arrow {

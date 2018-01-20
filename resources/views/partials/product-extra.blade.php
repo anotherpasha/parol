@@ -22,9 +22,17 @@
 
                     </div>
                 </div>
+                <br><br><br>
+                <div class="row">
+                  <div class="col-xs-12 text-center">
+                      <div class="btn-parolamas-group">
+                        <button type="button" class="btn btn-parolamas-secondary btn-md min-width-200" name="button">Unduh Brosur</button>
+                        &nbsp;
+                        &nbsp;
+                        <button type="button" class="btn btn-parolamas btn-md min-width-200" name="button">Daftar</button>
+                      </div>
+                  </div>
+                </div>
             </div>
-            <!-- <div class="half-center-scroll-icon bottom">
-              <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-            </div> -->
 
-      </section>
+  </section>
