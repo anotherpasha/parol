@@ -63,12 +63,12 @@ $(document).ready(()=> {
     console.log(repo);
   }
 
-  $('.selectPostal').selectpicker({
-    style: 'btn-info',
-    size: 3,
-    liveSearch: true,
-    liveSearchPlaceholder: 'Search kodepos'
-  });
+  // $('.selectPostal').selectpicker({
+  //   style: 'btn-info',
+  //   size: 3,
+  //   liveSearch: true,
+  //   liveSearchPlaceholder: 'Search kodepos'
+  // });
 
   if(!localStorage.quiz) {
     // $('#modal-quiz').modal('show');

@@ -49,41 +49,7 @@ const calculator = new Vue({
           flood: 0,
           earthquake: 0,
           eqType:1,
-<<<<<<< HEAD
-          form_total: 9,
-          indicators: 1,
-          slickOptions: {
-            arrows: false,
-            slidesToShow: 1,
-            centerMode: true,
-            infinite: false,
-            adaptiveHeight: true,
-            swipe: false,
-            swipeToSlide: false,
-            touchMove: false,
-            draggable: false,
-            accessibility: false,
-            responsive: [
-              {
-                breakpoint: 480,
-                settings: {
-                  centerMode: false,
-                }
-              }
-            ]
-          },
-          result: 0,
-          options:[],
-          errors: {}
-        };
-    },
 
-    watch: {
-      fakeZipcode: function() {
-        this.zipcode = this.fakeZipcode.value;
-        console.log('zipcode watched');
-      }
-=======
           result: 0,
 
           options:[],
@@ -109,49 +75,9 @@ const calculator = new Vue({
           },
           isValid: false,
         };
->>>>>>> e783cd95f0f7d6ec1a92ade58678d6e52371ceab
     },
 
     methods: {
-<<<<<<< HEAD
-        changeTime(evt) {
-          this.time = evt.target.value;
-        },
-        changeDate(evt) {
-          this.date = evt.target.value;
-        },
-        next() {
-            this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
-            this.$refs.slick.next();
-            this.reInit;
-        },
-
-        prev() {
-            this.indicators === 1 ? this.indicators = 1 : this.indicators -= 1;
-            this.$refs.slick.prev();
-            this.reInit;
-        },
-
-        slickSwipe(evt, slick, direction) {
-          if (direction == 'left') {
-            this.next();
-          } else {
-            this.prev();
-          }
-          // console.log(evt);
-          // console.log(slick);
-          // console.log(direction);
-        },
-
-        reInit() {
-            // Helpful if you have to deal with v-for to update dynamic lists
-            this.$nextTick(() => {
-                this.$refs.slick.reSlick();
-            });
-        },
-
-=======
->>>>>>> e783cd95f0f7d6ec1a92ade58678d6e52371ceab
         onSearch(search, loading) {
           loading(true);
           this.search(loading, search, this);
@@ -166,73 +92,13 @@ const calculator = new Vue({
           })
         }, 350),
 
-<<<<<<< HEAD
-        buildingStatusChange(evt) {
-          let buildingStatus = evt.target.value;
-          if (buildingStatus != 0) {
-            this.buildingStatus = buildingStatus;
-          }
-        },
-
-        changeType(evt){
-          let tp = evt.target.value;
-          if (tp != 0) {
-            this.type = tp;
-          }
-        },
-        woodChanged(evt){
-          let woodElement = evt.target.value;
-          if (woodElement != 0) {
-            this.woodElement = woodElement;
-          }
-        },
-        beenFiredChanged(evt){
-          let beenFire = evt.target.value;
-          if (beenFire != 0) {
-            this.beenFire = beenFire;
-          }
-        },
-        packageChanged(evt){
-          let pckg = evt.target.value;
-          if (pckg != 0) {
-            this.package = pckg;
-          }
-        },
-        package2Changed(evt){
-          let pckg = evt.target.value;
-          if (pckg != 0) {
-            this.package = pckg;
-          }
-        },
-        nextFloor() {
-          if (this.floor == '') {
-            alert(`Lantai harus diisi.`);
-          } else {
-          }
-        },
-        nextValue() {
-          if (this.buildingValue + this.contentValue == 0) {
-            alert(`Nilai harus diisi.`);
-          } else {
-          }
-        },
-        checkContentValue(evt) {
-          let maxContent = this.buildingValue / 10;
-          if (this.contentValue > maxContent) {
-            alert(`Harga isi bangunan Anda maksimal ${maxContent}`);
-            this.contentValue = maxContent;
-            evt.target.focus();
-          }
-        },
-=======
         tryAgain() {
           this.clearCalculator();
         },
 
         sendEmail() {
           console.log('send email');
-        },        
->>>>>>> e783cd95f0f7d6ec1a92ade58678d6e52371ceab
+        },
 
         hitungSimulasi() {
           let vm = this;
@@ -277,11 +143,6 @@ const calculator = new Vue({
             vm.loader = false;
           });
         },
-<<<<<<< HEAD
-        resetResult() {
-          this.result = 0
-        }
-=======
 
         changeTime(evt) {
           this.contactForm.time = evt.target.value;
@@ -326,6 +187,7 @@ const calculator = new Vue({
           // console.log(`floor ${floor}`);
           // console.log(`building value ${buildingValue}`);
           // console.log(`email ${contactForm.email}`);
+          console.log(contactForm);
 
           if (!Validator.isEmail(contactForm.email)) {
               errors.errEmail = 'This field must be a valid email address.';
@@ -360,13 +222,12 @@ const calculator = new Vue({
           if (buildingValue == 0) {
             errors.errBuildingValue = 'This field is required.';
           }
-          //console.log(errors);
+          console.log(errors);
           return {
             errors,
             isValid: isEmpty(errors)
           };
         },
->>>>>>> e783cd95f0f7d6ec1a92ade58678d6e52371ceab
 
     },
 });

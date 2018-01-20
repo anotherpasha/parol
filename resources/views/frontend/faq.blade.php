@@ -29,33 +29,30 @@
       <div class="col-xs-12 col-sm-10 col-sm-offset-1">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
           @php $x = 1; @endphp
-          @foreach($faqs as $faq)
-            <div class="panel panel-parolamas">
+          @if(count($faqs) > 0)
+            @foreach($faqs as $faq)
+              <div class="panel panel-parolamas">
 
-              <div class="panel-heading @if($x == 1) active @endif" role="tab">
-                <h4 class="panel-title">
-                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ $faq->id }}" aria-expanded="@if($x == 1) true @else false @endif" aria-controls="collapseOne">
-                    {!! $faq->translations->first()->title !!}
-                  </a>
-                  <span class="icon-panel"></span>
-                </h4>
-              </div>
-              <div id="{{ $faq->id }}" class="panel-collapse collapse @if($x == 1) in @endif" role="tabpanel">
-                <div class="panel-body">
-                  <div class="panel-content">
-                    {!! $faq->translations->first()->content !!}
+                <div class="panel-heading @if($x == 1) active @endif" role="tab">
+                  <h4 class="panel-title">
+                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ $faq->id }}" aria-expanded="@if($x == 1) true @else false @endif" aria-controls="collapseOne">
+                      {!! $faq->translations->first()->title !!}
+                    </a>
+                    <span class="icon-panel"></span>
+                  </h4>
+                </div>
+                <div id="{{ $faq->id }}" class="panel-collapse collapse @if($x == 1) in @endif" role="tabpanel">
+                  <div class="panel-body">
+                    <div class="panel-content">
+                      {!! $faq->translations->first()->content !!}
+                    </div>
                   </div>
                 </div>
+
               </div>
-
-            </div>
-            @php $x++; @endphp
-          @endforeach
-
-          
-
-          
-
+              @php $x++; @endphp
+            @endforeach
+          @endif
         </div>
       </div>
 

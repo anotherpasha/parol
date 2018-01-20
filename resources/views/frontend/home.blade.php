@@ -149,6 +149,6 @@
 
   </section>
 
-  <!-- @include('partials.quiz') -->
+  <!-- include('partials.quiz') -->
 
 @endsection

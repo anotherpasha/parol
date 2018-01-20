@@ -6,6 +6,7 @@ use App\Http\Requests\StorePost;
 use App\Models\Post as PostModel;
 use App\Services\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
 
@@ -146,5 +147,16 @@ class ProductsController extends Controller
     {
         $post->delete();
         return backendRedirect('product')->with(['message' => 'Data has been deleted.']);
+    }
+
+    // Frontend
+    public function product() {
+        $locale = App::getLocale();
+        $products = PostModel::with(['translations' => function ($query) use ($locale) {
+                    $query->where('locale', '=', $locale);
+                }])->where('post_type_id', 4)->get();
+        $data['isContact'] = true;
+        $data['products'] = $products;
+        return view('frontend/product', $data);
     }
 }
