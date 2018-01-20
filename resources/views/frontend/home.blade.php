@@ -41,7 +41,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-02.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-claim-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-02.jpg')}})"></div>
+          <div class="image-slider" data-image-desktop="{{url('/uploads/dummies/img-slider-02.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-calendar-mobile.jpg')}}" style="background-image: url({{url('/uploads/dummies/img-slider-02.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-02.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">
