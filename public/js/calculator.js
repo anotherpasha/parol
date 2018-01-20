@@ -471,6 +471,11 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
   },
   data: function data() {
     return {
+      name: '',
+      email: '',
+      phone: '',
+      time: '',
+      date: '',
       buildingStatus: 1,
       fakeZipcode: '',
       zipcode: '',
@@ -487,7 +492,6 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       flood: 0,
       earthquake: 0,
       eqType: 1,
-
       form_total: 9,
       indicators: 1,
       slickOptions: {
@@ -509,15 +513,14 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
         }]
       },
       result: 0,
-
-      options: []
+      options: [],
+      errors: {}
     };
   },
 
 
   watch: {
     fakeZipcode: function fakeZipcode() {
-      this.next();
       this.zipcode = this.fakeZipcode.value;
       console.log('zipcode watched');
     }
@@ -525,6 +528,12 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
   // All slick methods can be used too, example here
   methods: {
+    changeTime: function changeTime(evt) {
+      this.time = evt.target.value;
+    },
+    changeDate: function changeDate(evt) {
+      this.date = evt.target.value;
+    },
     next: function next() {
       this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
       this.$refs.slick.next();
@@ -570,57 +579,47 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       var buildingStatus = evt.target.value;
       if (buildingStatus != 0) {
         this.buildingStatus = buildingStatus;
-        this.next();
       }
     },
     changeType: function changeType(evt) {
       var tp = evt.target.value;
       if (tp != 0) {
         this.type = tp;
-        this.next();
       }
     },
     woodChanged: function woodChanged(evt) {
       var woodElement = evt.target.value;
       if (woodElement != 0) {
         this.woodElement = woodElement;
-        this.next();
       }
     },
     beenFiredChanged: function beenFiredChanged(evt) {
       var beenFire = evt.target.value;
       if (beenFire != 0) {
         this.beenFire = beenFire;
-        this.next();
       }
     },
     packageChanged: function packageChanged(evt) {
       var pckg = evt.target.value;
       if (pckg != 0) {
         this.package = pckg;
-        this.next();
       }
     },
     package2Changed: function package2Changed(evt) {
       var pckg = evt.target.value;
       if (pckg != 0) {
         this.package = pckg;
-        this.next();
       }
     },
     nextFloor: function nextFloor() {
       if (this.floor == '') {
         alert('Lantai harus diisi.');
-      } else {
-        this.next();
-      }
+      } else {}
     },
     nextValue: function nextValue() {
       if (this.buildingValue + this.contentValue == 0) {
         alert('Nilai harus diisi.');
-      } else {
-        this.next();
-      }
+      } else {}
     },
     checkContentValue: function checkContentValue(evt) {
       var maxContent = this.buildingValue / 10;
@@ -657,6 +656,9 @@ var calculator = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
       }).catch(function (err) {
         console.log(err);
       });
+    },
+    resetResult: function resetResult() {
+      this.result = 0;
     }
   }
 });

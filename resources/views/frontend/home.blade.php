@@ -91,10 +91,11 @@
               </div>
 
           </div>
-        </div>       
+        </div>
 
       </div>
-      <div class="icon-scroll">
+
+      <div class="icon-scroll ">
         <a href="#"><img src="{{url('/images/icon-scroll.png')}}"></a>
       </div>
     </div>
@@ -103,14 +104,14 @@
   <section class="half-center-transparent--top extra-padding with-scroll-bottom info-product ">
   @include('partials.our-product')
   </section>
-  
 
 
-  <section class="extra-padding grey with-scroll-bottom calculator">
+
+  <section class="extra-padding bordered-grey with-scroll-bottom calculator">
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-5">
-          <h1 class="color-primary ">Asuransi Rumah & Harta Benda</h1>
+          <h1 class="color-primary ">Simulasi <br/>Premi</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
             Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Anda dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
@@ -120,13 +121,10 @@
         </div>
       </div>
     </div>
-    <div class="half-center-scroll-icon bottom">
-      <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
-    </div>
 
   </section>
 
-  @include('partials.contact-form')
+  <!-- @include('partials.contact-form') -->
   <!-- @include('partials.quiz') -->
 
 @endsection

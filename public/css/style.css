@@ -9175,6 +9175,10 @@ h1 {
   font-size: 43px;
 }
 
+h1.big {
+  font-size: 75px;
+}
+
 @media all and (max-width: 52.875em) {
   h1 {
     font-size: 36px;
@@ -9217,6 +9221,12 @@ blockquote {
 .btn-parolamas-secondary:focus {
   color: #fff;
   outline: none;
+}
+
+.btn-parolamas.half-block,
+.half-block.btn-parolamas-secondary {
+  max-width: 500px;
+  width: 100%;
 }
 
 .btn-parolamas-secondary {
@@ -9512,6 +9522,10 @@ textarea.form-control {
   top: -35px;
 }
 
+.half-center-scroll-icon.bottom-on-border {
+  bottom: -30px;
+}
+
 .half-center-scroll-icon .scroll {
   display: inline-block;
   padding: 10px;
@@ -9579,6 +9593,11 @@ section.calculator {
   z-index: 1;
   position: relative;
   padding: 100px 0;
+  background: url("/images/decoration-calculator.png") no-repeat bottom left, #fff;
+}
+
+section.bordered-grey {
+  border-top: solid 25px #f7f7f7;
 }
 
 section.payment-description {

@@ -21,6 +21,11 @@ const calculator = new Vue({
 
     data() {
         return {
+          name:'',
+          email: '',
+          phone: '',
+          time: '',
+          date: '',
           buildingStatus: 1,
           fakeZipcode: '',
           zipcode: '',
@@ -37,7 +42,6 @@ const calculator = new Vue({
           flood: 0,
           earthquake: 0,
           eqType:1,
-
           form_total: 9,
           indicators: 1,
           slickOptions: {
@@ -61,14 +65,13 @@ const calculator = new Vue({
             ]
           },
           result: 0,
-
-          options:[]
+          options:[],
+          errors: {}
         };
     },
 
     watch: {
       fakeZipcode: function() {
-        this.next();
         this.zipcode = this.fakeZipcode.value;
         console.log('zipcode watched');
       }
@@ -76,6 +79,12 @@ const calculator = new Vue({
 
     // All slick methods can be used too, example here
     methods: {
+        changeTime(evt) {
+          this.time = evt.target.value;
+        },
+        changeDate(evt) {
+          this.date = evt.target.value;
+        },
         next() {
             this.indicators === this.form_total ? this.indicators = this.form_total : this.indicators += 1;
             this.$refs.slick.next();
@@ -123,7 +132,6 @@ const calculator = new Vue({
           let buildingStatus = evt.target.value;
           if (buildingStatus != 0) {
             this.buildingStatus = buildingStatus;
-            this.next();
           }
         },
 
@@ -131,49 +139,42 @@ const calculator = new Vue({
           let tp = evt.target.value;
           if (tp != 0) {
             this.type = tp;
-            this.next();
           }
         },
         woodChanged(evt){
           let woodElement = evt.target.value;
           if (woodElement != 0) {
             this.woodElement = woodElement;
-            this.next();
           }
         },
         beenFiredChanged(evt){
           let beenFire = evt.target.value;
           if (beenFire != 0) {
             this.beenFire = beenFire;
-            this.next();
           }
         },
         packageChanged(evt){
           let pckg = evt.target.value;
           if (pckg != 0) {
             this.package = pckg;
-            this.next();
           }
         },
         package2Changed(evt){
           let pckg = evt.target.value;
           if (pckg != 0) {
             this.package = pckg;
-            this.next();
           }
         },
         nextFloor() {
           if (this.floor == '') {
             alert(`Lantai harus diisi.`);
           } else {
-            this.next();
           }
         },
         nextValue() {
           if (this.buildingValue + this.contentValue == 0) {
             alert(`Nilai harus diisi.`);
           } else {
-            this.next();
           }
         },
         checkContentValue(evt) {
@@ -212,6 +213,9 @@ const calculator = new Vue({
           .catch((err) => {
             console.log(err);
           });
+        },
+        resetResult() {
+          this.result = 0
         }
 
     },

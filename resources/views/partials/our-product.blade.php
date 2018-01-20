@@ -1,8 +1,9 @@
 
     <div class="container">
         <div class="row">
+
             <div class="col-sm-12">
-                <h1 class="color-primary text-center">Produk Kami</h1>
+                <h1 class="color-primary text-center">Pilih Tipe Perlindungan</h1>
                 <hr class="primary"/>
                 <br><br><br>
             </div>
@@ -19,9 +20,6 @@
                       Perlindungan terhadap bangunan dan tempat tinggal Anda
                     </p>
                   </dt>
-                  <dt>
-                    <a href="{{ url('product') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
-                  </dt>
                 </dl>
             </div>
 
@@ -36,9 +34,6 @@
                     <p class="color-dark-grey book">
                       Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Anda.
                     </p>
-                  </dt>
-                  <dt>
-                    <a href="{{ url('product?page=goods') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
                   </dt>
                 </dl>
             </div>
@@ -55,16 +50,16 @@
                       Perlindungan gabungan untuk tempat tinggal dan harta benda di dalamnya
                     </p>
                   </dt>
-                  <dt>
-                    <a href="{{ url('product?page=home_goods') }}" class="btn btn-md btn-parolamas">Lihat Lebih lanjut</a>
-                  </dt>
                 </dl>
             </div>
 
+            <div class="col-xs-12 text-center">
+              <a href="{{ url('product') }}" class="btn btn-md btn-parolamas half-block">Lihat Lebih lanjut</a>
+
+            </div>
         </div>
     </div>
     <!--scroll icon -->
-    <div class="half-center-scroll-icon bottom">
+    <div class="half-center-scroll-icon bottom-on-border">
       <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
     </div>
-  

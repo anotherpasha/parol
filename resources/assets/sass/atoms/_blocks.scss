@@ -37,6 +37,9 @@
   &.top {
     top: -35px;
   }
+  &.bottom-on-border {
+    bottom: -30px;
+  }
 
     .scroll {
       display: inline-block;
@@ -95,6 +98,10 @@ section {
       z-index: 1;
       position: relative;
       padding: 100px 0;
+      background:  url('/images/decoration-calculator.png')no-repeat bottom left, #fff;
+  }
+  &.bordered-grey {
+    border-top: solid 25px #f7f7f7;
   }
   &.payment-description {
     background:  url('/images/decoration-payment.png')no-repeat bottom left, #fff;
