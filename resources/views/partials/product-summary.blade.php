@@ -36,7 +36,7 @@
                           <img src="{{url('/uploads/dummies/icon-plane.png')}}" alt="">
                         </span>
                         <h5 class="color-primary title">Kejatuhan Pesawat Terbang</h5>
-                        <p class="color-dark-grey book description">Adalah benturan fisik antara pesawat terbang termasuk helikopter atau segala sesuatu jatuh dari padanya dengan harta benda yang Anda asuransikan.</p>
+                        <p class="color-dark-grey book description">Adalah benturan fisik antara pesawat terbang termasuk helikopter atau segala sesuatu jatuh dari padanya dengan harta benda yang Kamu asuransikan.</p>
                       </dt>
 
                       <dt class="summary-wrapper">
@@ -44,7 +44,7 @@
                           <img src="{{url('/uploads/dummies/icon-smoke.png')}}" alt="">
                         </span>
                         <h5 class="color-primary title">Asap</h5>
-                        <p class="color-dark-grey book description">Kerusakan bagian dari harta benda yang berasal dari kebakaran harta benda yang Anda asuransikan.</p>
+                        <p class="color-dark-grey book description">Kerusakan bagian dari harta benda yang berasal dari kebakaran harta benda yang Kamu asuransikan.</p>
                       </dt>
 
 

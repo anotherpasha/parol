@@ -19,7 +19,6 @@ const calculator = new Vue({
 
     mounted() {
       let decimalMasked = document.getElementsByClassName("decimal-masked");
-      console.log(decimalMasked);
       Inputmask("numeric", { rightAlign: false, autoGroup: true, groupSeparator: '.' }).mask(decimalMasked);
     },
 

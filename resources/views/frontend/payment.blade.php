@@ -9,7 +9,7 @@
             <h1>Metode<br/>Pembayaran</h1>
             <hr class="primary left" />
             <p class="color-white">
-                Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi Anda fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan Anda
+                Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi Kamu fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan Kamu
             </p>
             </br>
             <!-- <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a> -->

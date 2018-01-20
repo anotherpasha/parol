@@ -128,12 +128,12 @@
 
     @include('partials.product-extra')
 
-    <!-- @include('partials.product-excluded') -->
+    <!-- include('partials.product-excluded') -->
 </main>
 
 <!-- section contact -->
-<!-- @include('partials.contact-form') -->
+<!-- include('partials.contact-form') -->
 
-<!-- @include('partials.toggled-calculator') -->
+<!-- include('partials.toggled-calculator') -->
 
 @endsection

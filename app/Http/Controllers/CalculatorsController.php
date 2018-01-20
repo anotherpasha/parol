@@ -61,7 +61,8 @@ class CalculatorsController extends Controller
         $dlv = $request->has('dlv') ? 0.01 : 0;
 
         $building = $request->has('building_value') ? str_replace(",","",$request->building_value) : 0;
-        $content = $request->has('content_value') ? str_replace(",","",$request->content_value)  : 0;
+        $content = $request->has('content_value') ? $request->content_value : 0;
+        $content = $content != '' ? str_replace(",","",$request->content_value) : 0;
         $tsi = $building + $content;
 
         $flexa = $this->calculateFlexa($tsi, $constType, $constClass, $rsmdcc, $dlv);
@@ -152,32 +153,47 @@ class CalculatorsController extends Controller
 
     protected function calculateFlood($tsi, $zipcode)
     {
-        $qZc = EqZipcode::where('id', $zipcode)->first();
-        $zc = $qZc->zipcode;
-        Log::warning(json_encode($zc));
-        $qRate = FloZipcode::where('code', $zc)->first();
-        $rate = $qRate->rate;
+        // $qZc = EqZipcode::where('id', $zipcode)->first();
+        // $zc = $qZc->zipcode;
+        // Log::warning(json_encode($zc));
+        $qRate = FloZipcode::where('zipcode', $zipcode)->first();
+        if ($qRate === null) {
+            $rate = 0;
+        } else 
+        {
+            $rate = $qRate->rate;
+        }
         return ($rate/100) * $tsi;
     }
 
     protected function calculateEarthquake($tsi, $type, $zipcode)
     {
-        $qZone = EqZipcode::where('id', $zipcode)->first();
-        $zone = $qZone->zone;
-        $qRate = EqRate::where('eq_construction_type_id', $type)
-                    ->where('zone', $zone)
-                    ->first();
-        $rate = $qRate->rate;
+        $qZone = EqZipcode::where('zipcode', $zipcode)->first();
+        if ($qZone === null) {
+            $zone = 4;
+        } else 
+        {
+            $zone = $qZone->zone;
+            $qRate = EqRate::where('eq_construction_type_id', $type)
+                        ->where('zone', $zone)
+                        ->first();
+            if ($qRate === null) {
+                $rate = 0;
+            } else {
+                $rate = $qRate->rate;
+            }
+        }
+        
         return ($rate/100) * $tsi;
     }
 
     public function getZipcode(Request $request) {
         // Log::warning($request->all());
         $zips = EqZipcode::where('zipcode', 'like', '%' . $request->search . '%')
-            ->select(['id', 'zipcode'])->get();
+            ->select(['zipcode'])->get();
         $rets = [];
         foreach ($zips as $zip) {
-            $rets[] = ['label' => $zip->zipcode, 'value'=> $zip->id];
+            $rets[] = ['label' => $zip->zipcode, 'value'=> $zip->zipcode];
         }
         return response()->json($rets);
     }
