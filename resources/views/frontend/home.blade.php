@@ -25,7 +25,7 @@
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang Kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
+                  Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
 
                 <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
@@ -46,7 +46,7 @@
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim Kamu dalam 7 hari kerja sehingga Kamu tidak lagi harus cemas menunggu lama.
+                  Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim kamu dalam 7 hari kerja sehingga kamu tidak lagi harus cemas menunggu lama.
                 </p>
                 <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
@@ -117,7 +117,7 @@
           <h1 class="color-primary ">Simulasi Premi</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
-            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda Kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
+            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
         </div>
         <div class="col-xs-12 col-md-8">
           @include('partials.contact-form')

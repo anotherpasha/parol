@@ -11,7 +11,7 @@ return [
 	'house2976' => 'Rumah Tinggal, < 4 Lantai, Bukan Ruko',
 	'house29761' => 'Kost-kostan',
 	'wood' => 'Kayu (harus kurang 20% dari total konstruksi)',
-	'concrete' => 'Beton',
+	'concrete' => 'Beton/Batu Bata',
 	'both' => 'Bangunan + Isi',
 	'onlyBuilding' => 'Bangunan Saja',
 	'onlyContent' => 'Isi Saja',

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <h1 class="color-primary text-center">Pilih Tipe Produk Perlindungan</h1>
+                <h1 class="color-primary text-center">Pilih Tipe Perlindungan</h1>
                 <hr class="primary"/>
                 <br><br><br>
             </div>
@@ -16,7 +16,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap bangunan atau tempat tinggal Kamu
+                      Perlindungan terhadap bangunan atau tempat tinggal kamu
                     </p>
                   </dt>
                   <dt>
@@ -34,7 +34,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen Kamu.
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu.
                     </p>
                   </dt>
                   <dt>

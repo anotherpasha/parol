@@ -40,13 +40,13 @@
                     </div>
                 </div>
 
-                @include('admin.includes.featured-sidebar')
+                <!-- include('admin.includes.featured-sidebar') -->
 
             </div>
         </div>
     </form>
 
-    @include('admin.includes.featured-modal')
+    <!-- include('admin.includes.featured-modal') -->
 @endsection
 
 @section('page-level-scripts')

@@ -9,7 +9,7 @@
             <h1>Metode<br/>Pembayaran</h1>
             <hr class="primary left" />
             <p class="color-white">
-                Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi Kamu fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan Kamu
+                Selain dengan tersedianya berbagai model pembayaran premi, Asuransi Harta Benda Parolamas juga memberi kamu fleksibilitas dalam melakukan pembayaran premi sesuai dengan kenyamanan kamu
             </p>
             </br>
             <!-- <a href="#" class="btn btn-parolamas btn-md to-section" data-target-to="main">Lihat Lebih Lanjut</a> -->
@@ -41,9 +41,9 @@
               <li>Instruksi akan diberikan di e-mail setelah pembelian terjadi.</li>
             </ol> -->
             <ol>
-              <li>Kamu dapat memilih untuk melakukan pembayaran premi per bulan dengan menggunakan kartu kredit.<br>Kartu kredit yang diterima adalah Visa, Mastercard, Amex,  dll.</li>
-              <li>Kamu dapat melakukan pembayaran premi per tahun melalui bank transfer, ATM, mobile banking, e-banking, atau melalui transaksi di Alfamart dan Indomaret.</li>
-              <li>Kamu memiliki kebebasan untuk membayar premi pertamamu dalam jangka waktu 30 hari setelah kamu mendaftar.</li>
+              <li>kamu dapat memilih untuk melakukan pembayaran premi per bulan dengan menggunakan kartu kredit.<br>Kartu kredit yang diterima adalah Visa, Mastercard, Amex,  dll.</li>
+              <li>kamu dapat melakukan pembayaran premi per tahun melalui bank transfer, ATM, mobile banking, e-banking, atau melalui transaksi di Alfamart dan Indomaret.</li>
+              <li>kamu memiliki kebebasan untuk membayar premi pertamamu dalam jangka waktu 30 hari setelah kamu mendaftar.</li>
               <li>Rincian instruksi pembayaran premi akan kamu dapatkan setelah kamu resmi mendapatkan perlindungan dari Asuransi Parolamas.</li>
             </ol>
             </br></br>

@@ -10,7 +10,7 @@
             <hr class="primary left" />
             <p class="color-white">
               Siapa bilang asuransi itu rumit?<br>
-              Dengan Asuransi Harta Benda Parolamas,<br> Kamu tidak perlu mengalami proses klaim yang berbelit.
+              Dengan Asuransi Harta Benda Parolamas,<br> kamu tidak perlu mengalami proses klaim yang berbelit.
             </p>
             <br/>
             <a href="{{ url('uploads/brochures/Claims_Form_Rumah_Harta_Benda_Parolamas.pdf') }}" class="btn btn-parolamas btn-md to-section" data-target-to="main">Download Formulir</a>
