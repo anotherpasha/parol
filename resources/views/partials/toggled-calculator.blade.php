@@ -1,6 +1,6 @@
 <div class="calculator-container">
   <div class="title" id="calculator-toggle">
-
+    <h3 class="caps">Simulasi Premi <span class="glyphicon glyphicon-triangle-top"></span></h3>
   </div>
   <div class="content">
     <label for="">Tipe Asuransi</label>
