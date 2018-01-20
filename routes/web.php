@@ -31,9 +31,7 @@ Route::get('/product', function () {
 Route::get('/about', function () {
     return view('frontend/about');
 });
-Route::get('/faq', function () {
-    return view('frontend/faq');
-});
+Route::get('/faq', 'FaqController@faq');
 
 Route::get('/contact-us', 'ContactController@contact');
 Route::post('/contact-us', 'ContactController@postContact');
