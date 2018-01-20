@@ -23,24 +23,25 @@
 </section>
 
 <section class="half-center-transparent--top extra-padding with-scroll-bottom ">
-  <div class="container" id="contactus">
+  <div class="container" id="contact-form">
     <div class="row">
       <div class="col-xs-12 col-sm-8">
         <div class="contact-form-wrapper">
-        @if (session('message'))
-          <div class="alert alert-success alert-dismissible">
-          {{ session('message') }}
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-          </div>
-        @endif
+        
         <h1 class="color-dark-grey ">Kontak Kami<br>Secara Online</h1>
         <hr class="primary left"/>
         <br><br>
         <div class="row">
           <div class="col-xs-12">
-            <form class="" method="post" action="{{ url('contact-us') }}">
+            @if (session('message'))
+              <div class="alert alert-success alert-dismissible">
+              {{ session('message') }}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+            @endif
+            <form class="" method="post" action="{{ url('contact-us') }}" >
                 {{ csrf_field() }}
                 <div class="row">
 
@@ -75,8 +76,9 @@
                           <span class="input-group-addon">
                               <span class="glyphicon glyphicon-calendar"></span>
                           </span>
-                           <input type='text' class="form-control grey" id="datepicker" />
+                           <input type='text' class="form-control grey" id="datepicker" name="date" />
                        </div>
+                       @if($errors->has('date'))<div class="alert alert-danger" role="alert">{{ $errors->first('date') }}</div>@endif
                     </div>
                   </div>
 
@@ -87,8 +89,9 @@
                           <span class="input-group-addon">
                               <span class="glyphicon glyphicon-time"></span>
                           </span>
-                           <input type='text' class="form-control grey" id='hourpicker' value="" />
+                          <input type='text' class="form-control grey" id='hourpicker' name="time" value="" />
                        </div>
+                       @if($errors->has('time'))<div class="alert alert-danger" role="alert">{{ $errors->first('time') }}</div>@endif
                     </div>
                   </div>
 

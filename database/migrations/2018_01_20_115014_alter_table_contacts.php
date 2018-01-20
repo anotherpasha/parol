@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterRegistrantsTable2 extends Migration
+class AlterTableContacts extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class AlterRegistrantsTable2 extends Migration
      */
     public function up()
     {
-        Schema::table('registrants', function (Blueprint $table) {
-            $table->string('date')->nullable();
-            $table->string('time')->nullable();
-            $table->string('product')->nullable();
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->string('date');
+            $table->string('time');
         });
     }
 
@@ -27,10 +26,9 @@ class AlterRegistrantsTable2 extends Migration
      */
     public function down()
     {
-        Schema::table('registrants', function (Blueprint $table) {
+        Schema::table('contacts', function (Blueprint $table) {
             $table->dropColumn('date');
             $table->dropColumn('time');
-            $table->dropColumn('product');
         });
     }
 }

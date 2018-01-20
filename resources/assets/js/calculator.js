@@ -111,6 +111,7 @@ const calculator = new Vue({
           }
           vm.loader = true;
           let formData = new FormData();
+          formData.append('building_status', this.buildingStatus);
           formData.append('building_type', this.type);
           formData.append('zipcode', this.zipcode.value);
           formData.append('house_type', this.houseType);

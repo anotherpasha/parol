@@ -240,7 +240,9 @@
       <label for="">Simulasi premi kamu </label>
       <h2 class="color-primary">Rp. @{{ result }}</h2>
       <h3 class="color-primary">/tahun</h3>
-      <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>&nbsp;<button type="button" class="btn btn-parolamas" @click="sendEmail">KIRIM KE EMAIL KAMU</button>
+      <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>
+      &nbsp;
+      <!-- <button type="button" class="btn btn-parolamas" @click="sendEmail">KIRIM KE EMAIL KAMU</button> -->
     </div>
 
 

@@ -141,6 +141,7 @@ Route::group([
     Route::get('registrants/download', 'RegistrantsController@download')->name('registrants');
 
     Route::get('/claims', 'ClaimsController@index')->name('claims');
+    Route::get('/contacts', 'ContactController@index')->name('contacts');
 });
 
 Route::group([
@@ -157,6 +158,7 @@ Route::group([
     Route::get('sliders/datatable', 'SlidersController@datatableList')->name('sliders');
     Route::get('registrant/datatable', 'RegistrantsController@datatableList')->name('registrant');
     Route::get('claim/datatable', 'ClaimsController@datatableList')->name('claim');
+    Route::get('contact/datatable', 'ContactController@datatableList')->name('contacts');
 
     Route::post('/tinymce/image-upload', 'MediaController@uploadImage');
     Route::get('/tinymce/get-medias', 'MediaController@getMedias');

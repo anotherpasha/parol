@@ -76,8 +76,8 @@
         </li> -->
 
         <li>
-            <a href="{!! backendUrl('claims') !!}">
-                <span class="uk-margin-small-right" uk-icon="icon: bolt"></span> Claims
+            <a href="{!! backendUrl('contacts') !!}">
+                <span class="uk-margin-small-right" uk-icon="icon: bolt"></span> Contacts
             </a>
         </li>
 

@@ -100,13 +100,11 @@
           <div class="custom-carousel-caption">
               <div class="container">
                 <h1>
-                  Kenyamanan</br>
-                  Dalam Memberi</br>
-                  Perlindungan
+                  Jaminan Kenyamanan<br>dalam Memberi<br>Perlindungan
                 </h1>
                 <hr class="primary left" />
                 <p class="paragraph">
-                  Kami memahami pentingnya rasa aman dan nyaman dalam hidup. Selain nyaman atas perlindungan yang kami berikan, kami juga menawarkan kenyamanan dengan proses klaim yang simpel, harga terjangkau serta fleksibilitas pembayaran premi.
+                  Kami memahami pentingnya rasa aman dan nyaman dalam menjalani hidup. Selain nyaman atas perlindungan yang kami berikan, kami juga menawarkan kenyamanan dengan proses klaim yang simpel, harga terjangkau serta fleksibilitas pembayaran premi sesuai dengan kenyamananmu.
                 </p>
                 <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Video</a>
               </div>
@@ -139,7 +137,7 @@
           <h1 class="color-primary ">Simulasi <br/>Premi</h1>
           <hr class="primary left"/>
           <p class="color-dark-grey">
-            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda kamu dengan menjawab pertanyaan-pertanyaan di samping ini.          </p>
+            Dapatkan perkiraan premi untuk perlindungan terhadap rumah dan harta benda kamu dengan menjawab pertanyaan-pertanyaan di samping ini.</p>
         </div>
         <div class="col-xs-12 col-md-8">
           @include('partials.calculator')

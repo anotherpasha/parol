@@ -14,8 +14,8 @@
         <ul class="undotted-list menu-list">
           <li><a href="javascript:;">Informasi Produk</a></li>
           <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Rumah</a></li>
-          <li class="sub-menu "><a href="{{url('/product?page=goods')}}">Asuransi Harta Benda</a></li>
-          <li class="sub-menu "><a href="{{url('/product?page=home_goods')}}">Asuransi Rumah & Harta Benda</a></li>
+          <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Harta Benda</a></li>
+          <li class="sub-menu "><a href="{{url('/product')}}">Asuransi Rumah & Harta Benda</a></li>
         </ul>
 
 
