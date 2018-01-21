@@ -3,4 +3,6 @@
 }
 .about-description {
   background:  url('/images/decoration-men.png')no-repeat bottom left, #fff;
+  position: relative;
+  z-index: 30;
 }

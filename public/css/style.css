@@ -9192,6 +9192,11 @@ blockquote {
   font-size: 22px;
 }
 
+.text-title {
+  display: block;
+  max-width: 90%;
+}
+
 .btn-parolamas,
 .btn-parolamas-secondary {
   background: #000498;
@@ -10176,6 +10181,7 @@ section.guarantee-summary {
 
 .panel-parolamas .panel-heading {
   background: #efefef;
+  position: relative;
   border-radius: 20px;
 }
 
@@ -10190,7 +10196,7 @@ section.guarantee-summary {
 }
 
 .panel-parolamas .panel-title a {
-  font-size: 20px;
+  font-size: 18px;
   font-family: "GothamBold";
 }
 
@@ -10203,7 +10209,9 @@ section.guarantee-summary {
   width: 23px;
   height: 14px;
   margin-top: 5px;
-  float: right;
+  position: absolute;
+  top: 25%;
+  right: 15px;
   background: url("/images/icon-panel-down.png") no-repeat top left;
 }
 
@@ -10488,6 +10496,8 @@ footer .copyright {
 
 .about-description {
   background: url("/images/decoration-men.png") no-repeat bottom left, #fff;
+  position: relative;
+  z-index: 30;
 }
 
 .quiz-introduction {

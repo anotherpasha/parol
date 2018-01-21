@@ -6,6 +6,7 @@
 
   .panel-heading {
     background: #efefef;
+    position: relative;
     @include vendor((border-radius: 20px), webkit moz ms o);
     + .panel-collapse > .panel-body {
       border-top: none;
@@ -19,7 +20,7 @@
   }
   .panel-title {
     a {
-      font-size: 20px;
+      font-size: 18px;
       font-family: $brand-font-medium;
       &:active , &:focus {
         text-decoration: none;
@@ -30,7 +31,9 @@
     width: 23px;
     height: 14px;
     margin-top: 5px;
-    float: right;
+    position: absolute;
+    top: 25%;
+    right: 15px;
     background: url('/images/icon-panel-down.png')no-repeat top left;
   }
   .panel-heading {

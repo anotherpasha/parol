@@ -36,9 +36,13 @@
                 <div class="panel-heading @if($x == 1) active @endif" role="tab">
                   <h4 class="panel-title">
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{ $faq->id }}" aria-expanded="@if($x == 1) true @else false @endif" aria-controls="collapseOne">
-                      {!! $faq->translations->first()->title !!}
+                      <span class="text-title">
+                        {!! $faq->translations->first()->title !!}
+                      </span>
+
+                      <span class="icon-panel"></span>
+
                     </a>
-                    <span class="icon-panel"></span>
                   </h4>
                 </div>
                 <div id="{{ $faq->id }}" class="panel-collapse collapse @if($x == 1) in @endif" role="tabpanel">
