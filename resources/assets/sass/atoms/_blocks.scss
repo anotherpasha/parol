@@ -206,6 +206,11 @@ section {
 .contact-form-wrapper {
   border-right: solid 1px #ededed;
   padding-right: 80px;
+    @include mappy-bp(max-width small) {
+      border-right: none;
+      padding-right: 0;
+      margin-bottom: 80px;
+    }
 }
 
 .contact-information-detail {
