@@ -242,7 +242,7 @@
           <h4 class="color-dark-grey">Simulasi premi kamu </h3>
           <h1 class="color-primary">Rp. @{{ result }}</h1>
           <h3 class="color-primary">/tahun</h3>
-          <button type="button" class="btn btn-parolamas" @click="tryAgain">COBA SIMULASI LAGI</button>
+          <a href="{{ url('/?r='.$r.'#calculator') }}" class="btn btn-parolamas">COBA SIMULASI LAGI</a>
           &nbsp;
 
         </div>

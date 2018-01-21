@@ -183,6 +183,7 @@ const calculator = new Vue({
           const {contactForm, zipcode, type, floor, buildingValue}  = this;
           let errors = {};
           // console.log(`zipcode ${zipcode}`);
+          console.log(`type ${type}`);
           // console.log(`floor ${floor}`);
           // console.log(`building value ${buildingValue}`);
           // console.log(`email ${contactForm.email}`);
@@ -212,7 +213,7 @@ const calculator = new Vue({
           if (zipcode == '') {
             errors.errZipcode = 'This field is required.';
           }
-          if (!Validator.isNumeric(floor)) {
+          if (!Validator.isNumeric(floor) && type == 1) {
               errors.errFloor = 'This field must be a number.';
           }
           if (type == 1 && Validator.isEmpty(floor)) {

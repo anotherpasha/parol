@@ -29,11 +29,13 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $r = $request->has('r') ? $request->r + 1 : 1;
         $data['types'] = EqConstructionType::all();
         $data['zipcodes'] = EqZipcode::take(100)->get();
         $data['isCalculator'] = true;
+        $data['r'] = $r;
         // $data['isContact'] = true;
         // $data['zipcodes'] = EqZipcode::all();
         return view('frontend.home', $data);

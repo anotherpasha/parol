@@ -53,7 +53,7 @@ class CalculatorsController extends Controller
         $constType = '';
         $constClass = '';
         $buildingType = $request->building_type;
-        $floor = '';
+        $floor = 0;
         // apartment
         if ($buildingType == 1) {
             $constClass = 1;
@@ -205,7 +205,7 @@ class CalculatorsController extends Controller
     public function getZipcode(Request $request) {
         // Log::warning($request->all());
         $zips = EqZipcode::where('zipcode', 'like', '%' . $request->search . '%')
-            ->select(['zipcode'])->get();
+            ->select(['zipcode'])->distinct()->get();
         $rets = [];
         foreach ($zips as $zip) {
             $rets[] = ['label' => $zip->zipcode, 'value'=> $zip->zipcode];
