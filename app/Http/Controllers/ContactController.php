@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\PostRegistrant;
 use App\Models\Contact;
-use App\Services\Contact as ContactService;
 use App\Models\Registrant;
+use App\Services\Contact as ContactService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ContactController extends Controller
 {
@@ -28,6 +29,17 @@ class ContactController extends Controller
     public function datatableList()
     {
         return $this->contact->datatable();
+    }
+
+    public function download()
+    {
+        Excel::create('contacts', function($excel) {
+            $excel->sheet('Sheetname', function($sheet) {
+                $header = ['Name', 'Email', 'Phone', 'Call Date', 'Call Time', 'Message'];
+                $sheet->row(1, $header);
+                $sheet->fromModel($this->contact->exported(), null, 'A2', false, false);
+            });
+        })->download('xls');
     }
 
     

@@ -21,4 +21,10 @@ class Calculator
     {
         return CalcModel::all();
     }
+
+    public function exported()
+    {
+        return CalcModel::select('name', 'email', 'phone', 'date', 'time', 'building_status', 'zipcode', 'building_type', 'floor', 'construction_type', 'construction_class', 'package', 'building_value', 'content_value', 'flexa', 'rsmdcc', 'dlv', 'flood', 'earthquake')
+            ->get();
+    }
 }

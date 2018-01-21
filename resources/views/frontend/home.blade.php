@@ -100,7 +100,7 @@
         </div>
 
         <div class="item">
-          <div class="image-slider"  data-image-desktop="{{url('/uploads/dummies/img-slider-04.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-men-mobile.jpg')}}"  style="background-image: url({{url('/uploads/dummies/img-slider-05.jpg')}})"></div>
+          <div class="image-slider"  data-image-desktop="{{url('/uploads/dummies/img-slider-05.jpg')}}" data-image-mobile="{{url('/uploads/dummies/img-men-mobile.jpg')}}"  style="background-image: url({{url('/uploads/dummies/img-slider-05.jpg')}})"></div>
           <!-- <img src="{{url('/uploads/dummies/img-slider-03.jpg')}}" alt="image contains clock and table"> -->
           <div class="custom-carousel-caption">
               <div class="container">

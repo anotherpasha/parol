@@ -141,8 +141,12 @@ Route::group([
     Route::get('registrants/download', 'RegistrantsController@download')->name('registrants');
 
     Route::get('/claims', 'ClaimsController@index')->name('claims');
+    
     Route::get('/contacts', 'ContactController@index')->name('contacts');
+    Route::get('/contacts/download', 'ContactController@download')->name('contacts');
+
     Route::get('/calculators', 'CalculatorsController@index')->name('calculators');
+    Route::get('/calculators/download', 'CalculatorsController@download')->name('calculators');
 });
 
 Route::group([

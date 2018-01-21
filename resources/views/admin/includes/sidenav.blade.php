@@ -49,7 +49,7 @@
             </ul>
         </li>
 
-        <li class="uk-parent">
+        <!-- <li class="uk-parent">
             <a href="javascript:;">
                 <span class="uk-margin-small-right" uk-icon="icon: image"></span> Sliders
             </a>
@@ -61,7 +61,7 @@
                     <a href="{!! backendUrl('sliders/create') !!}">Add Slider</a>
                 </li>
             </ul>
-        </li>
+        </li> -->
 
         <li>
             <a href="{!! backendUrl('calculators') !!}">
@@ -87,12 +87,12 @@
                 <span class="uk-margin-small-right" uk-icon="icon: cog"></span> Settings
             </a>
             <ul class="uk-nav-sub" >
-                <li>
+                <!-- <li>
                     <a href="{!! backendUrl('permissions') !!}">Permissions</a>
                 </li>
                 <li>
                     <a href="{!! backendUrl('roles') !!}">Roles</a>
-                </li>
+                </li> -->
                 <li>
                     <a href="{!! backendUrl('users') !!}">Users</a>
                 </li>

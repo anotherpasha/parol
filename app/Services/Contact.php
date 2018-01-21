@@ -22,11 +22,9 @@ class Contact
         return ContactModel::all();
     }
 
-    public function save(Request $request)
+    public function exported()
     {
-        return ContactModel::create([
-            'policy_number' => $request->policy_number,
-            'description' => $request->description
-        ]);
+        return ContactModel::select('name', 'email', 'phone', 'date', 'time', 'message')
+            ->get();
     }
 }

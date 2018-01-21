@@ -10,9 +10,10 @@ use App\Models\FlConstructionClass;
 use App\Models\FlConstructionType;
 use App\Models\FlRate;
 use App\Models\FloZipcode;
+use App\Services\Calculator as CalcService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
-use App\Services\Calculator as CalcService;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CalculatorsController extends Controller
 {
@@ -32,6 +33,17 @@ class CalculatorsController extends Controller
     public function datatableList()
     {
         return $this->calculator->datatable();
+    }
+
+    public function download()
+    {
+        Excel::create('calculators', function($excel) {
+            $excel->sheet('Sheetname', function($sheet) {
+                $header = ['Nama', 'Email', 'Telp', 'Call Date', 'Call Time', 'Status Kepemilikan', 'Kodepos', 'Jenis Bangunan', 'Lantai', 'Penggunaan Bangunan', 'Jenis Bahan Bangunan', 'Produk', 'Nilai Bangunan', 'Nilai Isi', 'Flexa', 'RSMDCC', 'DLV', 'Flood', 'Earthquake'];
+                $sheet->row(1, $header);
+                $sheet->fromModel($this->calculator->exported(), null, 'A2', false, false);
+            });
+        })->download('xls');
     }
 
 
@@ -83,7 +95,8 @@ class CalculatorsController extends Controller
         $flood = 0;
         $eq = 0;
         $zipcode = $request->zipcode;
-        $buildingStatus = ($request->building_status == 1 ? 'Apartemen' : 'Rumah Tinggal');
+        $buildingStatusName = ($request->building_status == 1 ? 'Pribadi' : 'Sewa');
+        $buildingTypeName = ($buildingType == 1 ? 'Apartemen' : 'Rumah Tinggal');
 
         if ($request->has('flood')) {
             $flood = $this->calculateFlood($tsi, $zipcode);
@@ -103,10 +116,12 @@ class CalculatorsController extends Controller
         $time = $request->time;
 
 
+
+
         $calc = Calculator::create([
-            'building_status' => $buildingStatus,
+            'building_status' => $buildingStatusName,
             'zipcode' => $zipcode,
-            'building_type' => $buildingType,
+            'building_type' => $buildingTypeName,
             'floor' => $floor,
             'construction_type' => $qFlConstType->code,
             'construction_class' => $constClass,

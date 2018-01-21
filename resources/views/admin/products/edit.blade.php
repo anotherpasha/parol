@@ -83,5 +83,7 @@
     <!-- <script src="{!! asset('assets/js/featured-image.js') !!}"></script> -->
     <script src="{!! asset('assets/js/lib/uikit.2.min.js') !!}"></script>
     <script src="{!! asset('assets/js/lib/datepicker.min.js') !!}"></script>
+    <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
     <script src="{{ mix('js/product.js') }}"></script>
 @endsection

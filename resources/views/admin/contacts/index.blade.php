@@ -6,9 +6,10 @@
 @endsection
 
 @section('content')
-
+<form action="{!! action('ContactController@download') !!}" method="get">
     <h3>
         @if(isset($pageTitle)) {!! $pageTitle !!}@endif
+        <button class="uk-button uk-button-primary uk-align-right uk-margin-small-top">Download Data</button>
     </h3>
     <table class="uk-table" id="thetable">
         <thead>
@@ -25,6 +26,7 @@
             </tr>
         </thead>
     </table>
+</form>
 
 @endsection
 

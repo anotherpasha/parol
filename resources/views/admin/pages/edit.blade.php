@@ -1,6 +1,7 @@
 @extends('admin.layouts.default')
 
 @section('page-level-styles')
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{!! asset('assets/css/lib/datepicker.min.css') !!}" />
     <link rel="stylesheet" href="{!! asset('assets/css/lib/flag-icon.css') !!}" />
 @endsection
@@ -50,20 +51,23 @@
                     </div>
                 </div>
 
-                <!-- @include('admin.includes.featured-sidebar-edit') -->
+                <!-- include('admin.includes.featured-sidebar-edit') -->
 
             </div>
         </div>
     </form>
 
-    @include('admin.includes.featured-modal')
+    <!-- include('admin.includes.featured-modal') -->
 @endsection
 
 @section('page-level-scripts')
     <script src="{!! asset('assets/js/lib/tinymce/tinymce.min.js') !!}"></script>
-    <script src="{!! asset('assets/js/lib/plupload/plupload.full.min.js') !!}"></script>
+    <!-- <script src="{!! asset('assets/js/lib/plupload/plupload.full.min.js') !!}"></script> -->
     <script src="{!! asset('assets/js/editor.js') !!}"></script>
-    <script src="{!! asset('assets/js/featured-image.js') !!}"></script>
+    <!-- <script src="{!! asset('assets/js/featured-image.js') !!}"></script> -->
     <script src="{!! asset('assets/js/lib/uikit.2.min.js') !!}"></script>
     <script src="{!! asset('assets/js/lib/datepicker.min.js') !!}"></script>
+    <!-- <script src="{{ asset('js/manifest.js') }}"></script>
+    <script src="{{ asset('js/vendor.js') }}"></script>
+    <script src="{{ mix('js/media.js') }}"></script> -->
 @endsection
