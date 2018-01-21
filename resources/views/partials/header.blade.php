@@ -14,9 +14,9 @@
             <div class="wrapper">
                 <ul class="undotted-list inline  header-info ">
                     <li>
-                      <form method="post" class="search-box">
+                      <form method="get" class="search-box">
                           <span class="glyphicon glyphicon-search"></span>
-                          <input class="rounded" type="text" name="" value="">
+                          <input class="rounded" type="text" name="searchText" value="">
                       </form>
                     </li>
                     <li class="color-white"><span class="icon-call-small"></span><a href="tel:1500554" class="color-white">&nbsp;&nbsp;1500 - 554</a></li>
