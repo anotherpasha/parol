@@ -30,9 +30,9 @@
                   Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
                 <ul class="undotted-list ups-list">
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persetujuan Klaim Dalam 7 Hari</li>
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Praktis & Ekonomis</li>
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persyaratan Mudah</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Tanpa Survei</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Pembayaran Mudah Setiap Bulan</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persetujuan Klaim dalam 7 Hari</li>
                 </ul>
                 <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>

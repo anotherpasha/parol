@@ -32,7 +32,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu.
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu
                     </p>
                   </dt>
                 </dl>
