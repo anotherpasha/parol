@@ -179,3 +179,8 @@ input, textarea{
 .form-group {
   margin-bottom: 30px;
 }
+label {
+  &.extra-padding {
+    padding: 10px 0;
+  }
+}

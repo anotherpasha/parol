@@ -120,7 +120,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6">
             <div class="form-group">
-              <label for="">@lang('form-title.buildingValue')</label>
+              <label for="" class="extra-padding">@lang('form-title.buildingValue')</label>
               <input type="text" name="building_value" value="" class="form-control grey decimal-masked" v-model="buildingValue" />
               <div v-if="errors.errBuildingValue" class="alert alert-danger" role="alert">@{{errors.errBuildingValue}}</div>
             </div>
