@@ -47,7 +47,7 @@
               <li>Rincian instruksi pembayaran premi akan kamu dapatkan setelah kamu resmi mendapatkan perlindungan dari Asuransi Parolamas.</li>
             </ol>
             </br></br>
-            <a href="http://pembayaran.parolamas.co.id/" class="btn btn-parolamas btn-md to-section" data-target-to="main">LAKUKAN PEMBAYARAN DI SINI</a>
+            <a href="https://pembayaran.parolamas.co.id/" class="btn btn-parolamas btn-md">LAKUKAN PEMBAYARAN DI SINI</a>
 
       </div>
 

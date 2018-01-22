@@ -8,7 +8,7 @@ return [
 	'rental' => 'Sewa',
 	'apartment' => 'Apartemen',
 	'house' => 'Rumah Tinggal',
-	'house2976' => 'Rumah Tinggal, < 4 Lantai, Bukan Ruko',
+	'house2976' => 'Rumah Tinggal, Kurang Dari 4 Lantai, Bukan Ruko',
 	'house29761' => 'Kost',
 	'wood' => 'Kayu (harus kurang 20% dari total konstruksi)',
 	'concrete' => 'Beton/Batu Bata',
