@@ -30,9 +30,9 @@
                   Parolamas menyediakan perlindungan risiko dasar untuk memberikan ganti rugi jika bangunan tempat tinggal dan atau harta benda di dalamnya yang kamu pertanggungkan rusak atau musnah disebabkan akibat terjadinya kebakaran atau risiko lainnya yang dijamin.
                 </p>
                 <ul class="undotted-list ups-list">
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persetujuan Klaim Dalam 7 Hari</li>
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Praktis & Ekonomis</li>
-                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persyaratan Mudah</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Tanpa Survei</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Pembayaran Mudah Setiap Bulan</li>
+                  <li><img src="{{url('/images/icon-checklist.png')}}" alt=""/>&nbsp;Persetujuan Klaim dalam 7 Hari</li>
                 </ul>
                 <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
               </div>
@@ -54,7 +54,7 @@
                 <p class="paragraph">
                   Setelah menerima dokumen klaim yang lengkap, Parolamas memberikan kepastian atas klaim kamu dalam 7 hari kerja sehingga kamu tidak lagi harus cemas menunggu lama.
                 </p>
-                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
+                <a href="{{ url('product') }}" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
 
           </div>
@@ -73,7 +73,7 @@
                 <p class="paragraph">
                   Asuransi Parolamas menawarkan fleksibilitas premi dengan harga terjangkau, serta proses pendaftaran yang ringkas.
                 </p>
-                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
+                <a href="{{ url('product') }}" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
 
           </div>
@@ -93,7 +93,7 @@
                   Kini daftar asuransi tidak perlu rumit.
                   Kami menawarkan perlindungan harta benda dengan syarat mudah tanpa survey yang berbelit-belit untuk nilai pertanggungan hingga Rp 1 Miliar.
                 </p>
-                <!-- <a href="" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a> -->
+                <a href="{{ url('product') }}" class="btn btn-parolamas btn-md m-t-20">Lihat Lebih Lanjut</a>
               </div>
 
           </div>
@@ -126,7 +126,7 @@
   </section>
 
   <section class="half-center-transparent--top extra-padding with-scroll-bottom info-product ">
-  @include('partials.our-product')
+  @include('partials.our-product', ['productButton' => true])
   <!--scroll icon -->
   <div class="half-center-scroll-icon bottom">
     <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>

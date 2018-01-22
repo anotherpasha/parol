@@ -32,7 +32,7 @@
                   </dt>
                   <dt class="description">
                     <p class="color-dark-grey book">
-                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu.
+                      Perlindungan terhadap harta benda di dalam rumah, kost, & apartemen kamu
                     </p>
                   </dt>
                 </dl>
@@ -52,14 +52,16 @@
                   </dt>
                 </dl>
             </div>
-
+            @if($productButton)
             <div class="col-xs-12 text-center">
               <a href="{{ url('product') }}" class="btn btn-md btn-parolamas half-block">Lihat Lebih lanjut</a>
-
             </div>
+            @endif
         </div>
     </div>
     <!--scroll icon -->
+    @if($productButton)
     <div class="half-center-scroll-icon bottom-on-border">
       <a class="scroll" href="javascript:;"><img src="{{url('/images/icon-scroll-blue.png')}}"/></a>
     </div>
+    @endif

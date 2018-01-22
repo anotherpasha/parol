@@ -59,8 +59,8 @@
 
 
 <section class="extra-padding with-scroll-bottom grey ">
-
-      <div class="container">
+      @include('partials.our-product', ['productButton' => false])
+      <!-- <div class="container">
           <div class="row">
 
               <div class="col-sm-12">
@@ -116,9 +116,8 @@
 
               <div class="col-xs-12 text-center">
                 <a href="{{ url('product') }}" class="btn btn-md btn-parolamas half-block">Lihat Lebih lanjut</a>
-
               </div>
           </div>
-      </div>
+      </div> -->
 </section>
 @endsection

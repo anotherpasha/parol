@@ -72,7 +72,7 @@ class FaqController extends Controller
         $locale = App::getLocale();
         $faqs = PostModel::with(['translations' => function ($query) use ($locale) {
                     $query->where('locale', '=', $locale);
-                }])->where('post_type_id', 3)->get();
+                }])->where('post_type_id', 3)->orderBy('order')->get();
         $data['faqs'] = $faqs;
         return view('frontend/faq', $data);
     }
